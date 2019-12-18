@@ -1,6 +1,6 @@
 # SITE CONFIGURATION
-baseurl: "/fink-broker"
-url: "https://astrolabsoftware.github.io/fink-broker"
+baseurl: "/fink-website"
+url: "https://astrolabsoftware.github.io/fink-website"
 
 # THEME-SPECIFIC CONFIGURATION
 title: Fink                                    # site's title
