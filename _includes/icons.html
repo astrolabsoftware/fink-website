@@ -10,17 +10,6 @@
 </li>
 {% endif %}
 
-{% if site.data.social.email_address or site.theme_settings.email_address %}
-<li>
-    <a href="mailto:{{ site.data.social.email_address }}" title="{{ site.data.language.str_email }}">
-		<span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-        </span>
-    </a>
-</li>
-{% endif %}
-
 {% if site.data.social.behance or site.theme_settings.behance %}
 <li>
     <a href="https://www.behance.net/{{ site.data.social.behance }}"
@@ -261,6 +250,29 @@
 		<span class="fa-stack fa-lg">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+{% endif %}
+
+{% if site.data.social.book or site.theme_settings.book %}
+<li>
+    <a href="{{ site.data.social.book }}"
+       title="Read the Docs">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-book fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+{% endif %}
+
+{% if site.data.social.email_address or site.theme_settings.email_address %}
+<li>
+    <a href="mailto:{{ site.data.social.email_address }}" title="{{ site.data.language.str_email }}">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
         </span>
     </a>
 </li>

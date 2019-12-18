@@ -1,6 +1,5 @@
 # Icons on the footer
 rss:         # Make sure you created a feed.xml with feed.xml layout
-email_address:    # Full email address, e.g. "sam@example.com"
 behance:
 bitbucket:
 dribbble:
@@ -8,7 +7,8 @@ facebook:
 flickr:
 gitlab:
 github: "astrolabsoftware/fink-broker"
-folder: "https://fink-broker.readthedocs.io/en/latest/"
+book: "https://fink-broker.readthedocs.io/en/latest/"
+email_address: peloton@lal.in2p3.fr   # Full email address, e.g. "sam@example.com"
 instagram:
 keybase:
 linkedin:         # Full URL
