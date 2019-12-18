@@ -1,0 +1,59 @@
+# SITE CONFIGURATION
+baseurl: "/fink-broker"
+url: "https://astrolabsoftware.github.io/fink-broker"
+
+# THEME-SPECIFIC CONFIGURATION
+title: Fink                                    # site's title
+description: "A new generation broker for LSST community"      # used by search engines
+avatar:                        # Empty for no avatar in navbar
+favicon:                             # Icon displayed in the tab
+
+# Header and footer text
+header_text: A new generation broker for LSST community # Change Blog header text
+header_feature_image: assets/img/pexels/travel.jpeg
+footer_text: Copyright AstroLab Software 2019-2020
+
+# Blog
+excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
+post_navigation: true
+color_image: /assets/img/lineart.png                    # A bit transparent for color posts.
+
+# Features
+katex: true                                             # Enable if using math markup
+google_analytics:                                       # Tracking ID, e.g. "UA-000000-01"
+disqus_shortname:                                       # Your discus shortname for comments
+layout_variables:                                       # Open the "_sass > base" folder, and open "_variables.scss"
+footer_icons:                                           # In _data/social.yml
+share_buttons:                                          # In _data/social.yml
+authors:                                                # In _data/authors.yml
+language:                                               # In _data/language.yml
+
+# PAGINATION
+paginate: 5
+paginate_path: "blog/page:num"
+
+# # PORTFOLIO
+# collections:
+#   portfolio:
+#     output: true
+#     permalink: /:collection/:name
+
+# BUILD SETTINGS
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: :compressed
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
+exclude: [".jekyll-cache", "Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", ".idea", "vendor/*",
+          "LICENSE", "README.md", "screenshot.png", "assets/package.json", "assets/node_modules", "assets/gulpfile.js"]
+
+# theme: type-on-strap                                  # if using the theme as a jekyll theme gem
+remote_theme: sylhare/Type-on-Strap                     # If using as a remote_theme in github
+
+gems:
+- jekyll-github-metadata
+- jekyll-mentions
+- jekyll-redirect-from
+- jekyll-sitemap
+- jemoji
