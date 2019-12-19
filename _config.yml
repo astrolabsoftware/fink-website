@@ -1,5 +1,5 @@
 # SITE CONFIGURATION
-baseurl: "/fink-website"
+baseurl: "/"
 url: "https://fink-broker.org"
 
 # THEME-SPECIFIC CONFIGURATION
