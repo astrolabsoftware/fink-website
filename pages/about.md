@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /about.html
 feature-img: "assets/img/pexels/circuit.jpeg"
 tags: [About, Archive]
 ---
