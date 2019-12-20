@@ -4,7 +4,7 @@ url: "https://fink-broker.org"
 
 # THEME-SPECIFIC CONFIGURATION
 title: Fink                                    # site's title
-description: "A new generation broker for LSST community"      # used by search engines
+description: "A new generation of broker for LSST community"      # used by search engines
 avatar:                        # Empty for no avatar in navbar
 favicon:                             # Icon displayed in the tab
 
