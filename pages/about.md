@@ -27,8 +27,8 @@ We want Fink to be able to _filter, aggregate, enrich, consume_ incoming data st
 
 Learning Fink is easy whether you are a developer or a scientist:
 
-* Learn about the [broker technology](https://fink-broker.readthedocs.io/en/latest/broker/introduction.md), the [science](https://fink-broker.readthedocs.io/en/latest/science/introduction.md) we do, and how to [receive](https://fink-broker.readthedocs.io/en/latest/distribution/introduction.md) alerts.
-* Learn how to use the broker or how to contribute following the different [tutorials](https://fink-broker.readthedocs.io/en/latest/tutorials/introduction.md).
+* Learn about the [broker technology](https://fink-broker.readthedocs.io/en/latest/broker/introduction/), the [science](https://fink-broker.readthedocs.io/en/latest/science/introduction/) we do, and how to [receive](https://fink-broker.readthedocs.io/en/latest/distribution/introduction/) alerts.
+* Learn how to use the broker or how to contribute following the different [tutorials](https://fink-broker.readthedocs.io/en/latest/tutorials/introduction/).
 * Explore the different components:
     * [fink-alert-simulator](https://github.com/astrolabsoftware/fink-alert-simulator): Simulate alert streams for the Fink broker.
     * [fink-broker](https://github.com/astrolabsoftware/fink-broker): Astronomy Broker based on Apache Spark.
