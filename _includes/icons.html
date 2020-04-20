@@ -255,6 +255,17 @@
 </li>
 {% endif %}
 
+{% if site.data.social.grafana or site.theme_settings.grafana %}
+  <li>
+      <a href="{{ site.data.social.grafana }}" title="Monitoring">
+          <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-dashboard fa-stack-1x fa-inverse"></i>
+          </span>
+      </a>
+  </li>
+ {% endif %}
+
 {% if site.data.social.book or site.theme_settings.book %}
 <li>
     <a href="{{ site.data.social.book }}"
