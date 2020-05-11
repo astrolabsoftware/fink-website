@@ -3,14 +3,14 @@ baseurl: "/"
 url: "https://fink-broker.org"
 
 # THEME-SPECIFIC CONFIGURATION
-title: Fink                                    # site's title
+title: ""                                    # site's title
 description: "A new generation of broker for LSST community"      # used by search engines
-avatar:                        # Empty for no avatar in navbar
-favicon:                             # Icon displayed in the tab
+avatar:  /assets/img/Fink_PrimaryLogo_WEB.png                        # Empty for no avatar in navbar
+favicon: /assets/img/Fink_SecondaryLogo_WEB.png                           # Icon displayed in the tab
 
 # Header and footer text
 header_text: A new generation broker for LSST community # Change Blog header text
-header_feature_image: assets/img/pexels/travel.jpeg
+header_feature_image: assets/img/pexels/LSST.jpg
 footer_text: Copyright AstroLab Software 2019-2020
 
 # Blog
