@@ -22,22 +22,27 @@
     </a>
 
     <!-- Menu -->
-    <ul class="hide">
-        {% assign name_page = "" %}
-
-        {% for page in site.pages %}
-            {% unless page.title == null or page.hide or name_page contains page.title %}
-            <li class="separator"> | </li>
-            <li>
-                <a class="clear" aria-label="{{ page.title }}" title="{{ page.title }}" href="{{ page.url | relative_url }}">
-                    {% if page.icon %} <i class="fa {{ page.icon }}" aria-hidden="true"></i>
-                    {% else %} {{ page.title }} {% endif%}
-                </a>
-            </li>
-            {% endunless %}
-            {% assign name_page = page.title | append: name_page %}
-        {% endfor %}
-    </ul>
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item">
+		    <a class="nav-link" href="/about.html"> About</a>
+		  </li>
+			<li class="separator"> | </li>
+			<li class="nav-item">
+		    <a class="nav-link" href="/members.html"> Team</a>
+		  </li>
+			<li class="separator"> | </li>
+			<li class="nav-item">
+		    <a class="nav-link" href="https://github.com/astrolabsoftware/fink-broker"><i class="fa fa-github"></i> GitHub</a>
+		  </li>
+			<li class="separator"> | </li>
+			<li class="nav-item">
+		    <a class="nav-link" href="https://fink-broker.readthedocs.io/en/latest/"><i class="fa fa-book"></i> Documentation</a>
+		  </li>
+			<li class="separator"> | </li>
+		  <li class="nav-item">
+		    <a class="nav-link" href="https://supervision.lal.in2p3.fr/dashboard/db/fink-broker-system-status"><i class="fa fa-dashboard"></i> Monitoring</a>
+		  </li>
+		</ul>
 
 	</nav>
 </header>
