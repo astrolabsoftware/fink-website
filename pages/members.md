@@ -12,6 +12,8 @@ tags: [Fink, Members]
 - [Anais Möller](https://www.mso.anu.edu.au/~anais/index.html) (PI) - CNRS/LPC Clermont, Physics department
 - [Julien Peloton](https://github.com/JulienPeloton) (PI) - CNRS/IJCLab, IT department
 
+You can contact us at contact(at)fink-broker.org for more information.
+
 ## Development Team
 
 - [Julien Peloton](https://github.com/JulienPeloton) (Lead) - CNRS/IJCLab, IT department

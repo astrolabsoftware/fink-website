@@ -27,6 +27,8 @@ Anyone wishing to propose a new project must fill the [subscription form](https:
 - Logistic help in defining the project deliverable.
 - Feedback for feasibility, impact, resources, timeline.
 
+You can contact us at contact(at)fink-broker.org for more information.
+
 
 ## Publication Policy
 
