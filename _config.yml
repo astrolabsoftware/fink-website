@@ -3,7 +3,7 @@ baseurl: "/"
 url: "https://fink-broker.org"
 
 # THEME-SPECIFIC CONFIGURATION
-title: ""                                    # site's title
+title: " broker"                                    # site's title
 description: "A new generation of broker for LSST community"      # used by search engines
 avatar:  /assets/img/Fink_PrimaryLogo_WEB.png                        # Empty for no avatar in navbar
 favicon: /assets/img/Fink_SecondaryLogo_WEB.png                           # Icon displayed in the tab

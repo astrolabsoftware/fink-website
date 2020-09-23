@@ -46,9 +46,11 @@
   }
 
   .site-title {
+    display: none;
     float: left;
-    font-weight: bold;
-    font-family: $font-family-logo;
+    color: #FFFFFF;
+    //font-weight: bold;
+    //font-family: $font-family-logo;
     font-size: 1.3em;
   }
 
