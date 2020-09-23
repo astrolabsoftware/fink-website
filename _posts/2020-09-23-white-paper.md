@@ -4,6 +4,7 @@ title:  Fink white paper
 author: fink
 tags: [paper]
 ---
+
 After a year of activities, the Fink team is proud to release its [first paper](https://arxiv.org/abs/2009.10185)! The team made of researchers and engineers worked restlessly to make Fink comes true. Congratulations to all!
 <!--more-->
 
