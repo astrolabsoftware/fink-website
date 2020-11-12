@@ -15,7 +15,7 @@ _The backend is using Apache HBase, a distributed non-relational database. The f
 
 ## What is available?
 
-We pushed ZTF alert data from 01 November 2019 to now. For the first year of operation (2019-11 to 2020-11), this represents more than 50 million alerts collected (>2 TB), and about 20 million processed (>700 GB). Alerts are aggregated by their `objectId`, and all alerts contain original ZTF information and Fink added values
+We pushed ZTF public alert data from 01 November 2019 to now. For the first year of Fink operation (2019-11 to 2020-11), this represents more than 50 million alerts collected (>2 TB), and about 20 million processed (>700 GB). Alerts are aggregated by their `objectId`, and all alerts contain original ZTF information and Fink added values
 
 Data is updated once a day, after the observing night is over. There is no plan to support streaming updates to HBase, and if you want live information we can provide live Kafka streams instead.
 
@@ -26,8 +26,11 @@ _The Fink object page summary from the beta version of the science portal. **A**
 
 The scientific interest of the Fink community is wide: supernovae, microlensing, multi-messenger astronomy, solar system objects... and it is difficult to give all information in one page for everyone. Hence, we developed _views_ to explore particular aspect of each alert. By default, you will have a summary view of the object (cutouts, lightcurve, some textual information...). Then you can click on different tabs that will show different information based on a science topic: supernovae (e.g. classification score evolution), variable stars (fit using gatspy), microlensing (fit using pyLIMA), ...
 
-<img src="{{site.url}}/assets/img/science-portal-aview.png" width="100%" height="100%" style="display: block; margin: auto;" />
-_Example of one view: microlensing. The view allows to use [pyLIMA](https://github.com/ebachelet/pyLIMA), an open source code, for modeling microlensing events. The user can fit for the data, and inspect fitted parameters._
+<img src="{{site.url}}/assets/img/science-portal-snview.png" width="100%" height="100%" style="display: block; margin: auto;" />
+_Example of a view: supernovae. The view shows the classification score evolution from the different machine learning modules in Fink such as the scores from [SuperNNova](https://arxiv.org/abs/1901.06384), an open source supernova photometric classification framework. You have also additional information from the alert shown on the right that can help to disentangle between a supernova and other types._
+
+<img src="{{site.url}}/assets/img/science-portal-mulensview.png" width="100%" height="100%" style="display: block; margin: auto;" />
+_Example of a view: microlensing. The view allows to use [pyLIMA](https://arxiv.org/abs/1709.08704), an open source code, for modeling microlensing events. The user can fit for the data, and inspect fitted parameters._
 
 More views are in preparation: Gamma Ray Bursts with the SVOM team, Solar System objects, and we would like to hear your ideas for new views!
 
