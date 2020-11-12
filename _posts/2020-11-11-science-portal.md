@@ -5,8 +5,9 @@ author: fink
 tags: [Portal]
 ---
 
-The Fink development team is happy to announce the deployment of the Fink Science Portal! This service allows users to browse and display alert data collected and processed by Fink from a web browser. The Portal can be accessed from the Fink website: [https://fink-broker.org](https://fink-broker.org).
+The Fink development team is happy to announce the deployment of the Fink Science Portal! 
 <!--more-->
+This service allows users to browse and display alert data collected and processed by Fink from a web browser. The Portal can be accessed from the Fink website: [https://fink-broker.org](https://fink-broker.org).
 
 <img src="{{site.url}}/assets/img/science-portal-intro.png" width="100%" height="100%" style="display: block; margin: auto;" />
 _The backend is using Apache HBase, a distributed non-relational database. The frontend is based on Dash, a Python web framework built on top of Flask and React._
