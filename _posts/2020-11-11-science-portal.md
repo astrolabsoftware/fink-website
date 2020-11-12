@@ -20,6 +20,27 @@ We pushed ZTF public alert data from 01 November 2019 to now. For the first year
 
 Data is updated once a day, after the observing night is over. There is no plan to support streaming updates to HBase, and if you want live information we can provide live Kafka streams instead.
 
+## Searching the database
+
+### Backend structure
+
+After each observation night, the data is aggregated and pushed into Apache HBase tables. The main table contains all alert data processed by Fink since 2019-11-01, and it is indexed along the `objectId` of each alert, and the emission date `jd`.
+
+In order to allow multi-indexing with HBase, we designed _index tables_. These tables are indexed along different properties (time, sky position, classification, ...). They contain the same number of rows than the main table but fewer columns. These index tables are used to perform fast search along arbitrary properties and isolate interesting candidates, while the main table is used to display final data.
+
+### Available searches
+
+<img src="{{site.url}}/assets/img/science-portal-explorer.png" width="100%" height="100%" style="display: block; margin: auto;" />
+
+Users can perform different types of search:
+
+* **Search by Object ID:** Enter a valid object ID to access its data
+* **Conesearch:** Peform a conesearch around a position on the sky given by (RA, Dec, radius). RA/Dec can be in decimal degrees, or sexagesimal in the form hh:mm:ss and dd:mm:ss. Radius is in arcsecond.
+* **Search by Date:** Choose a starting date and a time window to see all alerts in this period. Dates are in UTC, and the time window in minutes.
+* **Get latest 100 alerts by class:** Choose a class of interest using the dropdown menu to see the 100 latest alerts processed by Fink.
+
+For now, users cannot combine searches, but we are working hard to allow it. Stay tuned!
+
 ## The power of the views!
 
 <img src="{{site.url}}/assets/img/science-portal-summary.png" width="100%" height="100%" style="display: block; margin: auto;" />
@@ -47,19 +68,9 @@ This first version of the Portal contains only limited features, but it is extre
 
 We encourage users to send their feedback to the team (#scienceportal channel in the Fink Slack workspace, or by email at [contact@fink-broker.org](mailto:contact@fink-broker.org)). Note that in the next month, the server might be unavailable often (crash, updates, etc.). 
 
-## Backend structure
-
-After each observation night, the data is aggregated and pushed into Apache HBase tables. The main table contains all alert data processed by Fink since 2019-11-01, and it is indexed along the `objectId` of each alert, and the emission date `jd`.
-
-In order to allow multi-indexing with HBase, we designed _index tables_. These tables are indexed along different properties (time, sky position, classification, ...). They contain the same number of rows than the main table but fewer columns. These index tables are used to perform fast search along arbitrary properties and isolate interesting candidates, while the main table is used to display final data.
-
-## Public API
-
-### HBase client
+## Client and public API
 
 We developed custom HBase clients to manipulate the data efficiently (more information at [Lomikel or FinkBrowser](https://hrivnac.web.cern.ch/hrivnac/Activities/index.html)). The data itself is not directly publicly accessible for security reasons, and we are now constructing the public API service to enable a seamless user experience and enable automatising follow-up coordination with observational facilities and teams. 
-
-### Science Platform
 
 Note that the Science Portal is not the place to perform heavy computations. Instead, there will be the Fink _Science Platform_ launched later (expected Q1 2021), with notebooks available on-demand, and connected to the Fink dataset.
 
