@@ -1,0 +1,83 @@
+baseURL: https://localhost
+languageCode: en-us
+title: Fink broker
+theme: vanilla-bootstrap-hugo-theme
+favicon: /images/Fink_SecondaryLogo_WEB.png 
+publishDir: docs
+
+taxonomies:
+  tag: tags
+
+permalinks:
+  post: /:filename/
+
+# See https://feathericons.com/
+# The value of pre is the icon name
+menu:
+  nav:
+  - name: Home
+    pre: home
+    url: /
+    weight: 1
+  - name: News
+    pre: edit
+    url: /post/
+    weight: 2
+  - name: Science Portal
+    pre: monitor
+    url: http://134.158.75.151:24000/
+    weight: 3
+  - name: Team
+    pre: users
+    url: /members/
+    weight: 4
+  - name: Join us
+    pre: user-plus 
+    url: /joining/
+    weight: 5
+  - name: About
+    pre: info
+    url: /about/
+    weight: 6
+
+params:
+  includeBootstrapJs: true
+  showActiveNav: true
+  containerMaxWidth: 800px
+  dateFormat: Jan 2, 2006
+  homeText: 
+  footerText:  
+  hideFooter: true
+  katex: true
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xHTML: false
+  highlight:
+    codeFences: true
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: monokai
+    tabWidth: 4
+  tableOfContents:
+    endLevel: 6
+    startLevel: 2
+
