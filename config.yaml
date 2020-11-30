@@ -1,4 +1,4 @@
-baseURL: https://localhost
+baseURL: https://fink-broker.org
 languageCode: en-us
 title: Fink broker
 theme: vanilla-bootstrap-hugo-theme
