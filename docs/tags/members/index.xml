@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Members on Fink broker</title>
-    <link>https://localhost/tags/members/</link>
+    <link>https://fink-broker.org/tags/members/</link>
     <description>Recent content in Members on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://localhost/tags/members/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://fink-broker.org/tags/members/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Joining Fink</title>
-      <link>https://localhost/joining/</link>
+      <link>https://fink-broker.org/joining/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/joining/</guid>
+      <guid>https://fink-broker.org/joining/</guid>
       <description>What are Fink community projects? A Fink community project is a self-governed group of one or more people, who agrees on producing deliverables which can add value to the Fink broker. Examples of deliverables are (non-exhaustive):
  Fink filter, that is implementation of series of selection cuts for given science goal(s) Fink science module, that is implementation and testing of added value method (e.g. algorithm) within Fink infrastructure. Software/algorithm (new software or algorithm integrated into Fink&amp;rsquo;s infrastructure or in any of its components).</description>
     </item>
     
     <item>
       <title>Team</title>
-      <link>https://localhost/members/</link>
+      <link>https://fink-broker.org/members/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/members/</guid>
+      <guid>https://fink-broker.org/members/</guid>
       <description>Management Team  Emille E. O. Ishida (PI) - CNRS/LPC Clermont, IT department Anais Möller (PI) - CNRS/LPC Clermont, Physics department Julien Peloton (PI) - CNRS/IJCLab, IT department  You can contact us at contact(at)fink-broker.org for more information.
 Development Team  Julien Peloton (Lead) - CNRS/IJCLab, IT department Chris Arnault (distributed computing) - CNRS/IJCLab, IT department Julius Hrivnac (database) - CNRS/IJCLab, IT department Marco Leoni (machine learning) - Université Paris-Saclay, IT department Sacha Pateyron (cloud management, deployment, monitoring) - CNRS/IJCLab, IT department  Fink Community Project members To be added</description>
     </item>

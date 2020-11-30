@@ -2,99 +2,99 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fink broker</title>
-    <link>https://localhost/</link>
+    <link>https://fink-broker.org/</link>
     <description>Recent content on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://localhost/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fink Science Portal</title>
-      <link>https://localhost/2020-11-11-science-portal/</link>
+      <link>https://fink-broker.org/2020-11-11-science-portal/</link>
       <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/2020-11-11-science-portal/</guid>
+      <guid>https://fink-broker.org/2020-11-11-science-portal/</guid>
       <description>&lt;p&gt;The Fink development team is happy to announce the deployment of the Fink Science Portal!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Fink white paper</title>
-      <link>https://localhost/2020-09-23-white-paper/</link>
+      <link>https://fink-broker.org/2020-09-23-white-paper/</link>
       <pubDate>Wed, 23 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/2020-09-23-white-paper/</guid>
+      <guid>https://fink-broker.org/2020-09-23-white-paper/</guid>
       <description>&lt;p&gt;After a year of activities, the Fink team is proud to release its &lt;a href=&#34;https://arxiv.org/abs/2009.10185&#34;&gt;first paper&lt;/a&gt;! The team made of researchers and engineers worked restlessly to make Fink comes true. Congratulations to all!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LSST enabling science 2020 broker workshop</title>
-      <link>https://localhost/2020-09-17-lsst-enabling-science-part1/</link>
+      <link>https://fink-broker.org/2020-09-17-lsst-enabling-science-part1/</link>
       <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/2020-09-17-lsst-enabling-science-part1/</guid>
+      <guid>https://fink-broker.org/2020-09-17-lsst-enabling-science-part1/</guid>
       <description>&lt;p&gt;In order to enable new science with the LSST alert stream, brokers are developing a new layer in the time domain ecosystem, experimenting with new ways of enriching and filtering these data. A diversity of solutions are being tested, but there is a need for more interaction between brokers, their community of users, and the alert generation teams.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Fink is listening to ZTF!</title>
-      <link>https://localhost/2020-02-01-mouztf/</link>
+      <link>https://fink-broker.org/2020-02-01-mouztf/</link>
       <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/2020-02-01-mouztf/</guid>
+      <guid>https://fink-broker.org/2020-02-01-mouztf/</guid>
       <description>&lt;p&gt;We are pleased to announce that Fink has signed a Memorandum of Understanding (MoU) with the Zwicky Transient Facility (ZTF) Project on 2020, January 29.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>First Fink Workshop @ IJCLab</title>
-      <link>https://localhost/2020-01-28-workshop/</link>
+      <link>https://fink-broker.org/2020-01-28-workshop/</link>
       <pubDate>Tue, 28 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/2020-01-28-workshop/</guid>
+      <guid>https://fink-broker.org/2020-01-28-workshop/</guid>
       <description>&lt;p&gt;The First Fink Workshop will take place at IJCLab on the 6 February 2020, just after the LSST-France meeting.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Letter of Intent for LSST community broker</title>
-      <link>https://localhost/2020-01-10-loi/</link>
+      <link>https://fink-broker.org/2020-01-10-loi/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/2020-01-10-loi/</guid>
+      <guid>https://fink-broker.org/2020-01-10-loi/</guid>
       <description>&lt;p&gt;In 2019, Fink decided to participate to the LSST call for community broker. The first step was the submission of a Letter of Intent to LSST in Summer 2019 to describe the project, and our goals: &lt;em&gt;Fink - a new generation of astronomy broker based on Active Learning and Apache Spark.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Welcome</title>
-      <link>https://localhost/2019-12-17-welcome/</link>
+      <link>https://fink-broker.org/2019-12-17-welcome/</link>
       <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/2019-12-17-welcome/</guid>
+      <guid>https://fink-broker.org/2019-12-17-welcome/</guid>
       <description>&lt;p&gt;Fink is a broker infrastructure enabling a wide range of applications and services to connect to large streams of alerts issued from telescopes all over the world.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://localhost/about/</link>
+      <link>https://fink-broker.org/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/about/</guid>
+      <guid>https://fink-broker.org/about/</guid>
       <description>Fink is a broker infrastructure enabling a wide range of applications and services to connect to large streams of alerts issued from telescopes all over the world. Fink core is based on the Apache Spark framework, and more specifically it uses the Structured Streaming processing engine. The language chosen for the API is Python, which is widely used in the astronomy community, has a large scientific ecosystem and easily connects with existing tools.</description>
     </item>
     
     <item>
       <title>Joining Fink</title>
-      <link>https://localhost/joining/</link>
+      <link>https://fink-broker.org/joining/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/joining/</guid>
+      <guid>https://fink-broker.org/joining/</guid>
       <description>What are Fink community projects? A Fink community project is a self-governed group of one or more people, who agrees on producing deliverables which can add value to the Fink broker. Examples of deliverables are (non-exhaustive):
  Fink filter, that is implementation of series of selection cuts for given science goal(s) Fink science module, that is implementation and testing of added value method (e.g. algorithm) within Fink infrastructure. Software/algorithm (new software or algorithm integrated into Fink&amp;rsquo;s infrastructure or in any of its components).</description>
     </item>
     
     <item>
       <title>Team</title>
-      <link>https://localhost/members/</link>
+      <link>https://fink-broker.org/members/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://localhost/members/</guid>
+      <guid>https://fink-broker.org/members/</guid>
       <description>Management Team  Emille E. O. Ishida (PI) - CNRS/LPC Clermont, IT department Anais Möller (PI) - CNRS/LPC Clermont, Physics department Julien Peloton (PI) - CNRS/IJCLab, IT department  You can contact us at contact(at)fink-broker.org for more information.
 Development Team  Julien Peloton (Lead) - CNRS/IJCLab, IT department Chris Arnault (distributed computing) - CNRS/IJCLab, IT department Julius Hrivnac (database) - CNRS/IJCLab, IT department Marco Leoni (machine learning) - Université Paris-Saclay, IT department Sacha Pateyron (cloud management, deployment, monitoring) - CNRS/IJCLab, IT department  Fink Community Project members To be added</description>
     </item>
