@@ -1,7 +1,7 @@
 baseURL: https://localhost
 languageCode: en-us
 title: Fink broker
-theme: vanilla-bootstrap-hugo-theme
+theme: vanilla
 favicon: /images/Fink_SecondaryLogo_WEB.png 
 publishDir: docs
 
