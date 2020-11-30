@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ztf on Fink broker</title>
+    <link>https://localhost/tags/ztf/</link>
+    <description>Recent content in ztf on Fink broker</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://localhost/tags/ztf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fink is listening to ZTF!</title>
+      <link>https://localhost/2020-02-01-mouztf/</link>
+      <pubDate>Sat, 01 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://localhost/2020-02-01-mouztf/</guid>
+      <description>&lt;p&gt;We are pleased to announce that Fink has signed a Memorandum of Understanding (MoU) with the Zwicky Transient Facility (ZTF) Project on 2020, January 29.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
