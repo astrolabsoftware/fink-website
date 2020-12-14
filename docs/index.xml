@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Early supernova candidates &amp; follow-up</title>
+      <link>https://fink-broker.org/2020-11-19-tns/</link>
+      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2020-11-19-tns/</guid>
+      <description>&lt;p&gt;Fink has several classifiers to extract supernovae, including&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Fink Science Portal</title>
       <link>https://fink-broker.org/2020-11-11-science-portal/</link>
       <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
@@ -96,7 +105,7 @@
       
       <guid>https://fink-broker.org/members/</guid>
       <description>Management Team  Emille E. O. Ishida (PI) - CNRS/LPC Clermont, IT department Anais Möller (PI) - CNRS/LPC Clermont, Physics department Julien Peloton (PI) - CNRS/IJCLab, IT department  You can contact us at contact(at)fink-broker.org for more information.
-Development Team  Julien Peloton (Lead) - CNRS/IJCLab, IT department Chris Arnault (distributed computing) - CNRS/IJCLab, IT department Julius Hrivnac (database) - CNRS/IJCLab, IT department Marco Leoni (machine learning) - Université Paris-Saclay, IT department Sacha Pateyron (cloud management, deployment, monitoring) - CNRS/IJCLab, IT department  Fink Community Project members To be added</description>
+Development Team  Julien Peloton (Lead) - CNRS/IJCLab, IT department Chris Arnault (distributed computing) - CNRS/IJCLab, IT department Julius Hrivnac (database) - CNRS/IJCLab, IT department Marco Leoni (machine learning) - Université Paris-Saclay, IT department Sacha Pateyron (cloud management, deployment, monitoring) - CNRS/IJCLab, IT department  Fink members  CEA/AIM, Université Paris-Saclay: D.</description>
     </item>
     
   </channel>
