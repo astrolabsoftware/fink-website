@@ -24,6 +24,7 @@ You can contact us at contact(at)fink-broker.org for more information.
 ## Fink members
 
 * **CEA/AIM, Université Paris-Saclay**: D. Turpin
+* **Centre for Data Intensive Science/MSSL, University College London**: T. Allam Jr.
 * **CEICO, Institute of Physics, Czech Academy of Sciences**: S. Karpov
 * **CNRS/APC, Université de Paris**: A. Boucaud, A. Coleiro
 * **CNRS/CC-IN2P3**: F. Hernandez
@@ -37,7 +38,6 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **ISDC, Department of Astronomy, University of Geneva**: V. Savchenko
 * **Las Cumbres Observatory**: E. Bachelet
 * **Lomonosov Moscow State University, Sternberg Astronomical Institute**: M. V. Kornilov, M. V.  Pruzhinskaya
-* **Centre for Data Intensive Science/MSSL, University College London**: T. Allam Jr.
 
 ## Collaborators
 
