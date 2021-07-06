@@ -70,6 +70,4 @@ We constantly improve the layout to offer you the best experience when data mini
 
 I owe you apologies -- I barely use my phone to go on Internet. But when we launched the Twitter account for Fink ([@FinkBroker](https://twitter.com/finkbroker)), you probably almost died of heart attack by seeing the poorly designed Fink Science Portal... This is past now, and you can enjoy Fink on your smartphone! Checkout some beautiful objects:
 
-<img src="/images/mobile1.png" width="100%" height="100%" style="display: block; margin: auto;" />
-
-<img src="/images/mobile2.png" width="100%" height="100%" style="display: block; margin: auto;" />
+<img src="/images/mobile0.png" width="30%" height="30%" /><img src="/images/mobile1.png" width="30%" height="30%" /> <img src="/images/mobile2.png" width="30%" height="30%" />

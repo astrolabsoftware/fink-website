@@ -1,0 +1,334 @@
+<!doctype html>
+
+<html lang="en" class="h-100">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="Hugo 0.78.2" />
+  <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
+  
+  
+  <title>Fink Science Portal 0.8 | Fink broker</title>
+  <style>
+body {
+    background-color:  #f2f3f4; 
+    background-image: url(images/background.png);
+    background-size: contain;
+}
+.container {
+  max-width: 800px;
+}
+#nav a {
+  font-weight: bold;
+  color: inherit;
+}
+#nav a.nav-link-active {
+  background-color: #212529;
+  color: #fff;
+}
+#nav-border {
+  border-bottom: 1px solid #212529;
+}
+#main {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+#home-jumbotron {
+  background-color: inherit;
+}
+#footer .container {
+  padding: 1em 0;
+}
+#footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+.font-125 {
+  font-size: 125%;
+}
+.tag-btn {
+  margin-bottom: 0.3em;
+}
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit; 
+  background-color: transparent;
+  border-radius: 0;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+img,
+iframe,
+embed,
+video,
+audio {
+  max-width: 100%;
+}
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: initial;
+}
+</style>
+
+</head>
+  <body class="d-flex flex-column h-100">
+    <div id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/"><i data-feather="home"></i> Home</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/post/"><i data-feather="edit"></i> News</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="http://134.158.75.151:24000/"><i data-feather="monitor"></i> Science Portal</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/members/"><i data-feather="users"></i> Team</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/joining/"><i data-feather="user-plus"></i> Join us</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/about/"><i data-feather="info"></i> About</a>
+  
+  </nav>
+</div>
+
+    <div class="container">
+      <main id="main">
+        
+
+<h1>Fink Science Portal 0.8</h1>
+
+
+<i data-feather="calendar"></i> <time datetime="2021-07-05">Jul 5, 2021</time>
+
+  <br>
+  <i data-feather="tag"></i>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://fink-broker.org/tags/portal">Portal</a>
+  
+
+<br><br>
+<p>Check out the version 0.8 of the Science Portal: increased features, boosted conesearch, improved layout, support for mobile platforms, and many more!</p>
+<h2 id="new-api-features">New API features</h2>
+<p>The number of API services has increased. You can retrieve single object information, query the database (conesearch, date search), search by object class, retrieve Solar System Object, retrieve cutouts data, cross-match your favourite catalog data with Fink data, and more!</p>
+<table>
+<thead>
+<tr>
+<th>HTTP Method</th>
+<th>URI</th>
+<th>Action</th>
+<th>Availability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST/GET</td>
+<td><a href="http://134.158.75.151:24000/api/v1/objects">link</a></td>
+<td>Retrieve single object data from the Fink database</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>POST/GET</td>
+<td><a href="http://134.158.75.151:24000/api/v1/explorer">link</a></td>
+<td>Query the Fink alert database</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>POST/GET</td>
+<td><a href="http://134.158.75.151:24000/api/v1/latests">link</a></td>
+<td>Get latest alerts by class</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>POST/GET</td>
+<td><a href="http://134.158.75.151:24000/api/v1/sso">link</a></td>
+<td>Get Solar System Object data</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>POST/GET</td>
+<td><a href="http://134.158.75.151:24000/api/v1/cutouts">link</a></td>
+<td>Retrieve cutout data from the Fink database</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>POST/GET</td>
+<td><a href="http://134.158.75.151:24000/api/v1/xmatch">link</a></td>
+<td>Cross-match user-defined catalog with Fink alert data</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="http://134.158.75.151:24000/api/v1/classes">link</a></td>
+<td>Display all Fink derived classification</td>
+<td>☑️</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><a href="http://134.158.75.151:24000/api/v1/columns">link</a></td>
+<td>Display all available alert fields and their type</td>
+<td>☑️</td>
+</tr>
+</tbody>
+</table>
+<p>More information at <a href="http://134.158.75.151:24000/api">http://134.158.75.151:24000/api</a>.</p>
+<h2 id="boosted-conesearch">Boosted conesearch</h2>
+<p>The way to perform a conesearch in Fink has changed in two ways:</p>
+<ul>
+<li>You can specify time boundaries in addition to spatial constraints</li>
+<li>Under the hood, we use a multiresolution search to speed-up the queries, allowing users to define search radius as big as 5 degrees!</li>
+</ul>
+<p>Here is the current performance of the service for querying a
+single object (1.3TB, about 40 million alerts):</p>
+<p><img src="https://user-images.githubusercontent.com/20426972/123047697-e493a500-d3fd-11eb-9f30-216dce9cbf43.png" alt="conesearch"></p>
+<p><em>circle marks with dashed lines are results for a full scan search
+(~2 years of data, 40 million alerts), while the upper triangles with
+dotted lines are results when restraining to 7 days search.
+The numbers close to markers show the number of objects returned by the conesearch.</em></p>
+<p>We reached several of orders of magnitude speed-up&hellip; one can see how bad the first implementation was :D For arcsecond (blue) or arcminute (orange) scale radius, restricting the dates or performing full scan search give similar performances. However, for degree scale radius, it is recommended to specify a time window to speed-up the search.</p>
+<p>If you are using the API, the new syntax is now:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(
+   <span style="color:#e6db74">&#39;http://134.158.75.151:24000/api/v1/explorer&#39;</span>,
+   json<span style="color:#f92672">=</span>{
+       <span style="color:#e6db74">&#39;ra&#39;</span>: ra,
+       <span style="color:#e6db74">&#39;dec&#39;</span>: dec,
+       <span style="color:#e6db74">&#39;radius&#39;</span>: radius,
+       <span style="color:#e6db74">&#39;startdate_conesearch&#39;</span>: startdate, <span style="color:#75715e"># optional, can be None or not specified</span>
+       <span style="color:#e6db74">&#39;window_days_conesearch&#39;</span>: window_days <span style="color:#75715e"># optional, can be None or not specified</span>
+
+   }
+)
+
+pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(r<span style="color:#f92672">.</span>content)
+</code></pre></div><h2 id="improved-layout">Improved layout</h2>
+<p>We constantly improve the layout to offer you the best experience when data mining Fink data. Among several things, the Home page has been replaced by the Search page: less click to the results! We also improved <em>views</em> (e.g. check out the supernovae one), and introduced new <em>views</em> (e.g. check out the Solar System one). We also did a lot of hugs to the navigation bar, for a better result.</p>
+<h2 id="support-for-mobile-platforms">Support for mobile platforms</h2>
+<p>I owe you apologies &ndash; I barely use my phone to go on Internet. But when we launched the Twitter account for Fink (<a href="https://twitter.com/finkbroker">@FinkBroker</a>), you probably almost died of heart attack by seeing the poorly designed Fink Science Portal&hellip; This is past now, and you can enjoy Fink on your smartphone! Checkout some beautiful objects:</p>
+<p><img src="/images/mobile0.png" width="30%" height="30%" /><img src="/images/mobile1.png" width="30%" height="30%" /> <img src="/images/mobile2.png" width="30%" height="30%" /></p>
+
+
+      </main>
+    </div>
+    
+    <script src="https://fink-broker.org/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+
+
+<script src="https://fink-broker.org/js/jquery-3.3.1.slim.min.js"></script>
+<script src="https://fink-broker.org/js/bootstrap.bundle.min.js"></script>
+
+    
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+  crossorigin="anonymous"
+/>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+  crossorigin="anonymous"
+></script>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+  crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"
+></script>
+
+
+    
+  
+
+  </body>
+</html>
