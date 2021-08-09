@@ -42,6 +42,8 @@ You can contact us at contact(at)fink-broker.org for more information.
 ## Collaborators
 
 - ALeRCE Team - http://alerce.science/
+- AMPEL Team - https://ampelproject.github.io/
+- Lasair Team - https://lasair.roe.ac.uk/
 
 ## Acknowledgement
 
