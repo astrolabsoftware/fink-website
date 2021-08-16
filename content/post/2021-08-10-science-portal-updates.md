@@ -6,12 +6,12 @@ author: fink
 tags: [Portal]
 ---
 
-Check out the version 0.9 of the Science Portal: Several new features: constellation names, preview of alert information, shiny new buttons, link to https://ztf.snad.space, and... a lot of bug fixes!
+Check out the version 0.9 of the Science Portal: Several new features: constellation names, preview of alert information, shiny new buttons, link to SNAD, and... a lot of bug fixes!
 <!--more-->
 
 ## Constellation
 
-We probably forgot, but the constellations were often used to navigate in the sky. Even though the objects making each constellation have nothing no real relationships, the projection they form on the 2D sky is a great tool to locate an object, and target it. This why amateur astronomers use them a lot.
+We probably forgot, but the constellations were often used to navigate in the sky. Even though the objects making each constellation have no real relationships between them, the projection they form on the 2D sky is a great tool to locate an object, and target it. This why amateur astronomers use them a lot.
 
 So in Fink, we decided to add the name of the constellation an alert is in. This name will appear in various place in the Science Portal. More information (including screenshots) [here](https://github.com/astrolabsoftware/fink-science-portal/pull/197).
 
@@ -25,7 +25,7 @@ Imagine you open the page for an alert, and you want to see an information conta
 
 ## Link to SNAD
 
-The new version of the Portal includes now a direct link to the SNAD-ZTF viewer, so that you can perform a crossmatch from a Fink alert directly, and inspect possible counterparts in the ZTF-DR4.
+The new version of the Portal includes now a direct link to the [SNAD-ZTF](https://ztf.snad.space) viewer, so that you can perform a crossmatch from a Fink alert directly, and inspect possible counterparts in the ZTF-DR4.
 
 ## Shiny new buttons
 
