@@ -25,7 +25,7 @@ menu:
     weight: 2
   - name: Science Portal
     pre: monitor
-    url: http://134.158.75.151:24000/
+    url: https://fink-portal.org
     weight: 3
   - name: Team
     pre: users
