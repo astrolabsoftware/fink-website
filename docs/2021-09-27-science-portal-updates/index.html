@@ -1,0 +1,291 @@
+<!doctype html>
+
+<html lang="en" class="h-100">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="Hugo 0.78.2" />
+  <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
+  
+  
+  <title>Fink Science Portal 0.10 | Fink broker</title>
+  <style>
+body {
+    background-color:  #f2f3f4; 
+    background-image: url(images/background.png);
+    background-size: contain;
+}
+.container {
+  max-width: 800px;
+}
+#nav a {
+  font-weight: bold;
+  color: inherit;
+}
+#nav a.nav-link-active {
+  background-color: #212529;
+  color: #fff;
+}
+#nav-border {
+  border-bottom: 1px solid #212529;
+}
+#main {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+#home-jumbotron {
+  background-color: inherit;
+}
+#footer .container {
+  padding: 1em 0;
+}
+#footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+.font-125 {
+  font-size: 125%;
+}
+.tag-btn {
+  margin-bottom: 0.3em;
+}
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit; 
+  background-color: transparent;
+  border-radius: 0;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+img,
+iframe,
+embed,
+video,
+audio {
+  max-width: 100%;
+}
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: initial;
+}
+</style>
+
+</head>
+  <body class="d-flex flex-column h-100">
+    <div id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/"><i data-feather="home"></i> Home</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/post/"><i data-feather="edit"></i> News</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="http://134.158.75.151:24000/"><i data-feather="monitor"></i> Science Portal</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/members/"><i data-feather="users"></i> Team</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/joining/"><i data-feather="user-plus"></i> Join us</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/about/"><i data-feather="info"></i> About</a>
+  
+  </nav>
+</div>
+
+    <div class="container">
+      <main id="main">
+        
+
+<h1>Fink Science Portal 0.10</h1>
+
+
+<i data-feather="calendar"></i> <time datetime="2021-09-27">Sep 27, 2021</time>
+
+  <br>
+  <i data-feather="tag"></i>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://fink-broker.org/tags/portal">Portal</a>
+  
+
+<br><br>
+<p>Check out the version 0.10 of the Science Portal! Several new features: DNS for the portal, crossmatch with LIGO/Virgo maps, query string, and as always&hellip; a lot of bug fixes!</p>
+<h2 id="dns-for-the-portal-httpsfink-portalorg">DNS for the portal: <a href="https://fink-portal.org">https://fink-portal.org</a></h2>
+<p>So far, you were connecting to the Science Portal at 134.158.75.151:24000. I&rsquo;ve heard that IP addresses are so 1980s, and http is so 1990s&hellip; So here we are, a brand new domain name, and a secured connection! We even add a reverse proxy! Christmas before Christmas &ndash; enjoy <a href="https://fink-portal.org">https://fink-portal.org</a> !</p>
+<h2 id="crossmatch-with-ligovirgo-maps">Crossmatch with LIGO/Virgo maps</h2>
+<p>Let&rsquo;s assume you want get all alerts falling inside a given LIGO/Virgo credible region sky map
+(retrieved from the GraceDB event page, or distributed via GCN). You would
+simply upload the sky map with a threshold, and Fink returns all alerts emitted
+within <code>[-1 day, +6 day]</code> from the GW event inside the chosen credible region.
+Concretely on <a href="https://gracedb.ligo.org/superevents/S200219ac/view/">S200219ac</a>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># LIGO/Virgo probability sky maps, as gzipped FITS (bayestar.fits.gz)</span>
+<span style="color:#75715e"># S200219ac on 2020-02-19T09:44:15.197173</span>
+fn <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;bayestar.fits.gz&#39;</span>
+
+<span style="color:#75715e"># GW credible region threshold to look for. Note that the values in the resulting</span>
+<span style="color:#75715e"># credible level map vary inversely with probability density: the most probable pixel is</span>
+<span style="color:#75715e"># assigned to the credible level 0.0, and the least likely pixel is assigned the credible level 1.0.</span>
+<span style="color:#75715e"># Area of the 20% Credible Region:</span>
+credible_level <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.2</span>
+
+<span style="color:#75715e"># Query Fink</span>
+data <span style="color:#f92672">=</span> open(fn, <span style="color:#e6db74">&#39;rb&#39;</span>)<span style="color:#f92672">.</span>read()
+r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(
+    <span style="color:#e6db74">&#39;http://134.158.75.151:24000/api/v1/bayestar&#39;</span>,
+    json<span style="color:#f92672">=</span>{
+        <span style="color:#e6db74">&#39;bayestar&#39;</span>: str(data),
+        <span style="color:#e6db74">&#39;credible_level&#39;</span>: credible_level,
+        <span style="color:#e6db74">&#39;output-format&#39;</span>: <span style="color:#e6db74">&#39;json&#39;</span>
+    }
+)
+
+pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(r<span style="color:#f92672">.</span>content)
+</code></pre></div><p>You will get a Pandas DataFrame as usual, with all alerts inside the region (within <code>[-1 day, +6 day]</code>).</p>
+<p><img src="https://user-images.githubusercontent.com/20426972/134175884-3b190fa9-8051-4a1d-8bf8-cc8b47252494.png" alt="gw"></p>
+<p>More information at <a href="https://fink-portal.org/api">https://fink-portal.org/api</a>. Note this feature is available only from the REST API (not available from the website).</p>
+<h2 id="query-string">Query String</h2>
+<p>You can now query Fink database directly from an URL. You have to specify two things:</p>
+<ul>
+<li>The type of query <code>query_type=</code>. Here, choose among <code>objectID</code>, <code>Conesearch</code>, <code>Date Search</code>, <code>Class Search</code>, <code>SSO Search</code>.</li>
+<li>The list of parameters to pass and their value <code>param=value</code>, separated by <code>&amp;</code>. The parameters are the same as the API (see <a href="https://fink-portal.org/api)">https://fink-portal.org/api)</a>.</li>
+</ul>
+<p>See below some concrete examples.</p>
+<h3 id="object-id-search">Object ID search</h3>
+<pre><code>https://fink-portal.org/?query_type=objectID&amp;objectID=ZTF21abfmbix
+</code></pre><h3 id="conesearch">Conesearch</h3>
+<pre><code>https://fink-portal.org/?query_type=Conesearch&amp;ra=193.822&amp;dec=2.89732&amp;radius=5&amp;startdate_conesearch=2021-07-01 05:59:36&amp;window_days_conesearch=1
+</code></pre><p>Note that <code>startdate_conesearch</code> and <code>window_days_conesearch</code> are optional.</p>
+<h3 id="date-search">Date search</h3>
+<pre><code>https://fink-portal.org/?query_type=Date Search&amp;startdate=2020-07-01%2005:59:36&amp;window=1
+</code></pre><h3 id="class-search">Class search</h3>
+<pre><code>https://fink-portal.org/?query_type=Class Search&amp;class=Early SN Ia candidate
+</code></pre><h3 id="solar-system-object-search">Solar system object search</h3>
+<pre><code>https://fink-portal.org/?query_type=SSO Search&amp;n_or_d=4209
+</code></pre><h2 id="full-changelog">Full changelog</h2>
+<p><a href="https://github.com/astrolabsoftware/fink-science-portal/milestone/11?closed=1">https://github.com/astrolabsoftware/fink-science-portal/milestone/11?closed=1</a></p>
+
+
+      </main>
+    </div>
+    
+    <script src="https://fink-broker.org/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+
+
+<script src="https://fink-broker.org/js/jquery-3.3.1.slim.min.js"></script>
+<script src="https://fink-broker.org/js/bootstrap.bundle.min.js"></script>
+
+    
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+  crossorigin="anonymous"
+/>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+  crossorigin="anonymous"
+></script>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+  crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"
+></script>
+
+
+    
+  
+
+  </body>
+</html>
