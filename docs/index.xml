@@ -17,16 +17,6 @@
     </item>
     
     <item>
-      <title>Tracklets &amp; Fink Science Portal 0.10</title>
-      <link>https://fink-broker.org/2021-08-20-tracklets/</link>
-      <pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://fink-broker.org/2021-08-20-tracklets/</guid>
-      <description>&lt;h2 id=&#34;a-mysterious-object&#34;&gt;A mysterious object&lt;/h2&gt;
-&lt;p&gt;It all started with this: on 2021-02-08 12:24:04, several alerts have been emitted by ZTF and processed by Fink. Among all processed alerts, there is a series of alerts that seem spatially connected (&lt;code&gt;227.46 &amp;lt; ra &amp;lt; 227.64&lt;/code&gt; and &lt;code&gt;45.2 &amp;lt; dec &amp;lt; 46.3&lt;/code&gt;), with the following properties:&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Fink Science Portal 0.9</title>
       <link>https://fink-broker.org/2021-08-10-science-portal-updates/</link>
       <pubDate>Tue, 10 Aug 2021 00:00:00 +0000</pubDate>
