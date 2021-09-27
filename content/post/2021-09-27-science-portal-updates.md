@@ -9,7 +9,7 @@ tags: [Portal]
 Check out the version 0.10 of the Science Portal! Several new features: DNS for the portal, crossmatch with LIGO/Virgo maps, query string, and as always... a lot of bug fixes!
 <!--more-->
 
-## DNS for the portal: https://fink-portal.org
+## Domain name for the portal: https://fink-portal.org
 
 So far, you were connecting to the Science Portal at 134.158.75.151:24000. I've heard that IP addresses are so 1980s, and http is so 1990s... So here we are, a brand new domain name, and a secured connection! We even add a reverse proxy! Christmas before Christmas -- enjoy https://fink-portal.org !
 
