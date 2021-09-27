@@ -37,7 +37,7 @@ credible_level = 0.2
 # Query Fink
 data = open(fn, 'rb').read()
 r = requests.post(
-    'http://134.158.75.151:24000/api/v1/bayestar',
+    'https://fink-portal.org/api/v1/bayestar',
     json={
         'bayestar': str(data),
         'credible_level': credible_level,

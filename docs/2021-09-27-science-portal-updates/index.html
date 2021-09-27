@@ -211,7 +211,7 @@ credible_level <span style="color:#f92672">=</span> <span style="color:#ae81ff">
 <span style="color:#75715e"># Query Fink</span>
 data <span style="color:#f92672">=</span> open(fn, <span style="color:#e6db74">&#39;rb&#39;</span>)<span style="color:#f92672">.</span>read()
 r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(
-    <span style="color:#e6db74">&#39;http://134.158.75.151:24000/api/v1/bayestar&#39;</span>,
+    <span style="color:#e6db74">&#39;https://fink-portal.org/api/v1/bayestar&#39;</span>,
     json<span style="color:#f92672">=</span>{
         <span style="color:#e6db74">&#39;bayestar&#39;</span>: str(data),
         <span style="color:#e6db74">&#39;credible_level&#39;</span>: credible_level,
