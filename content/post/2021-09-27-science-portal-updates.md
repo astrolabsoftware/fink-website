@@ -13,6 +13,8 @@ Check out the version 0.10 of the Science Portal! Several new features: DNS for 
 
 So far, you were connecting to the Science Portal at 134.158.75.151:24000. I've heard that IP addresses are so 1980s, and http is so 1990s... So here we are, a brand new domain name, and a secured connection! We even add a reverse proxy! Christmas before Christmas -- enjoy https://fink-portal.org !
 
+_Note that the old link is still valid to give you the time to transition._
+
 ## Crossmatch with LIGO/Virgo maps
 
 Let's assume you want get all alerts falling inside a given LIGO/Virgo credible region sky map
