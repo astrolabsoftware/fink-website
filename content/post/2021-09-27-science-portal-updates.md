@@ -59,7 +59,7 @@ More information at https://fink-portal.org/api. Note this feature is available 
 You can now query Fink database directly from an URL. You have to specify two things:
 
 - The type of query `query_type=`. Here, choose among `objectID`, `Conesearch`, `Date Search`, `Class Search`, `SSO Search`.
-- The list of parameters to pass and their value `param=value`, separated by `&`. The parameters are the same as the API (see https://fink-portal.org/api).
+- The list of parameters to pass and their value `param=value`, separated by `&`. The parameters are the same as the API (see https://fink-portal.org/api ).
 
 See below some concrete examples.
 
