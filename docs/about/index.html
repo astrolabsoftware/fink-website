@@ -178,6 +178,9 @@ audio {
         
 
 <h1>About</h1>
+<p>Fink is a community driven project, open to anyone, that processes time-domains alert streams and connects them with follow-up facilities and science teams. Fink broker has been selected as a community broker to process the full stream of transient alerts from the <a href="https://lsst.org/">Vera C. Rubin Observatory</a>. Since 2020, we are processing the alert stream from the <a href="https://www.ztf.caltech.edu/">Zwicky Transient Facility</a> (ZTF).</p>
+<p>Fink&rsquo;s processed data stream from ZTF can be accessed through our <a href="https://fink-portal.org">science portal</a> and our <a href="https://fink-portal.org/api">API</a> (with <a href="https://github.com/astrolabsoftware/fink-notebook-template">tutorials</a>). This data is aggregated at the end of every observing night by ZTF. For automatic filtered data streams within minutes of observations, please contact us at <a href="mailto:contact@fink-broker.org">contact@fink-broker.org</a> An overview of Fink broker architecture and first science results can be found in our white paper published in <a href="https://academic.oup.com/mnras/article/501/3/3272/5992334">MNRAS</a> <a href="https://arxiv.org/abs/2009.10185">arxiv</a>.</p>
+<h2 id="about-finks-infrastructure">About Fink&rsquo;s infrastructure</h2>
 <p>Fink is a broker infrastructure enabling a wide range of applications and services to connect to large streams of alerts issued from telescopes all over the world. Fink core is based on the <a href="http://spark.apache.org/">Apache Spark</a> framework, and more specifically it uses the <a href="https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html">Structured Streaming processing engine</a>. The language chosen for the API is Python, which is widely used in the astronomy community, has a large scientific ecosystem and easily connects with existing tools.</p>
 <p>Fink&rsquo;s goal is twofold: providing a robust infrastructure and state-of-the-art streaming services to LSST scientists, and enabling user-defined science cases in a big data context. Fink decouples resources needed for listening to the stream (online, critical), and resources used for services: scalable, robust, and modular!</p>
 <p>We want Fink to be able to <em>filter, aggregate, enrich, consume</em> incoming data streams or otherwise <em>transform</em> into new streams for further consumption or follow-up processing. Following LSST <a href="https://github.com/lsst/LDM-612">LDM-612</a>, Fink&rsquo;s ultimate objectives are (no specific order):</p>
@@ -194,7 +197,8 @@ audio {
 <li>collecting classification and other information gathered by the scientific community</li>
 </ul>
 <h2 id="getting-started">Getting started</h2>
-<p>Learning Fink is easy whether you are a developer or a scientist:</p>
+<p>If you want to join Fink please check our <a href="https://fink-broker.org/joining/">Joining page</a></p>
+<p>Learning Fink infrastructure is easy whether you are a developer or a scientist:</p>
 <ul>
 <li>Learn about the <a href="https://fink-broker.readthedocs.io/en/latest/broker/introduction/">broker technology</a>, the <a href="https://fink-broker.readthedocs.io/en/latest/science/introduction/">science</a> we do, and how to <a href="https://fink-broker.readthedocs.io/en/latest/fink-client/">receive</a> alerts.</li>
 <li>Learn how to use the broker or how to contribute following the different <a href="https://fink-broker.readthedocs.io/en/latest/tutorials/introduction/">tutorials</a>.</li>
