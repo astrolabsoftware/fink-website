@@ -4,6 +4,11 @@ permalink: /joining.html
 tags: [Fink, Members]
 ---
 
+## How to join Fink?
+You can join the Fink collaboration by filling this [form](https://forms.gle/CmvH8vsyyv4AUTpy8). You will be then subscribed to our mailing list and receive relevant news and information about our general meetings.
+
+You can also submit a Fink community project if you have already something in mind. You don't need a community project to join Fink.
+
 ## What are Fink community projects?
 
 A Fink community project is a self-governed group of one or more people, who agrees on producing deliverables which can add value to the Fink broker. Examples of deliverables are (non-exhaustive):

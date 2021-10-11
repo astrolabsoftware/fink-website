@@ -4,6 +4,13 @@ permalink: /about.html
 tags: [About, Archive]
 ---
 
+Fink is a community driven project, open to anyone, that processes time-domains alert streams and connects them with follow-up facilities and science teams. Fink broker has been selected as a community broker to process the full stream of transient alerts from the [Vera C. Rubin Observatory](https://lsst.org/). Since 2020, we are processing the alert stream from the [Zwicky Transient Facility](https://www.ztf.caltech.edu/) (ZTF).
+
+Fink's processed data stream from ZTF can be accessed through our [science portal](https://fink-portal.org) and our [API](https://fink-portal.org/api) (with [tutorials](https://github.com/astrolabsoftware/fink-notebook-template)). This data is aggregated at the end of every observing night by ZTF. For automatic filtered data streams within minutes of observations, please contact us at contact@fink-broker.org An overview of Fink broker architecture and first science results can be found in our white paper published in [MNRAS](https://academic.oup.com/mnras/article/501/3/3272/5992334) [arxiv](https://arxiv.org/abs/2009.10185).
+
+
+## About Fink's infrastructure
+
 Fink is a broker infrastructure enabling a wide range of applications and services to connect to large streams of alerts issued from telescopes all over the world. Fink core is based on the [Apache Spark](http://spark.apache.org/) framework, and more specifically it uses the [Structured Streaming processing engine](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html). The language chosen for the API is Python, which is widely used in the astronomy community, has a large scientific ecosystem and easily connects with existing tools.
 
 Fink's goal is twofold: providing a robust infrastructure and state-of-the-art streaming services to LSST scientists, and enabling user-defined science cases in a big data context. Fink decouples resources needed for listening to the stream (online, critical), and resources used for services: scalable, robust, and modular!
@@ -23,7 +30,9 @@ We want Fink to be able to _filter, aggregate, enrich, consume_ incoming data st
 
 ## Getting started
 
-Learning Fink is easy whether you are a developer or a scientist:
+If you want to join Fink please check our [Joining page](https://fink-broker.org/joining/)
+
+Learning Fink infrastructure is easy whether you are a developer or a scientist:
 
 * Learn about the [broker technology](https://fink-broker.readthedocs.io/en/latest/broker/introduction/), the [science](https://fink-broker.readthedocs.io/en/latest/science/introduction/) we do, and how to [receive](https://fink-broker.readthedocs.io/en/latest/fink-client/) alerts.
 * Learn how to use the broker or how to contribute following the different [tutorials](https://fink-broker.readthedocs.io/en/latest/tutorials/introduction/).
