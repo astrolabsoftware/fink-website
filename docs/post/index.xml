@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fink data statistics</title>
+      <link>https://fink-broker.org/2021-12-01-statistics/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2021-12-01-statistics/</guid>
+      <description>Check out the new page about Fink processed data statistics on the Science Portal: heatmap, daily statistics, timelines, and more! These statistics are updated once a day, after the ZTF observing night.
+The header tells you about the last night we had data, the number of processed alerts for this night, the total number of processed alerts since 2019/11/01, as well as how many got a label by Fink.
+Heatmap The Heatmap tab shows the number of alerts processed by Fink for each night since the beginning of our operations (2019/11/01).</description>
+    </item>
+    
     <item>
       <title>Fink Science Portal 0.10</title>
       <link>https://fink-broker.org/2021-09-27-science-portal-updates/</link>

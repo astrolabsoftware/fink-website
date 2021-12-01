@@ -1,0 +1,291 @@
+<!doctype html>
+
+<html lang="en" class="h-100">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="Hugo 0.78.2" />
+  <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
+  
+  
+  <title>Fink data statistics | Fink broker</title>
+  <style>
+body {
+    background-color:  #f2f3f4; 
+    background-image: url(images/background.png);
+    background-size: contain;
+}
+.container {
+  max-width: 800px;
+}
+#nav a {
+  font-weight: bold;
+  color: inherit;
+}
+#nav a.nav-link-active {
+  background-color: #212529;
+  color: #fff;
+}
+#nav-border {
+  border-bottom: 1px solid #212529;
+}
+#main {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+#home-jumbotron {
+  background-color: inherit;
+}
+#footer .container {
+  padding: 1em 0;
+}
+#footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+.font-125 {
+  font-size: 125%;
+}
+.tag-btn {
+  margin-bottom: 0.3em;
+}
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit; 
+  background-color: transparent;
+  border-radius: 0;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+img,
+iframe,
+embed,
+video,
+audio {
+  max-width: 100%;
+}
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: initial;
+}
+</style>
+
+</head>
+  <body class="d-flex flex-column h-100">
+    <div id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/"><i data-feather="home"></i> Home</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/post/"><i data-feather="edit"></i> News</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="https://fink-portal.org"><i data-feather="monitor"></i> Science Portal</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/members/"><i data-feather="users"></i> Team</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/joining/"><i data-feather="user-plus"></i> Join us</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/about/"><i data-feather="info"></i> About</a>
+  
+  </nav>
+</div>
+
+    <div class="container">
+      <main id="main">
+        
+
+<h1>Fink data statistics</h1>
+
+
+<i data-feather="calendar"></i> <time datetime="2021-12-01">Dec 1, 2021</time>
+
+  <br>
+  <i data-feather="tag"></i>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://fink-broker.org/tags/portal">Portal</a>
+  
+
+<br><br>
+<p>Check out the new <a href="https://fink-portal.org/stats">page</a> about Fink processed data statistics on the Science Portal: heatmap, daily statistics, timelines, and more! These statistics are updated once a day, after the ZTF observing night.</p>
+<p><img src="/images/0-stat.png" width="100%" height="100%" style="display: block; margin: auto;" />
+<em>The header tells you about the last night we had data, the number of processed alerts for this night, the total number of processed alerts since 2019/11/01, as well as how many got a label by Fink.</em></p>
+<h2 id="heatmap">Heatmap</h2>
+<p>The <code>Heatmap</code> tab shows the number of alerts processed by Fink for each night
+since the beginning of our operations (2019/11/01). The graph is color coded,
+dark cells represent a low number of processed alerts, while bright cells represent
+a high number of processed alerts.</p>
+<p><img src="/images/1-stat.png" width="100%" height="100%" style="display: block; margin: auto;" />
+<em>Heatmap à la GitHub!</em></p>
+<h2 id="daily-statistics">Daily statistics</h2>
+<p>The <code>Daily statistics</code> tab shows various statistics for a given observing night.</p>
+<p>The first row shows histograms for various indicators:</p>
+<p><img src="/images/2-stat.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+<ul>
+<li>Quality cuts: difference between number of received alerts versus number of processed alerts. The difference is simmply due to the quality cuts in Fink selecting only the best quality alerts.</li>
+<li>Classification: Number of alerts that receive a tag by Fink, either from the Machine Learning classifiers, or from a crossmatch with catalogs. The rest is &ldquo;unclassified&rdquo;.</li>
+<li>External catalogs: Number of alerts that have a counterpart either in the MPC catalog or in the SIMBAD database.</li>
+<li>Selected candidates: Number of alerts for a subset of classes: early type Ia supernova (SN Ia), supernovae or core-collapse (SNe), Kilonova, or Solar System candidates.</li>
+</ul>
+<p>By default, we show the last observing night. You can change the night by using the dropdown button:</p>
+<p><img src="/images/2b-stat.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+<p>The second row shows the number of alerts for all labels in Fink (from classifiers or crossmatch):</p>
+<p><img src="/images/3-stat.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+<p>Since there are many labels available, do not hesitate to zoom in to see more details!</p>
+<p><img src="/images/3b-stat.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+<h2 id="timelines">Timelines</h2>
+<p>The <code>Timelines</code> tab shows the evolution of several parameters over time. By default, we show the number of
+processed alerts per night, since the beginning of operations:</p>
+<p><img src="/images/4-stat.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+<p>You can change the parameter to show by using the dropdown button:</p>
+<p><img src="/images/4c-stat.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+<p>Note that you can also show the cumulative number of alerts over time by switching the button on the top right :-)</p>
+<p><img src="/images/4b-stat.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+<p>More information about the schema in the <a href="https://fink-portal.org/stats">Help tab</a>.</p>
+<h2 id="rest-api">REST API</h2>
+<p>If you want to explore more statistics, or create your own dashboard based on Fink data,
+you can do all of these yourself using the REST API. Here is an example using Python:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> requests
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+
+<span style="color:#75715e"># get stats for all the year 2021</span>
+r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(
+  <span style="color:#e6db74">&#39;https://fink-portal.org/api/v1/statistics&#39;</span>,
+  json<span style="color:#f92672">=</span>{{
+    <span style="color:#e6db74">&#39;date&#39;</span>: <span style="color:#e6db74">&#39;2021&#39;</span>,
+    <span style="color:#e6db74">&#39;output-format&#39;</span>: <span style="color:#e6db74">&#39;json&#39;</span>
+  }}
+)
+
+<span style="color:#75715e"># Format output in a DataFrame</span>
+pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(r<span style="color:#f92672">.</span>content)
+</code></pre></div><p>Note <code>date</code> can be either a given night (YYYYMMDD), month (YYYYMM), year (YYYY), or eveything (empty string). More information about the schema in the <a href="https://fink-portal.org/stats">Help tab</a>.</p>
+
+
+
+      </main>
+    </div>
+    
+    <script src="https://fink-broker.org/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+
+
+<script src="https://fink-broker.org/js/jquery-3.3.1.slim.min.js"></script>
+<script src="https://fink-broker.org/js/bootstrap.bundle.min.js"></script>
+
+    
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+  crossorigin="anonymous"
+/>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+  crossorigin="anonymous"
+></script>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+  crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"
+></script>
+
+
+    
+  
+
+  </body>
+</html>

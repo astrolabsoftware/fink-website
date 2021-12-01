@@ -8,7 +8,7 @@ tags: [Fink, Members]
 ## Management Team
 
 - [Emille E. O. Ishida](https://www.emilleishida.com/) (PI) - CNRS/LPC Clermont, IT department
-- [Anais Möller](https://www.mso.anu.edu.au/~anais/index.html) (PI) - Swinburne University, Centre for Astrophysics and Supercomputing
+- [Anais Möller](http://anaismoller.github.io) (PI) - Swinburne University, Centre for Astrophysics and Supercomputing
 - [Julien Peloton](https://github.com/JulienPeloton) (PI) - CNRS/IJCLab, IT department
 
 You can contact us at contact(at)fink-broker.org for more information.
