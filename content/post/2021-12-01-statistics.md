@@ -76,7 +76,7 @@ _Evolution of the proportion of alerts classified as Early SN Ia as a function o
 
 It is rather difficult to display plots and use them on a mobile device. Therefore the mobile version of the statistics page is light, and it contains only the basic statistics from the header:
 
-<img src="/images/6-stat.png" width="100%" height="100%" style="display: block; margin: auto;" />
+<img src="/images/6-stat.png" width="50%" height="50%" style="display: block; margin: auto;" />
 
 ## REST API
 
