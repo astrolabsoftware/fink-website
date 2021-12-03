@@ -72,6 +72,12 @@ Finally, you can display the percentage of each class (with respect to the numbe
 <img src="/images/4d-stat.png" width="100%" height="100%" style="display: block; margin: auto;" />
 _Evolution of the proportion of alerts classified as Early SN Ia as a function of time._
 
+## Mobile version
+
+It is rather difficult to display plots and use them on a mobile device. Therefore the mobile version of the statistics page is light, and it contains only the basic statistics from the header:
+
+<img src="/images/6-stat.png" width="100%" height="100%" style="display: block; margin: auto;" />
+
 ## REST API
 
 If you want to explore more statistics, or create your own dashboard based on Fink data,
