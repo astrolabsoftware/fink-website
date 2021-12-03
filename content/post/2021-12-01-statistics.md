@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2021-12-01
+date: 2021-12-02
 title: Fink data statistics
 author: fink
 tags: [Portal]
@@ -34,6 +34,10 @@ The first row shows histograms for various indicators:
 - External catalogs: Number of alerts that have a counterpart either in the MPC catalog or in the SIMBAD database.
 - Selected candidates: Number of alerts for a subset of classes: early type Ia supernova (SN Ia), supernovae or core-collapse (SNe), Kilonova, or Solar System candidates.
 
+You get help about the content by hovering the [?]:
+
+<img src="/images/2c-stat.png" width="50%" height="50%" style="display: block; margin: auto;" />
+
 By default, we show the last observing night. You can change the night by using the dropdown button:
 
 <img src="/images/2b-stat.png" width="100%" height="100%" style="display: block; margin: auto;" />
@@ -62,6 +66,11 @@ Note that you can also show the cumulative number of alerts over time by switchi
 <img src="/images/4b-stat.png" width="100%" height="100%" style="display: block; margin: auto;" />
 
 More information about the schema in the [Help tab](https://fink-portal.org/stats).
+
+Finally, you can display the percentage of each class (with respect to the number of processed alerts) by switching the button `Percentage`. By combining both `Cumulative` and `Percentage`, you will see the evolution of the proportion of each class over time:
+
+<img src="/images/4d-stat.png" width="100%" height="100%" style="display: block; margin: auto;" />
+_Evolution of the proportion of alerts classified as Early SN Ia as a function of time._
 
 ## REST API
 
