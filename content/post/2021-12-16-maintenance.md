@@ -8,13 +8,17 @@ tags: [maintenance]
 
 ## Power outage strikes back
 
-This year, we had regular power outages at the VirtualData center, mainly due to a weak and old electrical network at the University. The IT teams at IJCLab regularly restarted all machines and services in a short amount of time after hard cuts (included evenings and week-ends!), and we designed more and more robust and automatic systems to keep the whole infrastructure healthy and operative after going completely crazy. But our systems are _a priori_ not designed to endure repeated (and random) blackouts, and the last power outage was fatal to the storage system.
+This year, we had regular power outages at the VirtualData center, mainly due to a weak and old electrical network at the University. The IT teams at IJCLab regularly restarted all machines and services in a short amount of time after hard cuts (included evenings and week-ends!), and we designed more and more robust and automatic systems to keep the whole infrastructure healthy and operative after going completely crazy. But our systems are _a priori_ not designed to endure repeated (and random) blackouts, and the last problem (14/12) was fatal to the storage system part.
 
-Long story short, a large part of Fink data was corrupted in a way that it is difficult to get services back online, and we had no backup for this. We found problems that started in the background after the previous power outage (05/11), and were amplified with the last outage.
+Long story short, a large part of Fink data cannot be recovered, making difficult to get some services back online, and we had no backup for this. It is yet unclear what happened exactly, and a post-mortem analysis is ongoing.
 
-Only the database part is affected (serving the Science Portal), and the time-critical part (that processes nightly data) will continue to run and process new data as it comes during this maintenance. I cannot predict when services will get back online with full capabilities, and you will be notified of any updates.
+Only the database part is affected (serving the Science Portal), and the time-critical part (that processes nightly data) will continue to run and process new data as it comes during this maintenance. 
 
-We will take the opportunity of this maintenance to refine the roadmap for the infrastructure in the light of the recent events, consolidate the weak points, and deploy new services that were on tests. We will get back stronger than ever!
+We will take the opportunity of this maintenance to learn lessons from the post-mortem analysis, refine the roadmap for the infrastructure, consolidate the weak points, and deploy new services that were on tests. We will get back stronger than ever!
+
+We cannot predict when services will get back online with full capabilities. Fortunately raw data is accessible, and all previous Fink data can be reconstructed. You will be notified of any updates.
+
+We apologize for the inconvience.
 
 Julien
 
