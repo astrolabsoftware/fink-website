@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>infrastructure on Fink broker</title>
+    <link>https://fink-broker.org/tags/infrastructure/</link>
+    <description>Recent content in infrastructure on Fink broker</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/tags/infrastructure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Infrastructures in Fink</title>
+      <link>https://fink-broker.org/2021-12-17-infrastructure/</link>
+      <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2021-12-17-infrastructure/</guid>
+      <description>Fink infrastructure Let&amp;rsquo;s take the opportunity of the bad turn of recent events to talk and learn a bit more on the infrastructure in place for Fink.
+Fink is deployed on the cloud, that is each box in the Figure is an independent set of machines where specific software are running and executing tasks.
+Nightly alert processing The central part of the processing in Fink is the Apache Spark cluster (see fink-broker).</description>
+    </item>
+    
+  </channel>
+</rss>
