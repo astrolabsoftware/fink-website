@@ -8,7 +8,7 @@ tags: [infrastructure]
 
 ## Fink infrastructure
 
-Let's take the opportunity of [the bad turn of recent events](https://fink-broker.org/2021-12-16-maintenance) to talk and learn a bit more on the infrastructure in place for Fink. 
+Let's take the opportunity of the bad turn of recent events to talk and learn a bit more on the infrastructure in place for Fink. 
 
 <img src="/images/architecture.png" width="100%" height="100%" style="display: block; margin: auto;" />
 _Fink is deployed on the cloud, that is each box in the Figure is an independent set of machines where specific software are running and executing tasks._
