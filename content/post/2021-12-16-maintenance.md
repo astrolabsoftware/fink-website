@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2021-12-16
+date: 2023-12-16
 title: Fink maintenance
 author: julien
 tags: [maintenance]
