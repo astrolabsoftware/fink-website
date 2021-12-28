@@ -19,15 +19,6 @@ Nightly alert processing The central part of the processing in Fink is the Apach
     </item>
     
     <item>
-      <title>Fink maintenance</title>
-      <link>https://fink-broker.org/2021-12-16-maintenance/</link>
-      <pubDate>Thu, 16 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://fink-broker.org/2021-12-16-maintenance/</guid>
-      <description>Power outage strikes back This year, we had regular power outages at the VirtualData center, mainly due to a weak and old electrical network at the University. The IT teams at IJCLab regularly restarted all machines and services in a short amount of time after hard cuts (included evenings and week-ends!), and we designed more and more robust and automatic systems to keep the whole infrastructure healthy and operative after going completely crazy.</description>
-    </item>
-    
-    <item>
       <title>Fink data statistics</title>
       <link>https://fink-broker.org/2021-12-01-statistics/</link>
       <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
