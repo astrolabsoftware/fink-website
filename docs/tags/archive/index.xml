@@ -13,7 +13,7 @@
       
       <guid>https://fink-broker.org/about/</guid>
       <description>Fink is a community driven project, open to anyone, that processes time-domains alert streams and connects them with follow-up facilities and science teams. Fink broker has been selected as a community broker to process the full stream of transient alerts from the Vera C. Rubin Observatory. Since 2020, we are processing the alert stream from the Zwicky Transient Facility (ZTF).
-Fink&amp;rsquo;s processed data stream from ZTF can be accessed through our science portal and our API (with tutorials).</description>
+Fink&#39;s processed data stream from ZTF can be accessed through our science portal and our API (with tutorials).</description>
     </item>
     
   </channel>

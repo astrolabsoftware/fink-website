@@ -189,49 +189,81 @@ audio {
 
 <br><br>
 <p>Check out the new <a href="https://fink-portal.org/stats">page</a> about Fink processed data statistics on the Science Portal: heatmap, daily statistics, timelines, and more! These statistics are updated once a day, after the ZTF observing night.</p>
+
 <p><img src="/images/0-stat.png" width="100%" height="100%" style="display: block; margin: auto;" />
 <em>The header tells you about the last night we had data, the number of processed alerts for this night, the total number of processed alerts since 2019/11/01, as well as how many got a label by Fink.</em></p>
+
 <h2 id="heatmap">Heatmap</h2>
+
 <p>The <code>Heatmap</code> tab shows the number of alerts processed by Fink for each night
 since the beginning of our operations (2019/11/01). The graph is color coded,
 dark cells represent a low number of processed alerts, while bright cells represent
 a high number of processed alerts.</p>
+
 <p><img src="/images/1-stat.png" width="100%" height="100%" style="display: block; margin: auto;" />
 <em>Heatmap à la GitHub!</em></p>
+
 <h2 id="daily-statistics">Daily statistics</h2>
+
 <p>The <code>Daily statistics</code> tab shows various statistics for a given observing night.</p>
+
 <p>The first row shows histograms for various indicators:</p>
+
 <p><img src="/images/2-stat.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
 <ul>
 <li>Quality cuts: difference between number of received alerts versus number of processed alerts. The difference is simmply due to the quality cuts in Fink selecting only the best quality alerts.</li>
-<li>Classification: Number of alerts that receive a tag by Fink, either from the Machine Learning classifiers, or from a crossmatch with catalogs. The rest is &ldquo;unclassified&rdquo;.</li>
+<li>Classification: Number of alerts that receive a tag by Fink, either from the Machine Learning classifiers, or from a crossmatch with catalogs. The rest is &quot;unclassified&quot;.</li>
 <li>External catalogs: Number of alerts that have a counterpart either in the MPC catalog or in the SIMBAD database.</li>
 <li>Selected candidates: Number of alerts for a subset of classes: early type Ia supernova (SN Ia), supernovae or core-collapse (SNe), Kilonova, or Solar System candidates.</li>
 </ul>
+
 <p>You get help about the content by hovering the [?]:</p>
+
 <p><img src="/images/2c-stat.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+
 <p>By default, we show the last observing night. You can change the night by using the dropdown button:</p>
+
 <p><img src="/images/2b-stat.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
 <p>The second row shows the number of alerts for all labels in Fink (from classifiers or crossmatch):</p>
+
 <p><img src="/images/3-stat.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
 <p>Since there are many labels available, do not hesitate to zoom in to see more details!</p>
+
 <p><img src="/images/3b-stat.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
 <h2 id="timelines">Timelines</h2>
+
 <p>The <code>Timelines</code> tab shows the evolution of several parameters over time. By default, we show the number of
 processed alerts per night, since the beginning of operations:</p>
+
 <p><img src="/images/4-stat.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
 <p>You can change the parameter to show by using the dropdown button:</p>
+
 <p><img src="/images/4c-stat.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
 <p>Note that you can also show the cumulative number of alerts over time by switching the button on the top right :-)</p>
+
 <p><img src="/images/4b-stat.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+
 <p>More information about the schema in the <a href="https://fink-portal.org/stats">Help tab</a>.</p>
+
 <p>Finally, you can display the percentage of each class (with respect to the number of processed alerts) by switching the button <code>Percentage</code>. By combining both <code>Cumulative</code> and <code>Percentage</code>, you will see the evolution of the proportion of each class over time:</p>
+
 <p><img src="/images/4d-stat.png" width="100%" height="100%" style="display: block; margin: auto;" />
 <em>Evolution of the proportion of alerts classified as Early SN Ia as a function of time.</em></p>
+
 <h2 id="mobile-version">Mobile version</h2>
+
 <p>It is rather difficult to display plots and use them on a mobile device. Therefore the mobile version of the statistics page is light, and it contains only the basic statistics from the header:</p>
+
 <p><img src="/images/6-stat.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+
 <h2 id="rest-api">REST API</h2>
+
 <p>If you want to explore more statistics, or create your own dashboard based on Fink data,
 you can do all of these yourself using the REST API. Here is an example using Python:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> requests
@@ -247,8 +279,8 @@ r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</sp
 )
 
 <span style="color:#75715e"># Format output in a DataFrame</span>
-pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(r<span style="color:#f92672">.</span>content)
-</code></pre></div><p>Note <code>date</code> can be either a given night (YYYYMMDD), month (YYYYMM), year (YYYY), or eveything (empty string). More information about the schema in the <a href="https://fink-portal.org/stats">Help tab</a>.</p>
+pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(r<span style="color:#f92672">.</span>content)</code></pre></div>
+<p>Note <code>date</code> can be either a given night (YYYYMMDD), month (YYYYMM), year (YYYY), or eveything (empty string). More information about the schema in the <a href="https://fink-portal.org/stats">Help tab</a>.</p>
 
 
 

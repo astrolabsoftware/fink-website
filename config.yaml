@@ -2,7 +2,7 @@ baseURL: https://fink-broker.org
 languageCode: en-us
 title: Fink broker
 theme: vanilla-bootstrap-hugo-theme
-favicon: /images/Fink_SecondaryLogo_WEB.png 
+favicon: /images/Fink_SecondaryLogo_WEB.png
 publishDir: docs
 
 taxonomies:
@@ -32,7 +32,7 @@ menu:
     url: /members/
     weight: 4
   - name: Join us
-    pre: user-plus 
+    pre: user-plus
     url: /joining/
     weight: 5
   - name: About
@@ -45,13 +45,13 @@ params:
   showActiveNav: true
   containerMaxWidth: 800px
   dateFormat: Jan 2, 2006
-  homeText: 
-  footerText:  
+  homeText:
+  footerText:
   hideFooter: true
   katex: true
 
 markup:
-  defaultMarkdownHandler: goldmark
+  defaultMarkdownHandler: mmark
   goldmark:
     extensions:
       definitionList: true
@@ -80,4 +80,3 @@ markup:
   tableOfContents:
     endLevel: 6
     startLevel: 2
-

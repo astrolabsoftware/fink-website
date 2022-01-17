@@ -188,12 +188,17 @@ audio {
   
 
 <br><br>
-<p>Check out the version 0.10 of the Science Portal! Several new features: DNS for the portal, crossmatch with LIGO/Virgo maps, query string, and as always&hellip; a lot of bug fixes!</p>
+<p>Check out the version 0.10 of the Science Portal! Several new features: DNS for the portal, crossmatch with LIGO/Virgo maps, query string, and as always... a lot of bug fixes!</p>
+
 <h2 id="domain-name-for-the-portal">Domain name for the portal</h2>
-<p>So far, you were connecting to the Science Portal at 134.158.75.151:24000. I&rsquo;ve heard that IP addresses are so 1980s, and http is so 1990s&hellip; So here we are, a brand new domain name, and a secured connection! We even add a reverse proxy! Christmas before Christmas &ndash; enjoy <a href="https://fink-portal.org">https://fink-portal.org</a> !</p>
+
+<p>So far, you were connecting to the Science Portal at 134.158.75.151:24000. I've heard that IP addresses are so 1980s, and http is so 1990s... So here we are, a brand new domain name, and a secured connection! We even add a reverse proxy! Christmas before Christmas -- enjoy <a href="https://fink-portal.org">https://fink-portal.org</a> !</p>
+
 <p><em>Note that the old link is still valid to give you the time to transition.</em></p>
+
 <h2 id="crossmatch-with-ligovirgo-maps">Crossmatch with LIGO/Virgo maps</h2>
-<p>Let&rsquo;s assume you want get all alerts falling inside a given LIGO/Virgo credible region sky map
+
+<p>Let's assume you want get all alerts falling inside a given LIGO/Virgo credible region sky map
 (retrieved from the GraceDB event page, or distributed via GCN). You would
 simply upload the sky map with a threshold, and Fink returns all alerts emitted
 within <code>[-1 day, +6 day]</code> from the GW event inside the chosen credible region.
@@ -219,29 +224,38 @@ r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</sp
     }
 )
 
-pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(r<span style="color:#f92672">.</span>content)
-</code></pre></div><p>You will get a Pandas DataFrame as usual, with all alerts inside the region (within <code>[-1 day, +6 day]</code>).</p>
-<p><img src="https://user-images.githubusercontent.com/20426972/134175884-3b190fa9-8051-4a1d-8bf8-cc8b47252494.png" alt="gw"></p>
+pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(r<span style="color:#f92672">.</span>content)</code></pre></div>
+<p>You will get a Pandas DataFrame as usual, with all alerts inside the region (within <code>[-1 day, +6 day]</code>).</p>
+
+<p><figure><img src="https://user-images.githubusercontent.com/20426972/134175884-3b190fa9-8051-4a1d-8bf8-cc8b47252494.png" alt="gw"></figure></p>
+
 <p>More information at <a href="https://fink-portal.org/api">https://fink-portal.org/api</a>. Note this feature is available only from the REST API (not available from the website).</p>
+
 <h2 id="query-string">Query String</h2>
+
 <p>You can now query Fink database directly from an URL. You have to specify two things:</p>
+
 <ul>
 <li>The type of query <code>query_type=</code>. Here, choose among <code>objectID</code>, <code>Conesearch</code>, <code>Date Search</code>, <code>Class Search</code>, <code>SSO Search</code>.</li>
 <li>The list of parameters to pass and their value <code>param=value</code>, separated by <code>&amp;</code>. The parameters are the same as the API (see <a href="https://fink-portal.org/api">https://fink-portal.org/api</a> ).</li>
 </ul>
+
 <p>See below some concrete examples.</p>
+
 <h3 id="object-id-search">Object ID search</h3>
-<pre><code>https://fink-portal.org/?query_type=objectID&amp;objectID=ZTF21abfmbix
-</code></pre><h3 id="conesearch">Conesearch</h3>
-<pre><code>https://fink-portal.org/?query_type=Conesearch&amp;ra=193.822&amp;dec=2.89732&amp;radius=5&amp;startdate_conesearch=2021-07-01 05:59:36&amp;window_days_conesearch=1
-</code></pre><p>Note that <code>startdate_conesearch</code> and <code>window_days_conesearch</code> are optional.</p>
+<pre><code>https://fink-portal.org/?query_type=objectID&amp;objectID=ZTF21abfmbix</code></pre>
+<h3 id="conesearch">Conesearch</h3>
+<pre><code>https://fink-portal.org/?query_type=Conesearch&amp;ra=193.822&amp;dec=2.89732&amp;radius=5&amp;startdate_conesearch=2021-07-01 05:59:36&amp;window_days_conesearch=1</code></pre>
+<p>Note that <code>startdate_conesearch</code> and <code>window_days_conesearch</code> are optional.</p>
+
 <h3 id="date-search">Date search</h3>
-<pre><code>https://fink-portal.org/?query_type=Date Search&amp;startdate=2020-07-01%2005:59:36&amp;window=1
-</code></pre><h3 id="class-search">Class search</h3>
-<pre><code>https://fink-portal.org/?query_type=Class Search&amp;class=Early SN Ia candidate
-</code></pre><h3 id="solar-system-object-search">Solar system object search</h3>
-<pre><code>https://fink-portal.org/?query_type=SSO Search&amp;n_or_d=4209
-</code></pre><h2 id="full-changelog">Full changelog</h2>
+<pre><code>https://fink-portal.org/?query_type=Date Search&amp;startdate=2020-07-01%2005:59:36&amp;window=1</code></pre>
+<h3 id="class-search">Class search</h3>
+<pre><code>https://fink-portal.org/?query_type=Class Search&amp;class=Early SN Ia candidate</code></pre>
+<h3 id="solar-system-object-search">Solar system object search</h3>
+<pre><code>https://fink-portal.org/?query_type=SSO Search&amp;n_or_d=4209</code></pre>
+<h2 id="full-changelog">Full changelog</h2>
+
 <p><a href="https://github.com/astrolabsoftware/fink-science-portal/milestone/11?closed=1">https://github.com/astrolabsoftware/fink-science-portal/milestone/11?closed=1</a></p>
 
 

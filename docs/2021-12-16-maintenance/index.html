@@ -1,0 +1,424 @@
+<!doctype html>
+
+<html lang="en" class="h-100">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="Hugo 0.78.2" />
+  <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
+  
+  
+  <title>Oh my God, they killed Kenny! | Fink broker</title>
+  <style>
+body {
+    background-color:  #f2f3f4; 
+    background-image: url(images/background.png);
+    background-size: contain;
+}
+.container {
+  max-width: 800px;
+}
+#nav a {
+  font-weight: bold;
+  color: inherit;
+}
+#nav a.nav-link-active {
+  background-color: #212529;
+  color: #fff;
+}
+#nav-border {
+  border-bottom: 1px solid #212529;
+}
+#main {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+#home-jumbotron {
+  background-color: inherit;
+}
+#footer .container {
+  padding: 1em 0;
+}
+#footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+.font-125 {
+  font-size: 125%;
+}
+.tag-btn {
+  margin-bottom: 0.3em;
+}
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit; 
+  background-color: transparent;
+  border-radius: 0;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+img,
+iframe,
+embed,
+video,
+audio {
+  max-width: 100%;
+}
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: initial;
+}
+</style>
+
+</head>
+  <body class="d-flex flex-column h-100">
+    <div id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/"><i data-feather="home"></i> Home</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/post/"><i data-feather="edit"></i> News</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="https://fink-portal.org"><i data-feather="monitor"></i> Science Portal</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/members/"><i data-feather="users"></i> Team</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/joining/"><i data-feather="user-plus"></i> Join us</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/about/"><i data-feather="info"></i> About</a>
+  
+  </nav>
+</div>
+
+    <div class="container">
+      <main id="main">
+        
+
+<h1>Oh my God, they killed Kenny!</h1>
+
+
+<i data-feather="calendar"></i> <time datetime="2022-01-17">Jan 17, 2022</time>
+
+  <br>
+  <i data-feather="tag"></i>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://fink-broker.org/tags/maintenance">maintenance</a>
+  
+
+<br><br>
+<h2 id="storage-system-failure">Storage system failure</h2>
+
+<p>The last reboot of machines (14/12) had revealed a serious problem in our storage system. Long story short, a large part of Fink data could not be recovered, making difficult to get some services back online, and we had no backup for this. It is yet unclear what happened exactly, but most likely a manipulation of the journal of transations in November that silently corrupted the system, only revealed a month later when the systems were rebooted. It was too late unfortunately, with more than 170k transactions missing...</p>
+
+<p>Only the database part was affected (serving the Science Portal), and the time-critical part (that processes nightly data) remained unaffected. Luckily though, the ZTF survey was shut down at the same moment due to out of order cryocooler -- so there were no alerts sent during the Fink shutdown.</p>
+
+<p>We took the opportunity of this maintenance to learn lessons from the post-mortem analysis, refine the roadmap for the infrastructure, consolidate the weak points, and deploy new services that were on tests. We describe below the epic recovery that took place during the 2021 Christmas break to bring back all Fink data from scratch.</p>
+
+<h2 id="summary-for-the-recovery">Summary for the recovery</h2>
+
+<p>For those who do not want to read the long blabla below, here are the salient results.</p>
+
+<p>The reprocessing went well. We restored the storage system, and we made it more robust to prevent similar failures. We optimised some parts of the pipelines, and took the opportunity of digging into old data to retrieve more data than before (nearly doubled!). The timings for the reprocessing were:</p>
+
+<table class="table">
+<thead>
+<tr>
+<th>Step</th>
+<th>Task</th>
+<th>Throughput per task</th>
+<th>Time for 4.7 TB</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Download</td>
+<td>5 nights</td>
+<td>300 MB/s</td>
+<td>5.5 hours</td>
+</tr>
+
+<tr>
+<td>Decompress+merge</td>
+<td>1 night</td>
+<td>33 MB/s</td>
+<td>42 hours</td>
+</tr>
+
+<tr>
+<td>Upload to HDFS</td>
+<td>16 nights</td>
+<td>300 MB/s</td>
+<td>5.5 hours</td>
+</tr>
+
+<tr>
+<td>Science reprocessing</td>
+<td>1 night</td>
+<td>15 MB/s</td>
+<td>96 hours</td>
+</tr>
+</tbody>
+</table>
+
+<p>So we could recreate everything for 2020 and 2021 in about one week. Note that with a wiser parallelisation of the decompression step, we could reach +100 MB/s, that is a step time divided by more than 2. Note that also the science reprocessing step could be speed-up by increasing the size our HBase instance.</p>
+
+<p>In terms of available alerts, the number has roughly doubled (11/2019 to 12/2021):</p>
+
+<table class="table">
+<thead>
+<tr>
+<th></th>
+<th>Previously</th>
+<th>Current</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Total number of alerts processed</td>
+<td>41,370,359</td>
+<td>72,017,228</td>
+</tr>
+
+<tr>
+<td>Classified</td>
+<td>17,189,220</td>
+<td>35,946,715</td>
+</tr>
+
+<tr>
+<td>Unclassified</td>
+<td>24,181,139</td>
+<td>36,070,513</td>
+</tr>
+</tbody>
+</table>
+
+<p>Note that there are more alerts classified (in percentage) than before. This is due to 2 main reasons:</p>
+
+<ol>
+<li>With more data, classifiers get better, and more alerts are tagged.</li>
+<li>CDS SIMBAD database get updated continuously -- so alerts from previous years benefit from the most recent SIMBAD entries, and many previously unknown alerts are now tagged.</li>
+</ol>
+
+<h2 id="resurrecting-hdfs">Resurrecting HDFS</h2>
+
+<p>HDFS was severly corrupted. The journal of transactions was full of gaps (&gt;170k missing transactions), and despite several attempts to save it, we could not restart our databases. Long story short, HDFS is made of blocks of data. We found that many blocks were affected, and we could just remove those blocks (which would mean losing 1 month of data), and starting again from this point. But not only newly created blocks were affected during the troubled times, but also previously created blocks that were updated. The 2nd case is typical for the database, managed by HBase. Basically, nearly all blocks for the database were updated at some point, and it was impossible to restart HBase (blocks with metadata were corrupted and unavailable).</p>
+
+<p>So after a long reflection, we came to the conclusion that despite all our efforts, it was just the moment to reformat HDFS. But we also put in place several mechanisms to prevent future similar failures:</p>
+
+<ul>
+<li>Installation of a second NameNode (Standby NameNode) to take over in case of failure.</li>
+<li>Regular back-up of the critical data.</li>
+<li>Regular audits of the infrastructure (to avoid long drifts of unusual situations like we had).</li>
+</ul>
+
+<h2 id="rebuilding-the-raw-data-lake">Re-building the raw data lake</h2>
+
+<h3 id="downloading--formatting-raw-ztf-data">Downloading &amp; formatting raw ZTF data</h3>
+
+<p>Public ZTF alert data can be downloaded from <a href="https://ztf.uw.edu/alerts/public">https://ztf.uw.edu/alerts/public</a>. For 2021 &amp; 2020, this corresponds to roughly 4.7 TB of compressed data. We used <a href="https://aria2.github.io/manual/en/html/index.html">aria2c</a> to speed-up the download, and we managed to get a rather stable transfer at 60 MB/s per file, for 5 files simultaneously (i.e. 300 MB/s). The transfer of 4.7 TB took about 5.5 hours:</p>
+
+<p><figure><img src="/images/network.png" alt="toto"></figure></p>
+
+<p>and the writing on CEPH was quite stable as well:</p>
+
+<p><figure><img src="/images/write_ceph.png" alt="toto"></figure></p>
+
+<h3 id="format-files-for-apache-spark">Format files for Apache Spark</h3>
+
+<p>The data transfered is made of compressed folders (<code>.tar.gz</code>) containing Apache Avro files. While this is good for an archive, this is not suitable for our processing. You need then to decompress the files, concatenate the data from individual Avro files into larger chunks, and save into Parquet files.</p>
+
+<p>The decompression is the slowest operation, and it is difficult to parallelize inside each task. We managed to slightly speed-up the process by using <code>pigz</code> and <code>tar</code> instead of <code>tar</code> alone (factor of 2 faster). The decompression rate was about 80 MB/s per file.</p>
+
+<p>Once data is decompressed, we obtain one Avro file per alert, and there are hundreds of thousands alerts by folder! This deluge of small files is bad for the processing. Hence, the next operation is to concatenate many alerts at once. In addition, we perform a conversion from Avro to Parquet (the chosen format for internal operations in Fink). By concatenating 3000 raw Avro files into one single Parquet file (with snappy compression), we currently achieve a compression factor of about 1.6. Finally, files are saved into a partitioned structure (<code>year/month/day</code>) to speed-up subsequent operations.</p>
+
+<p>The wrapper will look for all <code>ztf_public*.tar.gz</code> files, and do the job. To speed-up the merge operation, we use <code>mpi</code> under the hood. The script will use by default 16 cores -- leading to a writing throughput of about 170 MB/s.</p>
+
+<p>As decompression and merge are done one after the other, and file by file, we shall obtain a rate of about 55 MB/s. In practice, we observe twice slower (why?). Note that it would have been perhaps wiser to parallelize the decompression step first (by parallelizing folders), and then parallelize the merging step (that way we would easily reach +300 MB/s for decompression, that is a total rate at +100 MB/s). Improvement for the future!</p>
+
+<h2 id="reprocessing-science-data">Reprocessing science data</h2>
+
+<p>We then move all the data to our HDFS cluster, using a simple client (<a href="https://hdfscli.readthedocs.io/en/latest/">https://hdfscli.readthedocs.io/en/latest/</a>). This took roughly 5h for the 4.7 TB. Once the data was in place, we could relaunch the science processing, and populate the databases.</p>
+
+<p>But since we were restarting from scratch, why not improving the pipelines and the data quality? Since the beginning of Fink, we learned a lot, and our approach to the data is different from 2 years ago. We identified two major upgrades (and small ones): quality cuts and science module speed.</p>
+
+<h3 id="quality-cuts">Quality cuts</h3>
+
+<p>Quality cuts are the entry cuts that select valid alerts, and discard &quot;bad quality&quot; alerts before the processing. Our first set of quality cuts includes:</p>
+
+<ul>
+<li>RealBogus scores assigned by the ZTF alert distribution pipeline Mahabal et al. (2019); Duev et al. (2019). The values must be above 0.55.</li>
+<li>Number of prior-tagged bad pixels in a 5 x 5 pixel stamp. The value must be 0.</li>
+<li>The difference between the aperture magnitude and the PSF-fit magnitude. The absolute value must be lower than 0.1.</li>
+</ul>
+
+<p>This filtering reduces about 70% of the initial ZTF public stream, leaving 30% of all collected alerts to be further processed by the science modules. After 2 years of ZTF data, we found out that the last cut was not really motivated given our science cases. A lot of alerts were discarded, while they were just &quot;noisy&quot; -- but perfectly valid from the science point of view. Hence, in this reprocessing, we only activated the first two cuts.</p>
+
+<p>This change of the cut definition has two effects: (1) it lets more alerts to enter the pipeline (+30% of the total alerts, that is doubling the previous number of alerts), and (2) give more data for the alert classifiers to perform their task (and eventually allow to classify objects earlier, as first alerts are usually noisier than others).</p>
+
+<h3 id="science-module-speedup">Science module speed-up</h3>
+
+<p>Science modules were slow -- at least some of them. We managed to get a huge speed-up with respect to current version, by just moving the candidate filtering before the processing instead of after. Of course this gives less flexibility in the alert selection afterwards (since, for each science module, you process only what satisfies the science case cuts), but at least you stop classifying obvious solar system objects inside the supernova module for example...</p>
+
+<p><figure><img src="/images/perf_science_modules.png" alt="toto"></figure></p>
+
+<h3 id="overall-throughput">Overall throughput</h3>
+
+<p>The steps from raw data to the HBase tables are:</p>
+
+<ol>
+<li>load the raw data, filter for valid alerts, run science modules, save on disk.</li>
+<li>load previously stored science data, and push to the main table in HBase.</li>
+<li>load previously stored science data, select data based on needs, and push to the index tables in HBase.</li>
+</ol>
+
+<p>So there are: 1 time <code>processing</code>, 2 times <code>load</code>, 1 time <code>write</code> directly in HDFS, 1 time <code>write</code> in HBase (which uses HDFS), 11 times <code>write</code> in HBase (thin index tables). This is a lot of <code>write</code>... Using 36 cores, we reached a total throughput of 300 alerts/s, that is roughly 10 MB/s... This is super slow! Note that increasing the number of cores does not speed-up the computation for two reasons: (1) there are perfidious <code>join</code> operations in the processing, and (2) our HBase instance is too small to perform heavier write operations. The HBase instance is a single machine with 6 cores, each with 2GB RAM -- this is clearly suboptimal given the current volume of data and have rather large regions, and too many regions per regionserver (about 20 GB per region, and +200 regions in the single regionserver). As a consequence, heavy writes causes the instance to be frequently stuck, with crashes, hence we limit the number of parallel mappers.</p>
+
+<p><figure><img src="/images/hbase_stats.png" alt="toto"></figure>
+<em>CPU usage &amp; throughput for the HBase instance, during the reprocessing. Note the gaps appearing -- they are crash of the instance due to heavy write operations.</em></p>
+
+<p><figure><img src="/images/spark_stats.png" alt="toto"></figure>
+<em>CPU usage for the Apache Spark cluster, during the reprocessing. We used only 36 cores for each task.</em></p>
+
+<h2 id="changelog">Changelog</h2>
+
+<p>See the full changelog for this maintenance:</p>
+
+<ul>
+<li><a href="https://github.com/astrolabsoftware/fink-broker/pulls?q=updated%3A2021-12-14..2022-01-17">fink-broker/2021-12-14..2022-01-17</a></li>
+<li><a href="https://github.com/astrolabsoftware/fink-science/pulls?q=updated%3A2021-12-14..2022-01-17">fink-science/2021-12-14..2022-01-17</a></li>
+<li><a href="https://github.com/astrolabsoftware/fink-filters/pulls?q=updated%3A2021-12-14..2022-01-17">fink-filters/2021-12-14..2022-01-17</a></li>
+<li><a href="https://github.com/astrolabsoftware/fink-client/pulls?q=updated%3A2021-12-14..2022-01-17">fink-client/2021-12-14..2022-01-17</a></li>
+</ul>
+
+
+
+      </main>
+    </div>
+    
+    <script src="https://fink-broker.org/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+
+
+<script src="https://fink-broker.org/js/jquery-3.3.1.slim.min.js"></script>
+<script src="https://fink-broker.org/js/bootstrap.bundle.min.js"></script>
+
+    
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+  crossorigin="anonymous"
+/>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+  crossorigin="anonymous"
+></script>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+  crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"
+></script>
+
+
+    
+  
+
+  </body>
+</html>

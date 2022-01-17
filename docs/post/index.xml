@@ -6,14 +6,23 @@
     <description>Recent content in Posts on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 17 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oh my God, they killed Kenny!</title>
+      <link>https://fink-broker.org/2021-12-16-maintenance/</link>
+      <pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2021-12-16-maintenance/</guid>
+      <description>Storage system failure The last reboot of machines (14/12) had revealed a serious problem in our storage system. Long story short, a large part of Fink data could not be recovered, making difficult to get some services back online, and we had no backup for this. It is yet unclear what happened exactly, but most likely a manipulation of the journal of transations in November that silently corrupted the system, only revealed a month later when the systems were rebooted.</description>
+    </item>
+    
     <item>
       <title>Infrastructures in Fink</title>
       <link>https://fink-broker.org/2021-12-17-infrastructure/</link>
       <pubDate>Fri, 17 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://fink-broker.org/2021-12-17-infrastructure/</guid>
-      <description>Fink infrastructure Let&amp;rsquo;s take the opportunity of the bad turn of recent events to talk and learn a bit more on the infrastructure in place for Fink.
+      <description>Fink infrastructure Let&#39;s take the opportunity of the bad turn of recent events to talk and learn a bit more on the infrastructure in place for Fink.
 Fink is deployed on the cloud, that is each box in the Figure is an independent set of machines where specific software are running and executing tasks.
 Nightly alert processing The central part of the processing in Fink is the Apache Spark cluster (see fink-broker).</description>
     </item>
@@ -35,7 +44,7 @@ Heatmap The Heatmap tab shows the number of alerts processed by Fink for each ni
       <pubDate>Mon, 27 Sep 2021 00:00:00 +0000</pubDate>
       
       <guid>https://fink-broker.org/2021-09-27-science-portal-updates/</guid>
-      <description>&lt;p&gt;Check out the version 0.10 of the Science Portal! Several new features: DNS for the portal, crossmatch with LIGO/Virgo maps, query string, and as always&amp;hellip; a lot of bug fixes!&lt;/p&gt;</description>
+      <description>&lt;p&gt;Check out the version 0.10 of the Science Portal! Several new features: DNS for the portal, crossmatch with LIGO/Virgo maps, query string, and as always... a lot of bug fixes!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -44,7 +53,7 @@ Heatmap The Heatmap tab shows the number of alerts processed by Fink for each ni
       <pubDate>Tue, 10 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://fink-broker.org/2021-08-10-science-portal-updates/</guid>
-      <description>&lt;p&gt;Check out the version 0.9 of the Science Portal: Several new features: constellation names, preview of alert information, shiny new buttons, link to SNAD, and&amp;hellip; a lot of bug fixes!&lt;/p&gt;</description>
+      <description>&lt;p&gt;Check out the version 0.9 of the Science Portal: Several new features: constellation names, preview of alert information, shiny new buttons, link to SNAD, and... a lot of bug fixes!&lt;/p&gt;</description>
     </item>
     
     <item>

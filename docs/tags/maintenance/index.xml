@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>maintenance on Fink broker</title>
+    <link>https://fink-broker.org/tags/maintenance/</link>
+    <description>Recent content in maintenance on Fink broker</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/tags/maintenance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oh my God, they killed Kenny!</title>
+      <link>https://fink-broker.org/2021-12-16-maintenance/</link>
+      <pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2021-12-16-maintenance/</guid>
+      <description>Storage system failure The last reboot of machines (14/12) had revealed a serious problem in our storage system. Long story short, a large part of Fink data could not be recovered, making difficult to get some services back online, and we had no backup for this. It is yet unclear what happened exactly, but most likely a manipulation of the journal of transations in November that silently corrupted the system, only revealed a month later when the systems were rebooted.</description>
+    </item>
+    
+  </channel>
+</rss>
