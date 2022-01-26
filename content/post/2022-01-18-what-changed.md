@@ -8,7 +8,7 @@ tags: [API]
 
 ## API changes
 
-With the recent maintenance, we did a number of changes to sanitize the infrastructure and the pipelines. Some of these changes breaks the compatibility with older Fink versions. All changes apply from `fink-broker` version 1.4+ and `fink-science` version 0.5+.
+With the recent maintenance, we did a number of changes to sanitize the infrastructure and the pipelines. Some of these changes breaks the compatibility with older Fink versions. All changes apply from `fink-broker` version 1.4+ and `fink-science` version 0.5+, with a new [schema](https://github.com/astrolabsoftware/fink-client/blob/master/schemas/distribution_schema_fink_ztf_1.4_0.5.1.avsc).
 
 ### Active Learning module
 
@@ -37,4 +37,4 @@ The data columns have their names changed as well:
 - `d:mulens_*` becomes `d:mulens`, and it is a `double`
 
 
-All documentation has been 
+All documentation has been updated, but do not hesitate to reach us if you have any question!

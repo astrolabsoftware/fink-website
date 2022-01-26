@@ -13,7 +13,7 @@
       <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://fink-broker.org/2022-01-18-what-changed/</guid>
-      <description>API changes With the recent maintenance, we did a number of changes to sanitize the infrastructure and the pipelines. Some of these changes breaks the compatibility with older Fink versions. All changes apply from fink-broker version 1.4+ and fink-science version 0.5+.
+      <description>API changes With the recent maintenance, we did a number of changes to sanitize the infrastructure and the pipelines. Some of these changes breaks the compatibility with older Fink versions. All changes apply from fink-broker version 1.4+ and fink-science version 0.5+, with a new schema.
 Active Learning module We introduced a name change for the output of the module. The old rfscore field is now replaced by rf_snia_vs_nonia. The module itself did not change, and the values remain the same.</description>
     </item>
     
