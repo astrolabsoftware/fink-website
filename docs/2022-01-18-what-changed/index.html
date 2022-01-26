@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
   
   
-  <title>Tags | Fink broker</title>
+  <title>Interface changes | Fink broker</title>
   <style>
 body {
     background-color:  #f2f3f4; 
@@ -175,80 +175,52 @@ audio {
       <main id="main">
         
 
-<h1>Tags</h1>
+<h1>Interface changes</h1>
 
 
-  <p>
-    <a class="btn btn-outline-dark font-125" href="/tags/about/">
-      <span class="badge badge-dark">1</span> About
-    </a>
-  </p>
+<i data-feather="calendar"></i> <time datetime="2022-01-18">Jan 18, 2022</time>
 
-  <p>
-    <a class="btn btn-outline-dark font-125" href="/tags/api/">
-      <span class="badge badge-dark">1</span> API
-    </a>
-  </p>
+  <br>
+  <i data-feather="tag"></i>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://fink-broker.org/tags/api">API</a>
+  
 
-  <p>
-    <a class="btn btn-outline-dark font-125" href="/tags/archive/">
-      <span class="badge badge-dark">1</span> Archive
-    </a>
-  </p>
+<br><br>
+<h2 id="api-changes">API changes</h2>
 
-  <p>
-    <a class="btn btn-outline-dark font-125" href="/tags/fink/">
-      <span class="badge badge-dark">2</span> Fink
-    </a>
-  </p>
+<p>With the recent maintenance, we did a number of changes to sanitize the infrastructure and the pipelines. Some of these changes breaks the compatibility with older Fink versions. All changes apply from <code>fink-broker</code> version 1.4+ and <code>fink-science</code> version 0.5+.</p>
 
-  <p>
-    <a class="btn btn-outline-dark font-125" href="/tags/general/">
-      <span class="badge badge-dark">1</span> general
-    </a>
-  </p>
+<h3 id="active-learning-module">Active Learning module</h3>
 
-  <p>
-    <a class="btn btn-outline-dark font-125" href="/tags/infrastructure/">
-      <span class="badge badge-dark">1</span> infrastructure
-    </a>
-  </p>
+<p>We introduced a name change for the output of the module. The old <code>rfscore</code> field is now replaced by <code>rf_snia_vs_nonia</code>. The module itself did not change, and the values remain the same.</p>
 
-  <p>
-    <a class="btn btn-outline-dark font-125" href="/tags/maintenance/">
-      <span class="badge badge-dark">2</span> maintenance
-    </a>
-  </p>
+<h3 id="kilonova-module">Kilonova module</h3>
 
-  <p>
-    <a class="btn btn-outline-dark font-125" href="/tags/members/">
-      <span class="badge badge-dark">2</span> Members
-    </a>
-  </p>
+<p>We introduced a name change for the output of the module. The old <code>knscore</code> field is now replaced by <code>rf_kn_vs_nonkn</code>. The module itself did not change, and the values remain the same.</p>
 
-  <p>
-    <a class="btn btn-outline-dark font-125" href="/tags/paper/">
-      <span class="badge badge-dark">2</span> paper
-    </a>
-  </p>
+<h3 id="microlensing-module">Microlensing module</h3>
 
-  <p>
-    <a class="btn btn-outline-dark font-125" href="/tags/portal/">
-      <span class="badge badge-dark">5</span> Portal
-    </a>
-  </p>
+<p>We shipped a new microlensing module still based on LIA, with a new schema for the output. We are not outputing anymore a <code>struct</code> with classes and probabilities from LIA, but a single <code>double</code> that is the mean of the per-band probabilities.</p>
 
-  <p>
-    <a class="btn btn-outline-dark font-125" href="/tags/workshop/">
-      <span class="badge badge-dark">2</span> workshop
-    </a>
-  </p>
+<h3 id="rest-api">REST API</h3>
 
-  <p>
-    <a class="btn btn-outline-dark font-125" href="/tags/ztf/">
-      <span class="badge badge-dark">1</span> ztf
-    </a>
-  </p>
+<h4 id="queries">Queries</h4>
+
+<p>Nothing changed from the end-user perspective in the REST API. Indeed, we combine internally science module outputs in Fink to provide with you alert classification. So despite the active learning score <code>rfscore</code> changed its name into <code>rf_snia_vs_nonia</code>, the Early SN Ia candidates have still the label <code>Early SN Ia candidate</code>.</p>
+
+<h4 id="data-columns">Data columns</h4>
+
+<p>The data columns have their names changed as well:</p>
+
+<ul>
+<li><code>d:rfscore</code> becomes <code>d:rf_snia_vs_nonia</code></li>
+<li><code>d:knscore</code> becomes <code>d:rf_kn_vs_nonkn</code></li>
+<li><code>d:mulens_*</code> becomes <code>d:mulens</code>, and it is a <code>double</code></li>
+</ul>
+
+<p>All documentation has been</p>
 
 
 

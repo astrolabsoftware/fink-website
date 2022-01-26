@@ -4,26 +4,41 @@
   
   <url>
     <loc>https://fink-broker.org/</loc>
-    <lastmod>2022-01-17T00:00:00+00:00</lastmod>
+    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fink-broker.org/tags/api/</loc>
+    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fink-broker.org/2022-01-18-what-changed/</loc>
+    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fink-broker.org/tags/maintenance/</loc>
-    <lastmod>2022-01-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fink-broker.org/2022-01-17-maintenance/</loc>
-    <lastmod>2022-01-17T00:00:00+00:00</lastmod>
+    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fink-broker.org/post/</loc>
-    <lastmod>2022-01-17T00:00:00+00:00</lastmod>
+    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fink-broker.org/2022-01-18-power-failure/</loc>
+    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://fink-broker.org/tags/</loc>
+    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fink-broker.org/2022-01-17-maintenance/</loc>
     <lastmod>2022-01-17T00:00:00+00:00</lastmod>
   </url>
   
