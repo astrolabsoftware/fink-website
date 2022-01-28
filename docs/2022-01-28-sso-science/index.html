@@ -281,6 +281,8 @@ audio {
 
 <h3 id="using-the-rest-api">Using the REST API</h3>
 
+<h4 id="by-number-1">By number</h4>
+
 <p>The list of arguments for retrieving SSO data can be found at <a href="https://fink-portal.org/api/v1/sso">https://fink-portal.org/api/v1/sso</a>.
 The numbers or designations are taken from the MPC archive.
 When searching for a particular asteroid or comet, it is best to use the IAU number,
@@ -389,6 +391,60 @@ r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</sp
   }
 )</code></pre></div>
 <p>Note that the fields should be comma-separated. Unknown field names are ignored. More information at <a href="https://fink-portal.org/api">https://fink-portal.org/api</a>.</p>
+
+<h4 id="by-class-1">By class</h4>
+
+<p>The list of arguments for getting latest alerts by class can be found at <a href="https://fink-portal.org/api/v1/latests">https://fink-portal.org/api/v1/latests</a>.</p>
+
+<p>The list of Fink class can be found at <a href="https://fink-portal.org/api/v1/classes">https://fink-portal.org/api/v1/classes</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Get list of available class in Fink</span>
+curl -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> -X GET https://fink-portal.org/api/v1/classes -o finkclass.json</code></pre></div>
+<p>To get the last 5 candidates of the class <code>Solar System MPC</code>, you would simply use in a unix shell:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Get latests 5 Solar System MPC</span>
+curl -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> -X POST -d <span style="color:#e6db74">&#39;{&#34;class&#34;:&#34;Solar System MPC&#34;, &#34;n&#34;:&#34;5&#34;}&#39;</span> https://fink-portal.org/api/v1/latests -o out.json</code></pre></div>
+<p>In python, you would use</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> requests
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+
+<span style="color:#75715e"># Get latests 5 Solar System MPC alerts</span>
+r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(
+  <span style="color:#e6db74">&#39;https://fink-portal.org/api/v1/latests&#39;</span>,
+  json<span style="color:#f92672">=</span>{
+    <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;Solar System MPC&#39;</span>,
+    <span style="color:#e6db74">&#39;n&#39;</span>: <span style="color:#e6db74">&#39;5&#39;</span>
+  }
+)
+
+<span style="color:#75715e"># Format output in a DataFrame</span>
+pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(r<span style="color:#f92672">.</span>content)</code></pre></div>
+<p>You can also specify <code>startdate</code> and <code>stopdate</code> for your search:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> requests
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+
+<span style="color:#75715e"># Get all Solar System MPC alerts between March 1st 2021 and March 5th 2021</span>
+r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(
+  <span style="color:#e6db74">&#39;https://fink-portal.org/api/v1/latests&#39;</span>,
+  json<span style="color:#f92672">=</span>{
+    <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;Solar System MPC&#39;</span>,
+    <span style="color:#e6db74">&#39;n&#39;</span>: <span style="color:#e6db74">&#39;100&#39;</span>,
+    <span style="color:#e6db74">&#39;startdate&#39;</span>: <span style="color:#e6db74">&#39;2021-03-01&#39;</span>,
+    <span style="color:#e6db74">&#39;stopdate&#39;</span>: <span style="color:#e6db74">&#39;2021-03-05&#39;</span>
+  }
+)
+
+<span style="color:#75715e"># Format output in a DataFrame</span>
+pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(r<span style="color:#f92672">.</span>content)</code></pre></div>
+<p>There is no limit of time, but you will be limited by the
+number of alerts retrieve on the server side <code>n</code> (current max is 1000).</p>
+
+<h2 id="planned-improvements">Planned improvements</h2>
+
+<p>The service has some limitations, and here are the planned improvements for the coming months:</p>
+
+<ol>
+<li>SSOs do not have unique names or identifiers usually... While we stick with IAU identifiers for the moment, we plan to use a low level name resolver (<a href="https://ssp.imcce.fr/webservices/ssodnet/api/quaero/">quaero</a>) to use aliases as well.</li>
+<li>For the moment, users can search by SSO number or do a <code>Class Search</code> to get latest alerts. Ideally, we would like the users to query also SSO by the number of time they have been seen in ZTF.</li>
+</ol>
 
 <h2 id="how-to-receive-alerts-in-realtime-about-an-object">How to receive alerts in real-time about an object?</h2>
 

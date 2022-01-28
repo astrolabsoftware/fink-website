@@ -104,6 +104,8 @@ We also propose different phase curve modeling using the HG12 and HG models. Hit
 
 ### Using the REST API
 
+#### By number
+
 The list of arguments for retrieving SSO data can be found at https://fink-portal.org/api/v1/sso.
 The numbers or designations are taken from the MPC archive.
 When searching for a particular asteroid or comet, it is best to use the IAU number,
@@ -222,6 +224,73 @@ r = requests.post(
 ```
 
 Note that the fields should be comma-separated. Unknown field names are ignored. More information at https://fink-portal.org/api.
+
+#### By class
+
+The list of arguments for getting latest alerts by class can be found at https://fink-portal.org/api/v1/latests.
+
+The list of Fink class can be found at https://fink-portal.org/api/v1/classes
+
+```bash
+# Get list of available class in Fink
+curl -H "Content-Type: application/json" -X GET https://fink-portal.org/api/v1/classes -o finkclass.json
+```
+
+To get the last 5 candidates of the class `Solar System MPC`, you would simply use in a unix shell:
+
+```bash
+# Get latests 5 Solar System MPC
+curl -H "Content-Type: application/json" -X POST -d '{"class":"Solar System MPC", "n":"5"}' https://fink-portal.org/api/v1/latests -o out.json
+```
+
+In python, you would use
+
+```python
+import requests
+import pandas as pd
+
+# Get latests 5 Solar System MPC alerts
+r = requests.post(
+  'https://fink-portal.org/api/v1/latests',
+  json={
+    'class': 'Solar System MPC',
+    'n': '5'
+  }
+)
+
+# Format output in a DataFrame
+pdf = pd.read_json(r.content)
+```
+
+You can also specify `startdate` and `stopdate` for your search:
+
+```python
+import requests
+import pandas as pd
+
+# Get all Solar System MPC alerts between March 1st 2021 and March 5th 2021
+r = requests.post(
+  'https://fink-portal.org/api/v1/latests',
+  json={
+    'class': 'Solar System MPC',
+    'n': '100',
+    'startdate': '2021-03-01',
+    'stopdate': '2021-03-05'
+  }
+)
+
+# Format output in a DataFrame
+pdf = pd.read_json(r.content)
+```
+There is no limit of time, but you will be limited by the
+number of alerts retrieve on the server side `n` (current max is 1000).
+
+## Planned improvements
+
+The service has some limitations, and here are the planned improvements for the coming months:
+
+1. SSOs do not have unique names or identifiers usually... While we stick with IAU identifiers for the moment, we plan to use a low level name resolver ([quaero](https://ssp.imcce.fr/webservices/ssodnet/api/quaero/)) to use aliases as well.
+2. For the moment, users can search by SSO number or do a `Class Search` to get latest alerts. Ideally, we would like the users to query also SSO by the number of time they have been seen in ZTF.
 
 ## How to receive alerts in real-time about an object?
 
