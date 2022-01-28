@@ -32,7 +32,17 @@ if ssdistnr is not None:
 Among the hundreds of thousands alerts that we receive nightly, about 10 to 50% are flagged as known Solar System objects.
 
 ![sso-evolution](/images/sso-evolution.png)
-_Cumulative number of alerts flagged as known Solar System objects from MPC, taken from https://fink-portal.org/stats. After 2 years of operations (Nov 2019 to December 2021, 523 observing nights), Fink has flagged more than 10 million alerts as known Solar System objects._
+_Cumulative number of alerts flagged as known Solar System objects from MPC, taken from https://fink-portal.org/stats. After 2 years of operations (Nov 2019 to December 2021, 523 observing nights), Fink has flagged more than 10 million alerts as known Solar System objects, corresponding to 443,817 unique objects._
+
+### Some statistics
+
+Looking at the big picture, most of Solar System objects have few alerts attached (median at 11 alerts per object), with a long tail of highly sampled ones:
+
+![sso-hist-number](/images/sso-hist-number.png)
+
+If we look at the time window from the first alert to the last one for each object, we see yearly variations (vertical lines show 1st and 2nd year):
+
+![sso-hist-time](/images/sso-hist-time.png)
 
 ## Science portal: a shiny new interface
 
