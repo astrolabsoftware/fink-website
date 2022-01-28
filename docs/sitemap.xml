@@ -4,7 +4,27 @@
   
   <url>
     <loc>https://fink-broker.org/</loc>
-    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
+    <lastmod>2022-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fink-broker.org/post/</loc>
+    <lastmod>2022-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fink-broker.org/2022-01-28-sso-science/</loc>
+    <lastmod>2022-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fink-broker.org/tags/sso/</loc>
+    <lastmod>2022-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://fink-broker.org/tags/</loc>
+    <lastmod>2022-01-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -23,17 +43,7 @@
   </url>
   
   <url>
-    <loc>https://fink-broker.org/post/</loc>
-    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://fink-broker.org/2022-01-18-power-failure/</loc>
-    <lastmod>2022-01-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fink-broker.org/tags/</loc>
     <lastmod>2022-01-18T00:00:00+00:00</lastmod>
   </url>
   

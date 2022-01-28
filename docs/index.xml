@@ -6,7 +6,16 @@
     <description>Recent content on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solar System Science with Fink</title>
+      <link>https://fink-broker.org/2022-01-28-sso-science/</link>
+      <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2022-01-28-sso-science/</guid>
+      <description>Linking alerts to known moving objects Each night, Fink receives alerts from the public survey of the Zwicky Transient Facility (ZTF). The alert stream primarily includes events from flux transients and variables, but it also contains a large fraction of Solar System objects (SSO). Alert candidates are typically linked to an object on the sky by a cone search at the position of the alert. While this allows us to easily retrieve the brightness variation of a static object on the sky over time, this does not work if one wants to study a moving object.</description>
+    </item>
+    
     <item>
       <title>Interface changes</title>
       <link>https://fink-broker.org/2022-01-18-what-changed/</link>
