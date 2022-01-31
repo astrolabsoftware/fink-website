@@ -389,8 +389,14 @@ Index([<span style="color:#e6db74">&#39;index&#39;</span>, <span style="color:#e
        <span style="color:#e6db74">&#39;d:tracklet&#39;</span>, <span style="color:#e6db74">&#39;v:classification&#39;</span>, <span style="color:#e6db74">&#39;v:lastdate&#39;</span>, <span style="color:#e6db74">&#39;v:constellation&#39;</span>,
        <span style="color:#e6db74">&#39;i:magpsf_red&#39;</span>],
       dtype<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;object&#39;</span>)</code></pre></div>
-<p>Where first columns are fields returned from Miriade (beware it adds few seconds delay).
-By default, we transfer all available data fields (original ZTF fields and Fink science module outputs).
+<p>Where first columns are fields returned from Miriade (beware it adds few seconds delay). There are some limitations though:</p>
+
+<ul>
+<li>Color ephemerides are returned only for asteroids</li>
+<li>Temporary designations (C/... or YYYY...) do not have ephemerides available</li>
+</ul>
+
+<p>By default, we transfer all available data fields (original ZTF fields and Fink science module outputs).
 But you can also choose to transfer only a subset of the fields:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># select only jd, and magpsf</span>
 r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(
