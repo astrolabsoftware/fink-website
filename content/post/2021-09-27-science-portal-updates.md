@@ -66,7 +66,7 @@ See below some concrete examples.
 ### Object ID search
 
 ```
-https://fink-portal.org/?query_type=objectID&objectID=ZTF21abfmbix
+https://fink-portal.org/?query_type=objectId&objectId=ZTF21abfmbix
 ```
 
 ### Conesearch
@@ -80,7 +80,7 @@ Note that `startdate_conesearch` and `window_days_conesearch` are optional.
 ### Date search
 
 ```
-https://fink-portal.org/?query_type=Date Search&startdate=2020-07-01%2005:59:36&window=1
+https://fink-portal.org/?query_type=Date Search&startdate=2021-07-01%2005:59:36&window=1
 ```
 
 ### Class search
@@ -92,7 +92,7 @@ https://fink-portal.org/?query_type=Class Search&class=Early SN Ia candidate
 ### Solar system object search
 
 ```
-https://fink-portal.org/?query_type=SSO Search&n_or_d=4209
+https://fink-portal.org/?query_type=SSO&n_or_d=4209
 ```
 
 ## Full changelog
