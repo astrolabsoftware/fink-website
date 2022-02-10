@@ -3,7 +3,15 @@
 To deploy locally
 
 ```
-docker run --rm -it  -p 1313:1313 -v $(pwd):/src klakegg/hugo:0.78.2 \
+git clone https://github.com/astrolabsoftware/fink-website.git
+cd fink-website
+
+# add submodule
+git submodule init
+git submodule update
+
+# launch it
+docker run --rm -it  -p 1313:1313 -v $(pwd):/src klakegg/hugo:0.81.0 \
   server \
   -t vanilla-bootstrap-hugo-theme \
 ```
@@ -11,7 +19,7 @@ docker run --rm -it  -p 1313:1313 -v $(pwd):/src klakegg/hugo:0.78.2 \
 To deploy
 
 ```
-docker run --rm -it  -p 1313:1313 -v $(pwd):/src klakegg/hugo:0.78.2 \
+docker run --rm -it  -p 1313:1313 -v $(pwd):/src klakegg/hugo:0.81.0 \
   -t vanilla-bootstrap-hugo-theme \
   --baseUrl="https://fink-broker.org" \
   --buildDrafts \
