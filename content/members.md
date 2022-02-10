@@ -40,7 +40,7 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **ISDC, Department of Astronomy, University of Geneva**: V. Savchenko
 * **Istituto Nazionale di Fisica Nucleare – Sezione di Genova**: V. Kulikovskiy
 * **Las Cumbres Observatory**: E. Bachelet
-* **Lomonosov Moscow State University, Sternberg Astronomical Institute**: M. V. Kornilov, M. V.  Pruzhinskaya
+* **Lomonosov Moscow State University, Sternberg Astronomical Institute**: I. Beschastnov, M. V. Kornilov, M. V.  Pruzhinskaya
 * **University of Sheffield**: U. Burhanudin, J. Maund
 
 ## Collaborators
