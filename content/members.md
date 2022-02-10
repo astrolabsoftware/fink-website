@@ -16,10 +16,9 @@ You can contact us at contact(at)fink-broker.org for more information.
 ## Development Team
 
 - [Julien Peloton](https://github.com/JulienPeloton) (Lead) - CNRS/IJCLab, IT department
-- Chris Arnault (distributed computing) - CNRS/IJCLab, IT department
 - Julius Hrivnac (database) - CNRS/IJCLab, IT department
 - Marco Leoni (machine learning) - Université Paris-Saclay, IT department
-- Sacha Pateyron (cloud management, deployment, monitoring) - CNRS/IJCLab, IT department
+- Adrien Ramparison (cloud management, deployment, monitoring) - CNRS/IJCLab, IT department
 
 ## Fink members & collaborators
 
