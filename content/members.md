@@ -22,9 +22,17 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 ## Fink members & collaborators
 
-* **CEA/AIM, Université Paris-Saclay**: D. Turpin
-* **Centre for Data Intensive Science/MSSL, University College London**: T. Allam Jr.
+#### Czech Republic
+
 * **CEICO, Institute of Physics, Czech Academy of Sciences**: S. Karpov
+
+#### Italy
+
+* **Istituto Nazionale di Fisica Nucleare – Sezione di Genova**: V. Kulikovskiy
+
+#### France
+
+* **CEA/AIM, Université Paris-Saclay**: D. Turpin
 * **CNRS/APC, Université de Paris**: B. Biswas, A. Boucaud, A. Coleiro
 * **CNRS/CC-IN2P3**: F. Hernandez
 * **CNRS/CDS, Observatoire Astronomique de Strasbourg, Université de Strasbourg**: A. Nebot Gomez-Moran
@@ -37,11 +45,24 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **CNRS/LPC, Université Clermont Auvergne**: E. Gangler, P. Gris, E. Russeil
 * **CNRS/LPSC, Université Grenoble-Alpes**: J. Bregeon
 * **CNRS/OCA, Université Côte d'Azur**: B. Carry
-* **ISDC, Department of Astronomy, University of Geneva**: V. Savchenko
-* **Istituto Nazionale di Fisica Nucleare – Sezione di Genova**: V. Kulikovskiy
-* **Las Cumbres Observatory**: E. Bachelet
+
+#### Russian Federation
+
 * **Lomonosov Moscow State University, Sternberg Astronomical Institute**: I. Beschastnov, M. V. Kornilov, M. V.  Pruzhinskaya
+
+#### Switzerland
+
+* **ISDC, Department of Astronomy, University of Geneva**: V. Savchenko
+
+#### United Kingdom
+
+* **Centre for Data Intensive Science/MSSL, University College London**: T. Allam Jr.
 * **University of Sheffield**: U. Burhanudin, J. Maund
+
+#### United States of America
+
+* **Las Cumbres Observatory**: E. Bachelet
+
 
 ## Collaborators
 
