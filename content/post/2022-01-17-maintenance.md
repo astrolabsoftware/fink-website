@@ -20,7 +20,7 @@ For those who do not want to read the long blabla below, here are the salient re
 
 The reprocessing went well. We restored the storage system, and we made it more robust to prevent similar failures. We optimised some parts of the pipelines, and took the opportunity of digging into old data to retrieve more data than before (nearly doubled!). The timings for the reprocessing were:
 
-{.table}
+
 | Step | Task | Throughput per task | Time for 4.7 TB |
 |------|---------------|------|-----------------|
 | Download | 5 nights | 300 MB/s | 5.5 hours |
@@ -32,7 +32,6 @@ So we could recreate everything for 2020 and 2021 in about one week. Note that w
 
 In terms of available alerts, the number has roughly doubled (11/2019 to 12/2021):
 
-{.table}
 |  | Previously | Current |
 |---|---|---|
 | Total number of alerts processed | 41,370,359 | 72,017,228|
