@@ -9,6 +9,9 @@ List of publications from the Fink collaboration and the larger astronomy commun
 
 ### 2022
 
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2202.05719) **Impact of satellite glints on the transient science on ZTF scale**,
+_Sergey Karpov, Julien Peloton_ 
+
 [![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2111.11438) [![button1](https://img.shields.io/static/v1?label=&message=zenodo&color=green&style=plastic&logo=&logoColor=white)](https://doi.org/10.5281/zenodo.5645609)  **Fink: early supernovae Ia classification using active learning**,
 _Marco Leoni, Emille E. O. Ishida, Julien Peloton, Anais Möller_ 
 
