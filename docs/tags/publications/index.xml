@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>publications on Fink broker</title>
+    <link>https://fink-broker.org/tags/publications/</link>
+    <description>Recent content in publications on Fink broker</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://fink-broker.org/tags/publications/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Publications</title>
+      <link>https://fink-broker.org/papers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/papers/</guid>
+      <description>List of publications from the Fink collaboration and the larger astronomy community that uses Fink public data.
+2022  Impact of satellite glints on the transient science on ZTF scale, Sergey Karpov, Julien Peloton
+  Fink: early supernovae Ia classification using active learning, Marco Leoni, Emille E. O. Ishida, Julien Peloton, Anais Möller
+2021    Fink, a new generation of broker for the LSST community, Anais Möller, Julien Peloton, Emille E.</description>
+    </item>
+    
+  </channel>
+</rss>

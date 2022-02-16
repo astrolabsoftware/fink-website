@@ -4,7 +4,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.78.2" />
+  <meta name="generator" content="Hugo 0.81.0" />
   <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
   
   
@@ -16,7 +16,7 @@ body {
     background-size: contain;
 }
 .container {
-  max-width: 800px;
+  max-width: 900px;
 }
 #nav a {
   font-weight: bold;
@@ -127,7 +127,20 @@ audio {
       
     
     
-    <a class="nav-link " href="https://fink-portal.org"><i data-feather="monitor"></i> Science Portal</a>
+    <a class="nav-link " href="https://fink-portal.org"><i data-feather="share-2"></i> Science Portal</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/papers/"><i data-feather="book"></i> Publications</a>
   
     
     
@@ -189,37 +202,23 @@ audio {
 
 <br><br>
 <h2 id="api-changes">API changes</h2>
-
 <p>With the recent maintenance, we did a number of changes to sanitize the infrastructure and the pipelines. Some of these changes breaks the compatibility with older Fink versions. All changes apply from <code>fink-broker</code> version 1.4+ and <code>fink-science</code> version 0.5+, with a new <a href="https://github.com/astrolabsoftware/fink-client/blob/master/schemas/distribution_schema_fink_ztf_1.4_0.5.1.avsc">schema</a>.</p>
-
 <h3 id="active-learning-module">Active Learning module</h3>
-
 <p>We introduced a name change for the output of the module. The old <code>rfscore</code> field is now replaced by <code>rf_snia_vs_nonia</code>. The module itself did not change, and the values remain the same.</p>
-
 <h3 id="kilonova-module">Kilonova module</h3>
-
 <p>We introduced a name change for the output of the module. The old <code>knscore</code> field is now replaced by <code>rf_kn_vs_nonkn</code>. The module itself did not change, and the values remain the same.</p>
-
 <h3 id="microlensing-module">Microlensing module</h3>
-
 <p>We shipped a new microlensing module still based on LIA, with a new schema for the output. We are not outputing anymore a <code>struct</code> with classes and probabilities from LIA, but a single <code>double</code> that is the mean of the per-band probabilities.</p>
-
 <h3 id="rest-api">REST API</h3>
-
 <h4 id="queries">Queries</h4>
-
 <p>Nothing changed from the end-user perspective in the REST API. Indeed, we combine internally science module outputs in Fink to provide with you alert classification. So despite the active learning score <code>rfscore</code> changed its name into <code>rf_snia_vs_nonia</code>, the Early SN Ia candidates have still the label <code>Early SN Ia candidate</code>.</p>
-
 <h4 id="data-columns">Data columns</h4>
-
 <p>The data columns have their names changed as well:</p>
-
 <ul>
 <li><code>d:rfscore</code> becomes <code>d:rf_snia_vs_nonia</code></li>
 <li><code>d:knscore</code> becomes <code>d:rf_kn_vs_nonkn</code></li>
 <li><code>d:mulens_*</code> becomes <code>d:mulens</code>, and it is a <code>double</code></li>
 </ul>
-
 <p>All documentation has been updated, but do not hesitate to reach us if you have any question!</p>
 
 

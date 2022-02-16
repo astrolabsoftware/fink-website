@@ -4,7 +4,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.78.2" />
+  <meta name="generator" content="Hugo 0.81.0" />
   <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
   
   
@@ -16,7 +16,7 @@ body {
     background-size: contain;
 }
 .container {
-  max-width: 800px;
+  max-width: 900px;
 }
 #nav a {
   font-weight: bold;
@@ -127,7 +127,20 @@ audio {
       
     
     
-    <a class="nav-link " href="https://fink-portal.org"><i data-feather="monitor"></i> Science Portal</a>
+    <a class="nav-link " href="https://fink-portal.org"><i data-feather="share-2"></i> Science Portal</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/papers/"><i data-feather="book"></i> Publications</a>
   
     
     
@@ -188,32 +201,19 @@ audio {
   
 
 <br><br>
-<p>Check out the version 0.9 of the Science Portal: Several new features: constellation names, preview of alert information, shiny new buttons, link to SNAD, and... a lot of bug fixes!</p>
-
+<p>Check out the version 0.9 of the Science Portal: Several new features: constellation names, preview of alert information, shiny new buttons, link to SNAD, and&hellip; a lot of bug fixes!</p>
 <h2 id="constellation">Constellation</h2>
-
 <p>We probably forgot, but the constellations were often used to navigate in the sky. Even though the objects making each constellation have no real relationships between them, the projection they form on the 2D sky is a great tool to locate an object, and target it. This why amateur astronomers use them a lot.</p>
-
 <p>So in Fink, we decided to add the name of the constellation an alert is in. This name will appear in various place in the Science Portal. More information (including screenshots) <a href="https://github.com/astrolabsoftware/fink-science-portal/pull/197">here</a>.</p>
-
 <h2 id="preview-of-alerts">Preview of alerts</h2>
-
 <p>Often you make a query, and you have a long list of candidates. Even though there is table that shows alert properties, it is often more efficient to quickly look at the stamps and the lightcurve to make an educated guess about the relevance of the alert. So instead of manually clicking on individual results, we introduced a new mechanism to quickly inspect alerts: the preview service. If you click on it, a window will open, and show the lightcurves (and some metadata) for the 10 first alerts of your query. Time saved! (<a href="https://github.com/astrolabsoftware/fink-science-portal/pull/187">screenshots</a>)</p>
-
 <h2 id="preview-of-individual-alert-information">Preview of individual alert information</h2>
-
 <p>Imagine you open the page for an alert, and you want to see an information contained in the alert packet. Previously, you had to download the alert. Now you can still download the alert, but you can also inspect all alert data in the browser! (<a href="https://github.com/astrolabsoftware/fink-science-portal/pull/192">screenshots</a>).</p>
-
 <h2 id="link-to-snad">Link to SNAD</h2>
-
 <p>The new version of the Portal includes now a direct link to the <a href="https://ztf.snad.space">SNAD-ZTF</a> viewer, so that you can perform a crossmatch from a Fink alert directly, and inspect possible counterparts in the ZTF-DR4.</p>
-
 <h2 id="shiny-new-buttons">Shiny new buttons</h2>
-
 <p>Buttons are important. We click on them everyday, million of times. So we decided to make an effort to have shiny buttons, especially for the links to external catalogs (<a href="https://github.com/astrolabsoftware/fink-science-portal/pull/194">screenshots</a>).</p>
-
 <h2 id="full-changelog">Full changelog</h2>
-
 <p><a href="https://github.com/astrolabsoftware/fink-science-portal/milestone/10?closed=1">https://github.com/astrolabsoftware/fink-science-portal/milestone/10?closed=1</a></p>
 
 
