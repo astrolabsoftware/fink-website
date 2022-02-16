@@ -4,7 +4,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.78.2" />
+  <meta name="generator" content="Hugo 0.81.0" />
   <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
   
   
@@ -16,7 +16,7 @@ body {
     background-size: contain;
 }
 .container {
-  max-width: 800px;
+  max-width: 900px;
 }
 #nav a {
   font-weight: bold;
@@ -127,7 +127,20 @@ audio {
       
     
     
-    <a class="nav-link " href="https://fink-portal.org"><i data-feather="monitor"></i> Science Portal</a>
+    <a class="nav-link " href="https://fink-portal.org"><i data-feather="share-2"></i> Science Portal</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/papers/"><i data-feather="book"></i> Publications</a>
   
     
     
@@ -189,27 +202,22 @@ audio {
 
 <br><br>
 <p>Fink is a broker infrastructure enabling a wide range of applications and services to connect to large streams of alerts issued from telescopes all over the world.</p>
-
 <p>Fink core is based on the <a href="http://spark.apache.org/">Apache Spark</a> framework, and more specifically it uses the <a href="https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html">Structured Streaming processing engine</a>. The language chosen for the API is Python, which is widely used in the astronomy community, has a large scientific ecosystem and easily connects with existing tools.</p>
-
-<p>Fink's goal is twofold: providing a robust infrastructure and state-of-the-art streaming services to LSST scientists, and enabling user-defined science cases in a big data context. Fink decouples resources needed for listening to the stream (online, critical), and resources used for services: scalable, robust, and modular!</p>
-
+<p>Fink&rsquo;s goal is twofold: providing a robust infrastructure and state-of-the-art streaming services to LSST scientists, and enabling user-defined science cases in a big data context. Fink decouples resources needed for listening to the stream (online, critical), and resources used for services: scalable, robust, and modular!</p>
 <h2 id="getting-started">Getting started</h2>
-
 <p>Learning Fink is easy whether you are a developer or a scientist:</p>
-
 <ul>
 <li>Learn about the <a href="https://fink-broker.readthedocs.io/en/latest/broker/introduction/">broker technology</a>, the <a href="https://fink-broker.readthedocs.io/en/latest/science/introduction/">science</a> we do, and how to <a href="https://fink-broker.readthedocs.io/en/latest/fink-client/">receive</a> alerts.</li>
 <li>Learn how to use the broker or how to contribute following the different <a href="https://fink-broker.readthedocs.io/en/latest/tutorials/introduction/">tutorials</a>.</li>
 <li>Explore the different components:
-
 <ul>
 <li><a href="https://github.com/astrolabsoftware/fink-alert-simulator">fink-alert-simulator</a>: Simulate alert streams for the Fink broker.</li>
 <li><a href="https://github.com/astrolabsoftware/fink-broker">fink-broker</a>: Astronomy Broker based on Apache Spark.</li>
 <li><a href="https://github.com/astrolabsoftware/fink-science">fink-science</a>: Define your science modules to add values to Fink alerts.</li>
 <li><a href="https://github.com/astrolabsoftware/fink-filters">fink-filters</a>: Define your filters to create your alert stream in Fink.</li>
 <li><a href="https://github.com/astrolabsoftware/fink-client">fink-client</a>:  Light-weight client to manipulate alerts from Fink.</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 
 

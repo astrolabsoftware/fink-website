@@ -124,5 +124,14 @@
       <description></description>
     </item>
     
+    <item>
+      <title>publications</title>
+      <link>https://fink-broker.org/tags/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/tags/publications/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

@@ -4,7 +4,7 @@
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Hugo 0.78.2" />
+  <meta name="generator" content="Hugo 0.81.0" />
   <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
   
   
@@ -16,7 +16,7 @@ body {
     background-size: contain;
 }
 .container {
-  max-width: 800px;
+  max-width: 900px;
 }
 #nav a {
   font-weight: bold;
@@ -127,7 +127,20 @@ audio {
       
     
     
-    <a class="nav-link " href="https://fink-portal.org"><i data-feather="monitor"></i> Science Portal</a>
+    <a class="nav-link " href="https://fink-portal.org"><i data-feather="share-2"></i> Science Portal</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/papers/"><i data-feather="book"></i> Publications</a>
   
     
     
@@ -189,12 +202,9 @@ audio {
 
 <br><br>
 <h2 id="linking-alerts-to-known-moving-objects">Linking alerts to known moving objects</h2>
-
 <p>Each night, Fink receives alerts from the public survey of the Zwicky Transient Facility (ZTF). The alert stream primarily includes events from flux transients and variables, but it also contains a large fraction of Solar System objects (SSO). Alert candidates are typically linked to an object on the sky by a cone search at the position of the alert. While this allows us to easily retrieve the brightness variation of a static object on the sky over time, this does not work if one wants to study a moving object.</p>
-
 <p>Fortunately for us, ZTF performs also a cross match with the Minor Planet Center archive, and attach the result to the alerts. We get mainly 3 additional fields: <code>ssnamenr</code> (the name of the nearest SSO within 30 arcsec, if any), <code>ssdistnr</code> (the distance to the nearest SSO within 30 arcsec, if any), <code>ssmagnr</code> (the magnitude of nearest known SSO within 30 arcsec, if any). While we could use this information as is, we slightly refine the search to link alerts to SSO objects.</p>
-
-<p>First, a cross match radius of 30 arcsec is rather broad -- there are sky fields for which there could be many sources. So first we keep only alerts with a ZTF MPC match within 5 arcsec from an MPC object. Second, we make also a condition on the distance to the nearest Panstarrs object, which should be bigger than the distance to MPC object (to remove stellar contamination). In pseudo-code, and using ZTF alert field names, the complete series of cuts is:</p>
+<p>First, a cross match radius of 30 arcsec is rather broad &ndash; there are sky fields for which there could be many sources. So first we keep only alerts with a ZTF MPC match within 5 arcsec from an MPC object. Second, we make also a condition on the distance to the nearest Panstarrs object, which should be bigger than the distance to MPC object (to remove stellar contamination). In pseudo-code, and using ZTF alert field names, the complete series of cuts is:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">if</span> ssdistnr <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> None:
     <span style="color:#75715e"># alerts should be less than 5&#39;&#39; away from MPC object</span>
     f_distance1 <span style="color:#f92672">=</span> ssdistnr <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0.0</span>
@@ -206,132 +216,88 @@ audio {
     <span style="color:#75715e"># Not seen many times with the same objectId</span>
     f_ndethist <span style="color:#f92672">=</span> ndethist <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">2</span>
 
-    mask_roid <span style="color:#f92672">=</span> f_distance1 <span style="color:#f92672">&amp;</span> f_distance2 <span style="color:#f92672">&amp;</span> f_relative_distance <span style="color:#f92672">&amp;</span> f_ndethist</code></pre></div>
-<p>Among the hundreds of thousands alerts that we receive nightly, about 10 to 50% are flagged as known Solar System objects.</p>
-
-<p><figure><img src="/images/sso-evolution.png" alt="sso-evolution"></figure>
+    mask_roid <span style="color:#f92672">=</span> f_distance1 <span style="color:#f92672">&amp;</span> f_distance2 <span style="color:#f92672">&amp;</span> f_relative_distance <span style="color:#f92672">&amp;</span> f_ndethist
+</code></pre></div><p>Among the hundreds of thousands alerts that we receive nightly, about 10 to 50% are flagged as known Solar System objects.</p>
+<p><img src="/images/sso-evolution.png" alt="sso-evolution">
 <em>Cumulative number of alerts flagged as known Solar System objects from MPC, taken from <a href="https://fink-portal.org/stats">https://fink-portal.org/stats</a>. After 2 years of operations (Nov 2019 to December 2021, 523 observing nights), Fink has flagged more than 10 million alerts as known Solar System objects, corresponding to 443,817 unique objects.</em></p>
-
 <h3 id="some-statistics">Some statistics</h3>
-
 <p>Looking at the big picture, most of Solar System objects have few alerts attached (median at 11 alerts per object), with a long tail of highly sampled ones:</p>
-
-<p><figure><img src="/images/sso-hist-number.png" alt="sso-hist-number"></figure></p>
-
+<p><img src="/images/sso-hist-number.png" alt="sso-hist-number"></p>
 <p>If we look at the time window from the first alert to the last one for each object, we see yearly variations (vertical lines show 1st and 2nd year):</p>
-
-<p><figure><img src="/images/sso-hist-time.png" alt="sso-hist-time"></figure></p>
-
+<p><img src="/images/sso-hist-time.png" alt="sso-hist-time"></p>
 <h2 id="science-portal-a-shiny-new-interface">Science portal: a shiny new interface</h2>
-
 <p>In order to explore these moving objects, you can use the Fink Science Portal.</p>
-
 <h3 id="searching-for-sso">Searching for SSO</h3>
-
 <h4 id="by-number">By number</h4>
-
 <p>If you already know a Solar System object name (IAU identifier), you can directly query for it:</p>
-
-<p><figure><img src="/images/sso-number-1.png" alt="sso-number-1"></figure>
+<p><img src="/images/sso-number-1.png" alt="sso-number-1">
 <em>How to search for SSO by number? <strong>A:</strong> Choose the SSO query. <strong>B:</strong> Enter a valid IAU number. <strong>C:</strong> hit search!</em></p>
-
 <p>You will have the list of alerts that correspond to this SSO number:</p>
-
-<p><figure><img src="/images/sso-number-2.png" alt="sso-number-2"></figure></p>
-
+<p><img src="/images/sso-number-2.png" alt="sso-number-2"></p>
 <p>Note that you can display the orbit made by the alerts by hitting the button <code>Sky map</code> above the table:</p>
-
-<p><figure><img src="/images/sso-number-3.png" alt="sso-number-3"></figure></p>
-
+<p><img src="/images/sso-number-3.png" alt="sso-number-3"></p>
 <h4 id="by-class">By class</h4>
-
 <p>You can also request the latest 100 alerts received linked to known Solar System objects:</p>
-
-<p><figure><img src="/images/sso-class-1.png" alt="sso-class-1"></figure>
+<p><img src="/images/sso-class-1.png" alt="sso-class-1">
 <em>How to get the lastest 100 alerts received linked to SSO? <strong>A:</strong> Choose the <code>Class Search</code> query. <strong>B:</strong> Choose the <code>Solar System (MPC)</code> field in the dropdown. <strong>C:</strong> hit search!</em></p>
-
 <p>You will have the list of alerts that correspond to this SSO number:</p>
-
-<p><figure><img src="/images/sso-class-2.png" alt="sso-class-2"></figure>
+<p><img src="/images/sso-class-2.png" alt="sso-class-2">
 <em>Note that you can easily add extra columns to the table, like the IAU number for these moving objects.</em></p>
-
 <h3 id="inspecting-data-for-an-object">Inspecting data for an object</h3>
-
 <p>Once you have your table result, you can further inspect an object. For this, click on any alert of the table. A new page will open with the data for the alert, and go to the Tab <code>Solar System</code>.</p>
-
 <h4 id="lightcurve">Lightcurve</h4>
-
 <p>The first Tab, <code>Lightcurve</code>, will display the lightcurve made from all linked alerts:</p>
-
-<p><figure><img src="/images/sso-lc.png" alt="sso-lc"></figure></p>
-
+<p><img src="/images/sso-lc.png" alt="sso-lc"></p>
 <p>The top plot is the lightcurve for the 2 ZTF filter bands (g &amp; r), as well as ephemerides data provided by the <a href="https://ssp.imcce.fr/webservices/miriade/api/ephemcc/">Miriade ephemeride service</a>. The plot on the bottom shows the residuals between observed and predicted magnitude as a function of the ecliptic longitude. The variations are most-likely due to the difference of aspect angle: the object is not a perfect sphere, and we are seeing its oblateness here. The solid lines are sinusoidal fits to the residuals.</p>
-
 <p>The card on the right displays parameters for this object from the MPC archive. You also have two links to the MPC and JPL websites for further inspection.</p>
-
 <h4 id="astrometry">Astrometry</h4>
-
 <p>The <code>Astrometry</code> Tab displays the difference between the alert positions and the positions returned by the <a href="https://ssp.imcce.fr/webservices/miriade/api/ephemcc/">Miriade ephemeride service</a>.</p>
-
-<p><figure><img src="/images/sso-astrometry.png" alt="sso-astrometry"></figure></p>
-
+<p><img src="/images/sso-astrometry.png" alt="sso-astrometry"></p>
 <h4 id="phase-curve">Phase curve</h4>
-
 <p>The <code>Phase curve</code> Tab allows to inspect the phase curve. By default, the data is modeled after the three-parameter H, G1, G2 magnitude phase function for asteroids from <a href="https://doi.org/10.1016/j.icarus.2010.04.003">Muinonen et al. 2010</a>. We use the implementation in <a href="https://sbpy.readthedocs.io/en/latest/sbpy/photometry.html#disk-integrated-phase-function-models">sbpy</a> to fit the data.</p>
-
-<p><figure><img src="/images/sso-phase-1.png" alt="sso-phase-1"></figure></p>
-
+<p><img src="/images/sso-phase-1.png" alt="sso-phase-1"></p>
 <p>We propose two cases, one fitting bands separately, and the other fitting both bands simultaneously (rescaled):</p>
-
-<p><figure><img src="/images/sso-phase-2.png" alt="sso-phase-2"></figure></p>
-
+<p><img src="/images/sso-phase-2.png" alt="sso-phase-2"></p>
 <p>We also propose different phase curve modeling using the HG12 and HG models. Hit buttons to see the fitted values!</p>
-
-<p><figure><img src="/images/sso-phase-3.png" alt="sso-phase-3"></figure></p>
-
+<p><img src="/images/sso-phase-3.png" alt="sso-phase-3"></p>
 <h3 id="using-the-rest-api">Using the REST API</h3>
-
 <h4 id="by-number-1">By number</h4>
-
 <p>The list of arguments for retrieving SSO data can be found at <a href="https://fink-portal.org/api/v1/sso">https://fink-portal.org/api/v1/sso</a>.
 The numbers or designations are taken from the MPC archive.
 When searching for a particular asteroid or comet, it is best to use the IAU number,
-as in 8467 for asteroid &quot;8467 Benoitcarry&quot;. You can also try for numbered comet (e.g. 10P),
-or interstellar object (none so far...). If the number does not yet exist, you can search for designation.
+as in 8467 for asteroid &ldquo;8467 Benoitcarry&rdquo;. You can also try for numbered comet (e.g. 10P),
+or interstellar object (none so far&hellip;). If the number does not yet exist, you can search for designation.
 Here are some examples of valid queries:</p>
-
 <ul>
 <li>Asteroids by number (default)
-
 <ul>
 <li>Asteroids (Main Belt): 8467, 1922</li>
 <li>Asteroids (Hungarians): 18582, 77799</li>
 <li>Asteroids (Jupiter Trojans): 4501, 1583</li>
 <li>Asteroids (Mars Crossers): 302530</li>
-</ul></li>
+</ul>
+</li>
 <li>Asteroids by designation (if number does not exist yet)
-
 <ul>
 <li>2010JO69, 2017AD19, 2012XK111</li>
-</ul></li>
+</ul>
+</li>
 <li>Comets by number (default)
-
 <ul>
 <li>10P, 249P, 124P</li>
-</ul></li>
+</ul>
+</li>
 <li>Comets by designation (if number does no exist yet)
-
 <ul>
 <li>C/2020V2, C/2020R2</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p>Note for designation, you can also use space (2010 JO69 or C/2020 V2).</p>
-
 <p>In a unix shell, you would simply use</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Get data for the asteroid 8467 and save it in a CSV file</span>
-curl -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> -X POST -d <span style="color:#e6db74">&#39;{&#34;n_or_d&#34;:&#34;8467&#34;, &#34;output-format&#34;:&#34;csv&#34;}&#39;</span> https://fink-portal.org/api/v1/sso -o 8467.csv</code></pre></div>
-<p>In python, you would use</p>
+curl -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> -X POST -d <span style="color:#e6db74">&#39;{&#34;n_or_d&#34;:&#34;8467&#34;, &#34;output-format&#34;:&#34;csv&#34;}&#39;</span> https://fink-portal.org/api/v1/sso -o 8467.csv
+</code></pre></div><p>In python, you would use</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> requests
 <span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
 
@@ -345,20 +311,20 @@ r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</sp
 )
 
 <span style="color:#75715e"># Format output in a DataFrame</span>
-pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(r<span style="color:#f92672">.</span>content)</code></pre></div>
-<p>Note that for <code>csv</code> output, you need to use</p>
+pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(r<span style="color:#f92672">.</span>content)
+</code></pre></div><p>Note that for <code>csv</code> output, you need to use</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># get data for asteroid 8467 in CSV format...</span>
 r <span style="color:#f92672">=</span> <span style="color:#f92672">...</span>
 
-pd<span style="color:#f92672">.</span>read_csv(io<span style="color:#f92672">.</span>BytesIO(r<span style="color:#f92672">.</span>content))</code></pre></div>
-<p>You can also get a votable using the json output format:</p>
+pd<span style="color:#f92672">.</span>read_csv(io<span style="color:#f92672">.</span>BytesIO(r<span style="color:#f92672">.</span>content))
+</code></pre></div><p>You can also get a votable using the json output format:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> astropy.table <span style="color:#f92672">import</span> Table
 
 <span style="color:#75715e"># get data for asteroid 8467 in JSON format...</span>
 r <span style="color:#f92672">=</span> <span style="color:#f92672">...</span>
 
-t <span style="color:#f92672">=</span> Table(r<span style="color:#f92672">.</span>json())</code></pre></div>
-<p>You can also attach the ephemerides provided by the <a href="https://ssp.imcce.fr/webservices/miriade/api/ephemcc/">Miriade ephemeride service</a>:</p>
+t <span style="color:#f92672">=</span> Table(r<span style="color:#f92672">.</span>json())
+</code></pre></div><p>You can also attach the ephemerides provided by the <a href="https://ssp.imcce.fr/webservices/miriade/api/ephemcc/">Miriade ephemeride service</a>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> requests
 <span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
 
@@ -388,14 +354,12 @@ Index([<span style="color:#e6db74">&#39;index&#39;</span>, <span style="color:#e
        <span style="color:#e6db74">&#39;i:ssmagnr&#39;</span>, <span style="color:#e6db74">&#39;i:ssnamenr&#39;</span>, <span style="color:#e6db74">&#39;i:tooflag&#39;</span>, <span style="color:#e6db74">&#39;i:xpos&#39;</span>, <span style="color:#e6db74">&#39;i:ypos&#39;</span>,
        <span style="color:#e6db74">&#39;d:tracklet&#39;</span>, <span style="color:#e6db74">&#39;v:classification&#39;</span>, <span style="color:#e6db74">&#39;v:lastdate&#39;</span>, <span style="color:#e6db74">&#39;v:constellation&#39;</span>,
        <span style="color:#e6db74">&#39;i:magpsf_red&#39;</span>],
-      dtype<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;object&#39;</span>)</code></pre></div>
-<p>Where first columns are fields returned from Miriade (beware it adds few seconds delay). There are some limitations though:</p>
-
+      dtype<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;object&#39;</span>)
+</code></pre></div><p>Where first columns are fields returned from Miriade (beware it adds few seconds delay). There are some limitations though:</p>
 <ul>
 <li>Color ephemerides are returned only for asteroids</li>
-<li>Temporary designations (C/... or YYYY...) do not have ephemerides available</li>
+<li>Temporary designations (C/&hellip; or YYYY&hellip;) do not have ephemerides available</li>
 </ul>
-
 <p>By default, we transfer all available data fields (original ZTF fields and Fink science module outputs).
 But you can also choose to transfer only a subset of the fields:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># select only jd, and magpsf</span>
@@ -405,20 +369,17 @@ r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</sp
     <span style="color:#e6db74">&#39;n_or_d&#39;</span>: <span style="color:#e6db74">&#39;8467&#39;</span>,
     <span style="color:#e6db74">&#39;columns&#39;</span>: <span style="color:#e6db74">&#39;i:jd,i:magpsf&#39;</span>
   }
-)</code></pre></div>
-<p>Note that the fields should be comma-separated. Unknown field names are ignored. More information at <a href="https://fink-portal.org/api">https://fink-portal.org/api</a>.</p>
-
+)
+</code></pre></div><p>Note that the fields should be comma-separated. Unknown field names are ignored. More information at <a href="https://fink-portal.org/api">https://fink-portal.org/api</a>.</p>
 <h4 id="by-class-1">By class</h4>
-
 <p>The list of arguments for getting latest alerts by class can be found at <a href="https://fink-portal.org/api/v1/latests">https://fink-portal.org/api/v1/latests</a>.</p>
-
 <p>The list of Fink class can be found at <a href="https://fink-portal.org/api/v1/classes">https://fink-portal.org/api/v1/classes</a></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Get list of available class in Fink</span>
-curl -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> -X GET https://fink-portal.org/api/v1/classes -o finkclass.json</code></pre></div>
-<p>To get the last 5 candidates of the class <code>Solar System MPC</code>, you would simply use in a unix shell:</p>
+curl -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> -X GET https://fink-portal.org/api/v1/classes -o finkclass.json
+</code></pre></div><p>To get the last 5 candidates of the class <code>Solar System MPC</code>, you would simply use in a unix shell:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Get latests 5 Solar System MPC</span>
-curl -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> -X POST -d <span style="color:#e6db74">&#39;{&#34;class&#34;:&#34;Solar System MPC&#34;, &#34;n&#34;:&#34;5&#34;}&#39;</span> https://fink-portal.org/api/v1/latests -o out.json</code></pre></div>
-<p>In python, you would use</p>
+curl -H <span style="color:#e6db74">&#34;Content-Type: application/json&#34;</span> -X POST -d <span style="color:#e6db74">&#39;{&#34;class&#34;:&#34;Solar System MPC&#34;, &#34;n&#34;:&#34;5&#34;}&#39;</span> https://fink-portal.org/api/v1/latests -o out.json
+</code></pre></div><p>In python, you would use</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> requests
 <span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
 
@@ -432,8 +393,8 @@ r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</sp
 )
 
 <span style="color:#75715e"># Format output in a DataFrame</span>
-pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(r<span style="color:#f92672">.</span>content)</code></pre></div>
-<p>You can also specify <code>startdate</code> and <code>stopdate</code> for your search:</p>
+pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(r<span style="color:#f92672">.</span>content)
+</code></pre></div><p>You can also specify <code>startdate</code> and <code>stopdate</code> for your search:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> requests
 <span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
 
@@ -449,46 +410,32 @@ r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</sp
 )
 
 <span style="color:#75715e"># Format output in a DataFrame</span>
-pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(r<span style="color:#f92672">.</span>content)</code></pre></div>
-<p>There is no limit of time, but you will be limited by the
+pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(r<span style="color:#f92672">.</span>content)
+</code></pre></div><p>There is no limit of time, but you will be limited by the
 number of alerts retrieve on the server side <code>n</code> (current max is 1000).</p>
-
 <h2 id="planned-improvements">Planned improvements</h2>
-
 <p>The service has some limitations, and here are the planned improvements for the coming months:</p>
-
 <ol>
-<li>SSOs do not have unique names or identifiers usually... While we stick with IAU identifiers for the moment, we plan to use a low level name resolver (<a href="https://ssp.imcce.fr/webservices/ssodnet/api/quaero/">quaero</a>) to use aliases as well.</li>
+<li>SSOs do not have unique names or identifiers usually&hellip; While we stick with IAU identifiers for the moment, we plan to use a low level name resolver (<a href="https://ssp.imcce.fr/webservices/ssodnet/api/quaero/">quaero</a>) to use aliases as well.</li>
 <li>For the moment, users can search by SSO number or do a <code>Class Search</code> to get latest alerts. Ideally, we would like the users to query also SSO by the number of time they have been seen in ZTF.</li>
 </ol>
-
-<h2 id="how-to-receive-alerts-in-realtime-about-an-object">How to receive alerts in real-time about an object?</h2>
-
+<h2 id="how-to-receive-alerts-in-real-time-about-an-object">How to receive alerts in real-time about an object?</h2>
 <p>The Science Portal databases are updated with new data only at the end of an observation night. If you want to receive alerts in real-time from Fink, you can design a <a href="https://github.com/astrolabsoftware/fink-filters">filter</a> and use the <a href="https://github.com/astrolabsoftware/fink-client">client</a>. Either try the tutorial, or contact us so that we can deploy it for you!</p>
-
 <h2 id="beyond-known-moving-objects-new-discoveries">Beyond known moving objects: new discoveries</h2>
-
 <p>So far, we only mentioned moving objects that are already contained in the MPC database. But there are potentially more objects still uncatalogued. In Fink, we have a science module to try to catch this potential Solar System new candidates. It works in 2 steps:</p>
-
 <h3 id="step-1-filtering-candidates">Step 1: filtering candidates</h3>
-
 <p>Similarly to MPC, we try to guess in real-time if an alert could be a moving object. This time, we do not have any name information, so we have to guess with other properties. Here is the summary of our cuts:</p>
-
 <ol>
 <li>No stellar counterpart from PS1, <code>sgscore1</code> &lt; 0.76 (Tachibana &amp; Miller 2018)</li>
 <li>Number of detection is 1 or 2</li>
 <li>No Panstarrs counterpart within 1&quot;</li>
 <li>If 2 detections, observations must be done within 30 min.</li>
 </ol>
-
 <p>There are about 100 times less candidates than confirmed SSO, with about 100-1000 candidates per night:</p>
-
-<p><figure><img src="/images/sso-cand-evolution.png" alt="sso-cand-evolution"></figure>
+<p><img src="/images/sso-cand-evolution.png" alt="sso-cand-evolution">
 <em>Nightly number of alerts flagged as Solar System objects candidates, taken from <a href="https://fink-portal.org/stats">https://fink-portal.org/stats</a>. After 2 years of operations (Nov 2019 to December 2021, 523 observing nights), Fink has flagged more than 300,000 alerts as SSO candidates.</em></p>
-
 <h3 id="step-2-refining">Step 2: refining</h3>
-
-<p>All candidates are probably not SSO, so the second step is to refine the analysis by linking those candidates and extracting orbits. This is a work in progress -- more to come soon!</p>
+<p>All candidates are probably not SSO, so the second step is to refine the analysis by linking those candidates and extracting orbits. This is a work in progress &ndash; more to come soon!</p>
 
 
 

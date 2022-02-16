@@ -24,34 +24,38 @@ menu:
     url: /post/
     weight: 2
   - name: Science Portal
-    pre: monitor
+    pre: share-2
     url: https://fink-portal.org
     weight: 3
+  - name: Publications
+    pre: book 
+    url: /papers/
+    weight: 4
   - name: Team
     pre: users
     url: /members/
-    weight: 4
+    weight: 5
   - name: Join us
     pre: user-plus
     url: /joining/
-    weight: 5
+    weight: 6
   - name: About
     pre: info
     url: /about/
-    weight: 6
+    weight: 7
 
 params:
   includeBootstrapJs: true
   showActiveNav: true
-  containerMaxWidth: 800px
+  containerMaxWidth: 900px
   dateFormat: Jan 2, 2006
-  homeText:
+  homeText: 
   footerText:
   hideFooter: true
   katex: true
 
 markup:
-  defaultMarkdownHandler: mmark
+  defaultMarkdownHandler: goldmark
   goldmark:
     extensions:
       definitionList: true

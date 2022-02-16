@@ -1,173 +1,107 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://fink-broker.org/</loc>
     <lastmod>2022-01-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/post/</loc>
     <lastmod>2022-01-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/2022-01-28-sso-science/</loc>
     <lastmod>2022-01-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/tags/sso/</loc>
     <lastmod>2022-01-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/tags/</loc>
     <lastmod>2022-01-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/tags/api/</loc>
     <lastmod>2022-01-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/2022-01-18-what-changed/</loc>
     <lastmod>2022-01-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/tags/maintenance/</loc>
     <lastmod>2022-01-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/2022-01-18-power-failure/</loc>
     <lastmod>2022-01-18T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/2022-01-17-maintenance/</loc>
     <lastmod>2022-01-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/tags/infrastructure/</loc>
     <lastmod>2021-12-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/2021-12-17-infrastructure/</loc>
     <lastmod>2021-12-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/2021-12-01-statistics/</loc>
     <lastmod>2021-12-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/tags/portal/</loc>
     <lastmod>2021-12-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/2021-09-27-science-portal-updates/</loc>
     <lastmod>2021-09-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/2021-08-10-science-portal-updates/</loc>
     <lastmod>2021-08-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/2021-07-05-science-portal-updates/</loc>
     <lastmod>2021-07-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/2020-11-11-science-portal/</loc>
     <lastmod>2020-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/2020-09-23-white-paper/</loc>
     <lastmod>2020-09-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/tags/paper/</loc>
     <lastmod>2020-09-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/2020-09-17-lsst-enabling-science-part1/</loc>
     <lastmod>2020-09-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/tags/workshop/</loc>
     <lastmod>2020-09-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/2020-02-01-mouztf/</loc>
     <lastmod>2020-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/tags/ztf/</loc>
     <lastmod>2020-02-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/2020-01-28-workshop/</loc>
     <lastmod>2020-01-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/2020-01-10-loi/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/tags/general/</loc>
     <lastmod>2019-12-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/2019-12-17-welcome/</loc>
     <lastmod>2019-12-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/tags/about/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/about/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/tags/archive/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/tags/fink/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/joining/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fink-broker.org/tags/members/</loc>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://fink-broker.org/papers/</loc>
+  </url><url>
+    <loc>https://fink-broker.org/tags/publications/</loc>
+  </url><url>
     <loc>https://fink-broker.org/members/</loc>
   </url>
-  
 </urlset>
