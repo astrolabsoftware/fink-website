@@ -9,6 +9,9 @@ List of publications from the Fink collaboration and the larger astronomy commun
 
 ### 2022
 
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2202.09766) [![button1](https://img.shields.io/static/v1?label=&message=data&color=orange&style=plastic&logo=&logoColor=white)](https://github.com/astrolabsoftware/fink_grandma_kn) **GRANDMA Observations of ZTF/Fink Transients during Summer 2021**,
+_V. Aivazyan, M. Almualla, S. Antier, A. Baransky, K. Barynova, S. Basa, F. Bayard, S. Beradze, D. Berezin, M. Blazek, D. Boutigny, D. Boust, E. Broens, O. Burkhonov, A. Cailleau, N. Christensen, D. Cejudo, A. Coleiro, M. W. Coughlin, D. Datashvili, T. Dietrich, F. Dolon, J.-G. Ducoin, P.-A. Duverne, G. Marchal-Duval, C. Galdies, L. Granier, V. Godunova, P. Gokuldass, H. B. Eggenstein, M. Freeberg, P. Hello, R. Inasaridze, E. O. Ishida, P. Jaquiery, D. A. Kann, G. Kapanadze, S. Karpov, R. W. Kiendrebeogo, A. Klotz, R. Kneip, N. Kochiashvili, W. Kou, F. Kugel, C. Lachaud, S. Leonini, A. Leroy, N. Leroy, A. Le Van Su, D. Marchais, M. Masek, T. Midavaine, A. Moller, D. Morris, R. Natsvlishvili, F. Navarete, K. Noysena, S. Nissanke, K. Noonan, N. B. Orange, J. Peloton, A. Popowicz, T. Pradier, M. Prouza, G. Raaijmakers, Y. Rajabov, M. Richmond, Ya. Romanyuk, L. Rousselot, T. Sadibekova, M. Serrau, O. Sokoliuk, X. Song, A. Simon, C. Stachie, A. Taylor, Y. Tillayev, D. Turpin, M. Vardosanidze, J. Vlieghe, I. Tosta e Melo, X. F. Wang, J. Zhu_ 
+
 [![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2202.05719) **Impact of satellite glints on the transient science on ZTF scale**,
 _Sergey Karpov, Julien Peloton_ 
 
