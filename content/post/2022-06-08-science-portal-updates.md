@@ -9,7 +9,7 @@ tags: [Portal]
 Check out the version 1.2 of the Science Portal!
 <!--more-->
 
-## Add QR codes for objects
+## Object QR codes
 
 Now there is a QR code attached to each *object*. You will find it next to the name of the object in the summary page:
 
@@ -17,7 +17,7 @@ Now there is a QR code attached to each *object*. You will find it next to the n
 
 Each QR code references to an object page `https://fink-portal/<objectId>`, so that you can easily switch from your laptop to smartphone, or use it in slides to share data with others! Try for example:
 
-<img src="/images/qr_fink.png" width="30%" height="30%" />
+<img src="/images/qr_fink.png" width="30%" height="30%" style="display: block; margin: auto;" />
 
 ## Enable ENTER key to send query
 
