@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fink Science Portal 1.2</title>
+      <link>https://fink-broker.org/2022-06-08-science-portal-updates/</link>
+      <pubDate>Wed, 08 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2022-06-08-science-portal-updates/</guid>
+      <description>&lt;p&gt;Check out the version 1.2 of the Science Portal!&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Solar System Science with Fink</title>
       <link>https://fink-broker.org/2022-01-28-sso-science/</link>

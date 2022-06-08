@@ -1,0 +1,367 @@
+<!doctype html>
+
+<html lang="en" class="h-100">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="Hugo 0.81.0" />
+  <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
+  
+  
+  <title>Fink Science Portal 1.2 | Fink broker</title>
+  <style>
+body {
+    background-color:  #f2f3f4; 
+    background-image: url(images/background.png);
+    background-size: contain;
+}
+.container {
+  max-width: 900px;
+}
+#nav a {
+  font-weight: bold;
+  color: inherit;
+}
+#nav a.nav-link-active {
+  background-color: #212529;
+  color: #fff;
+}
+#nav-border {
+  border-bottom: 1px solid #212529;
+}
+#main {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+#home-jumbotron {
+  background-color: inherit;
+}
+#footer .container {
+  padding: 1em 0;
+}
+#footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+.font-125 {
+  font-size: 125%;
+}
+.tag-btn {
+  margin-bottom: 0.3em;
+}
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit; 
+  background-color: transparent;
+  border-radius: 0;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+img,
+iframe,
+embed,
+video,
+audio {
+  max-width: 100%;
+}
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: initial;
+}
+</style>
+
+</head>
+  <body class="d-flex flex-column h-100">
+    <div id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/"><i data-feather="home"></i> Home</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/post/"><i data-feather="edit"></i> News</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="https://fink-portal.org"><i data-feather="share-2"></i> Science Portal</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/papers/"><i data-feather="book"></i> Publications</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/members/"><i data-feather="users"></i> Team</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/joining/"><i data-feather="user-plus"></i> Join us</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/about/"><i data-feather="info"></i> About</a>
+  
+  </nav>
+</div>
+
+    <div class="container">
+      <main id="main">
+        
+
+<h1>Fink Science Portal 1.2</h1>
+
+
+<i data-feather="calendar"></i> <time datetime="2022-06-08">Jun 8, 2022</time>
+
+  <br>
+  <i data-feather="tag"></i>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://fink-broker.org/tags/portal">Portal</a>
+  
+
+<br><br>
+<p>Check out the version 1.2 of the Science Portal!</p>
+<h2 id="add-qr-codes-for-objects">Add QR codes for objects</h2>
+<p>Now there is a QR code attached to each <em>object</em>. You will find it next to the name of the object in the summary page:</p>
+<p><img src="/images/qr_web.png" alt="qr_web"></p>
+<p>Each QR code references to an object page <code>https://fink-portal/&lt;objectId&gt;</code>, so that you can easily switch from your laptop to smartphone, or use it in slides to share data with others! Try for example:</p>
+<p><img src="/images/qr_fink.png" width="30%" height="30%" /></p>
+<h2 id="enable-enter-key-to-send-query">Enable ENTER key to send query</h2>
+<p>FINALLY there! I deeply apologise on this one&hellip; now you can write your query on the Fink search bar, and just press enter to execute it :-)</p>
+<p>Note that the class search has been also automatised. Now it displays the 100 latest alerts
+by default when you switch on the <code>Class Search</code>, and if you select a class from the list,
+the query results will be automatically refreshed.</p>
+<h2 id="draw-random-objects-from-the-database">Draw random objects from the database</h2>
+<p>We often want random objects. Now you can easily do this from the new API endpoint <a href="https://fink-portal.org/api/v1/random">https://fink-portal.org/api/v1/random</a>. This service lets you draw random objects (full light-curve) from the Fink database (120+ million alerts). This is still largely experimental. In python, you would use</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> io
+<span style="color:#f92672">import</span> requests
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+
+r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(
+  <span style="color:#e6db74">&#39;https://fink-portal.org/api/v1/random&#39;</span>,
+  json<span style="color:#f92672">=</span>{
+    <span style="color:#e6db74">&#39;n&#39;</span>: integer, <span style="color:#75715e"># Number of random objects to get. Maximum is 16.</span>
+    <span style="color:#e6db74">&#39;class&#39;</span>: classname, <span style="color:#75715e"># Optional, specify a Fink class.</span>
+    <span style="color:#e6db74">&#39;seed&#39;</span>: integer, <span style="color:#75715e"># Optional, the seed for reproducibility</span>
+    <span style="color:#e6db74">&#39;columns&#39;</span>: str, <span style="color:#75715e"># Optional, comma-separated column names</span>
+    <span style="color:#e6db74">&#39;output-format&#39;</span>: output_format, <span style="color:#75715e"># Optional [json[default], csv, parquet, votable]</span>
+  }
+)
+
+<span style="color:#75715e"># Format output in a DataFrame</span>
+pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(io<span style="color:#f92672">.</span>BytesIO(r<span style="color:#f92672">.</span>content))
+</code></pre></div><p>More information at <a href="https://fink-portal.org/api">https://fink-portal.org/api</a>. Note that this is not available yet from the Science Portal (web), but there should be a page dedicated to this later.</p>
+<h2 id="limit-the-number-of-times-an-object-is-listed-in-the-results">Limit the number of times an object is listed in the results</h2>
+<p>There is now a new button that gives the capability to group by alerts by name to only output a list of unique names (the last alert in time is kept):</p>
+<p><img src="/images/group_objects.png" alt="groupby"></p>
+<p>Limitation: once the grouping by alert name is performed, one cannot go back to the full list (the table is overwritten). In order to get full results, the query needs to be re-ran.</p>
+<p>Note that we also added two new columns to ease the search:</p>
+<ol>
+<li>A new column <code>v:firstdate</code> which is the human readable datetime for the first variation of the object (from <code>i:jdstarthist</code>)</li>
+<li>A new column <code>v:lapse</code> which is the number of days between first and last detection.</li>
+</ol>
+<p>For example, one can easily then filter results by their age by adding <code>v:lapse</code> and sorting:</p>
+<p><img src="/images/lapse.png" alt="lapse"></p>
+<p>The API is untouched, although new columns are available in the results (only when transferring all columns though).</p>
+<h2 id="querying-the-photometry-for-multiple-objects-at-once">Querying the photometry for multiple objects at once</h2>
+<p>When you retrieve object data, you can now specify several object names at once:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> io
+<span style="color:#f92672">import</span> requests
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+
+mylist <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;ZTF21aaxtctv&#39;</span>, <span style="color:#e6db74">&#39;ZTF21abfmbix&#39;</span>, <span style="color:#e6db74">&#39;ZTF21abfaohe&#39;</span>]
+
+<span style="color:#75715e"># get data for many objects</span>
+r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(
+  <span style="color:#e6db74">&#39;https://fink-portal.org/api/v1/objects&#39;</span>,
+  json<span style="color:#f92672">=</span>{
+    <span style="color:#e6db74">&#39;objectId&#39;</span>: <span style="color:#e6db74">&#39;,&#39;</span><span style="color:#f92672">.</span>join(mylist),
+    <span style="color:#e6db74">&#39;output-format&#39;</span>: <span style="color:#e6db74">&#39;json&#39;</span>
+  }
+)
+
+<span style="color:#75715e"># Format output in a DataFrame</span>
+pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(io<span style="color:#f92672">.</span>BytesIO(r<span style="color:#f92672">.</span>content))
+</code></pre></div><p>you will get a single DataFrame, with all objects stacked.</p>
+<h2 id="solar-system-objects">Solar system objects</h2>
+<p>In the release 1.1, we only allowed for querying asteroid ephemerides in Miriade &ndash; and query for comets would miserably fail. This has been fixed!</p>
+<h2 id="speeding-up-class-search">Speeding up Class Search</h2>
+<p>As is done with other services, you can now specify the fields to transfer when querying latest alerts for a given class:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> io
+<span style="color:#f92672">import</span> requests
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+
+<span style="color:#75715e"># Get all classified SN Ia from TNS between March 1st 2021 and March 15th 2021</span>
+r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(
+  <span style="color:#e6db74">&#39;https://fink-portal.org/api/v1/latests&#39;</span>,
+  json<span style="color:#f92672">=</span>{
+    <span style="color:#e6db74">&#39;class&#39;</span>: <span style="color:#e6db74">&#39;(TNS) SN Ia&#39;</span>,
+    <span style="color:#e6db74">&#39;n&#39;</span>: <span style="color:#e6db74">&#39;1000&#39;</span>,
+    <span style="color:#e6db74">&#39;columns&#39;</span>: <span style="color:#e6db74">&#39;i:objectId,i:jd,i:magpsf&#39;</span>,
+    <span style="color:#e6db74">&#39;startdate&#39;</span>: <span style="color:#e6db74">&#39;2021-03-01&#39;</span>,
+    <span style="color:#e6db74">&#39;stopdate&#39;</span>: <span style="color:#e6db74">&#39;2021-03-15&#39;</span>
+  }
+)
+
+<span style="color:#75715e"># Format output in a DataFrame</span>
+pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(io<span style="color:#f92672">.</span>BytesIO(r<span style="color:#f92672">.</span>content))
+</code></pre></div><h2 id="new-output-format-votable">New output format: VOTable</h2>
+<p>Regarding VOTables, we have an experimental support:</p>
+<pre><code>wget &quot;https://fink-portal.org/api/v1/explorer?ra=193.822&amp;dec=2.89732&amp;radius=5&amp;output-format=votable&quot; -O conesearch.xml
+</code></pre><p>or in Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> io
+<span style="color:#f92672">import</span> requests
+<span style="color:#f92672">from</span> astropy.io <span style="color:#f92672">import</span> votable
+
+r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(
+  <span style="color:#e6db74">&#39;https://fink-portal.org/api/v1/objects&#39;</span>,
+  json<span style="color:#f92672">=</span>{
+    <span style="color:#e6db74">&#39;objectId&#39;</span>: <span style="color:#e6db74">&#39;ZTF21aaxtctv&#39;</span>,
+    <span style="color:#e6db74">&#39;output-format&#39;</span>: <span style="color:#e6db74">&#39;votable&#39;</span>
+  }
+)
+
+vt <span style="color:#f92672">=</span> votable<span style="color:#f92672">.</span>parse(io<span style="color:#f92672">.</span>BytesIO(r<span style="color:#f92672">.</span>content))
+</code></pre></div><h2 id="proper-post-url-query">Proper POST URL query</h2>
+<p>Why not trying:</p>
+<pre><code># photometry &amp; metadata
+wget &quot;https://fink-portal.org/api/v1/objects?objectId=ZTF21aaxtctv&amp;output-format=json&quot; -O ZTF21aaxtctv.json
+
+# conesearch
+wget &quot;https://fink-portal.org/api/v1/explorer?ra=193.822&amp;dec=2.89732&amp;radius=5&amp;output-format=json&quot; -O conesearch.json
+
+# class search
+wget &quot;https://fink-portal.org/api/v1/latests?class=Early SN Ia candidate&amp;n=100&amp;columns=i:objectId,i:magpsf,i:jd&quot; -O snia.json
+
+# etc... ;-)
+</code></pre><h2 id="full-changelog">Full changelog</h2>
+<p>Thanks to @anaismoller, @MatSmithAstro, @fusroman, @BrentMiszalski for feedback!</p>
+<p><a href="https://github.com/astrolabsoftware/fink-science-portal/releases/tag/1.2">https://github.com/astrolabsoftware/fink-science-portal/releases/tag/1.2</a></p>
+
+
+      </main>
+    </div>
+    
+    <script src="https://fink-broker.org/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+
+
+<script src="https://fink-broker.org/js/jquery-3.3.1.slim.min.js"></script>
+<script src="https://fink-broker.org/js/bootstrap.bundle.min.js"></script>
+
+    
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+  crossorigin="anonymous"
+/>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+  crossorigin="anonymous"
+></script>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+  crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"
+></script>
+
+
+    
+  
+
+  </body>
+</html>
