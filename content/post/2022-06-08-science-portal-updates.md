@@ -40,10 +40,10 @@ r = requests.post(
   'https://fink-portal.org/api/v1/random',
   json={
     'n': integer, # Number of random objects to get. Maximum is 16.
-    'class': classname, # Optional, specify a Fink class.
+    'class': str, # Optional, specify a Fink class.
     'seed': integer, # Optional, the seed for reproducibility
     'columns': str, # Optional, comma-separated column names
-    'output-format': output_format, # Optional [json[default], csv, parquet, votable]
+    'output-format': str, # Optional [json[default], csv, parquet, votable]
   }
 )
 

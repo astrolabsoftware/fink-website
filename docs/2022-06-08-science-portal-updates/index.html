@@ -222,10 +222,10 @@ r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</sp
   <span style="color:#e6db74">&#39;https://fink-portal.org/api/v1/random&#39;</span>,
   json<span style="color:#f92672">=</span>{
     <span style="color:#e6db74">&#39;n&#39;</span>: integer, <span style="color:#75715e"># Number of random objects to get. Maximum is 16.</span>
-    <span style="color:#e6db74">&#39;class&#39;</span>: classname, <span style="color:#75715e"># Optional, specify a Fink class.</span>
+    <span style="color:#e6db74">&#39;class&#39;</span>: str, <span style="color:#75715e"># Optional, specify a Fink class.</span>
     <span style="color:#e6db74">&#39;seed&#39;</span>: integer, <span style="color:#75715e"># Optional, the seed for reproducibility</span>
     <span style="color:#e6db74">&#39;columns&#39;</span>: str, <span style="color:#75715e"># Optional, comma-separated column names</span>
-    <span style="color:#e6db74">&#39;output-format&#39;</span>: output_format, <span style="color:#75715e"># Optional [json[default], csv, parquet, votable]</span>
+    <span style="color:#e6db74">&#39;output-format&#39;</span>: str, <span style="color:#75715e"># Optional [json[default], csv, parquet, votable]</span>
   }
 )
 
