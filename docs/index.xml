@@ -6,7 +6,17 @@
     <description>Recent content on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fink Collaboration Meeting</title>
+      <link>https://fink-broker.org/2022-06-10-fink-collaboration-meeting/</link>
+      <pubDate>Fri, 10 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2022-06-10-fink-collaboration-meeting/</guid>
+      <description>We had our first in-person Collaboration Meeting last month in Annecy. This was 3 years after the start of the project, which included 2 years of pandemic. It was a pleasure to host and work with so many scientists!
+The two days were super active, with a lot of discussions and hands-on tutorials. We were super happy to see all the new developments, and such a diversity in the science topics.</description>
+    </item>
+    
     <item>
       <title>Fink Science Portal 1.2</title>
       <link>https://fink-broker.org/2022-06-08-science-portal-updates/</link>
