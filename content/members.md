@@ -22,6 +22,14 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 ## Fink members & collaborators
 
+#### Argentina
+
+* **International Center for Advanced Studies, Physical Sciences Institute, San Martin University**: M. Makler
+
+#### Brazil
+
+* **Centro Brasileiro de Pesquisas Físicas**: C.R. De Bom
+
 #### Czech Republic
 
 * **CEICO, Institute of Physics, Czech Academy of Sciences**: S. Karpov
@@ -37,39 +45,47 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **CNRS/CC-IN2P3**: F. Hernandez
 * **CNRS/CDS, Observatoire Astronomique de Strasbourg, Université de Strasbourg**: A. Nebot Gomez-Moran
 * **CNRS/CPPM, Aix Marseille Université**: D. Dornic, D. Fouchez, G. Vannoye
-* **CNRS/IAP, Sorbonne Université**: F. Daigne, J.G. Ducoin
-* **CNRS/IJCLab, Université Paris-Saclay**: R. Ansari, J.-E. Campagne, R. Le Montagner, N. Leroy, M. Moniez, J. Neveu
-* **CNRS/IRAP, Université Paul Sabatier**: O. Godet, E. Quintin, N. Webb, M. Yassine
+* **CNRS/IAP, Sorbonne Université**: E. Bachelet, F. Daigne, J.G. Ducoin
+* **CNRS/IJCLab, Université Paris-Saclay**: R. Ansari, J.-E. Campagne, R. Le Montagner, M. Leoni, N. Leroy, M. Moniez, J. Neveu
+* **CNRS/IP2I, Université Claude Bernard Lyon 1**: M. Smith
+* **CNRS/IRAP, Université Paul Sabatier**: O. Godet, E. Quintin, M.L. Lanza, N. Webb, M. Yassine
 * **CNRS/LAM, Aix Marseille Université**: S. Blondin
 * **CNRS/LAPP, Université Grenoble-Alpes, Université Savoie Mont Blanc**: D. Boutigny, D. Verkindt
 * **CNRS/LPC, Université Clermont Auvergne**: E. Gangler, P. Gris, E. Russeil
-* **CNRS/LPSC, Université Grenoble-Alpes**: J. Bregeon
-* **CNRS/OCA, Université Côte d'Azur**: B. Carry
+* **CNRS/LPSC, Université Grenoble-Alpes**: J. Bregeon, M. Masson
+* **CNRS/LUPM, Université de Montpellier**: J. Cohen-Tanugi
+* **CNRS/OCA, Lagrange, Université Côte d'Azur**: B. Carry
 
 #### Russian Federation
 
 * **Lomonosov Moscow State University, Sternberg Astronomical Institute**: I. Beschastnov, M. V. Kornilov, M. V.  Pruzhinskaya
 
+#### South Korea
+
+* **Seoul National University**: S.W. Chang
+
 #### Switzerland
 
-* **ISDC, Department of Astronomy, University of Geneva**: V. Savchenko
+* **EPFL**: V. Savchenko
+
+#### Ukraine
+
+* **Taras Shevchenko National University of Kyiv**: P. Voloshyn
 
 #### United Kingdom
 
 * **Centre for Data Intensive Science/MSSL, University College London**: T. Allam Jr.
 * **University of Sheffield**: U. Burhanudin, J. Maund
 
-#### United States of America
-
-* **Las Cumbres Observatory**: E. Bachelet
-
 
 ## Collaborators
 
 - ALeRCE Team - http://alerce.science/
 - AMPEL Team - https://ampelproject.github.io/
+- ANTARES Team - https://antares.noirlab.edu/
 - Lasair Team - https://lasair.roe.ac.uk/
+- Pitt-Google - https://pitt-broker.readthedocs.io/
 
 ## Acknowledgement
 
-This project is supported by LSST-France, and IN2P3.
+This project is supported by LSST-France, and IN2P3/CNRS.
