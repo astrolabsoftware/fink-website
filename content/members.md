@@ -46,7 +46,7 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **CNRS/CDS, Observatoire Astronomique de Strasbourg, Université de Strasbourg**: A. Nebot Gomez-Moran
 * **CNRS/CPPM, Aix Marseille Université**: D. Dornic, D. Fouchez, G. Vannoye
 * **CNRS/IAP, Sorbonne Université**: E. Bachelet, F. Daigne, J.G. Ducoin
-* **CNRS/IJCLab, Université Paris-Saclay**: R. Ansari, J.-E. Campagne, R. Le Montagner, M. Leoni, N. Leroy, M. Moniez, J. Neveu
+* **CNRS/IJCLab, Université Paris-Saclay**: R. Ansari, J.-E. Campagne, R. Le Montagner, N. Leroy, M. Moniez, J. Neveu
 * **CNRS/IP2I, Université Claude Bernard Lyon 1**: M. Smith
 * **CNRS/IRAP, Université Paul Sabatier**: O. Godet, E. Quintin, M.L. Lanza, N. Webb, M. Yassine
 * **CNRS/LAM, Aix Marseille Université**: S. Blondin
