@@ -161,6 +161,6 @@ You can do it for Solar System objects (key `i:ssnamenr`), or man-made objects (
 
 ## Full changelog
 
-Thanks to @fusroman, @BenoitCarry for feedback on the Portal, and @MariaPrushinskaya and @SergeyKarpov for information on GCVS and VSX catalogs!
+Thanks to @fusroman, @BenoitCarry for feedback on the Portal, and @MariaPruzhinskaya and @SergeyKarpov for information on GCVS and VSX catalogs!
 
 [https://github.com/astrolabsoftware/fink-science-portal/releases/tag/1.3](https://github.com/astrolabsoftware/fink-science-portal/releases/tag/1.3)
