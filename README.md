@@ -25,3 +25,13 @@ docker run --rm -it  -p 1313:1313 -v $(pwd):/src klakegg/hugo:0.81.0 \
   --buildDrafts \
   --cleanDestinationDir
 ```
+
+## Troubleshooting
+
+On linux, you may want to run docker without sudo. To do this just:
+
+```bash
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker # or restart computer
+```
