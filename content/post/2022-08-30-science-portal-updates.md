@@ -1,12 +1,12 @@
 ---
 layout: post
 date: 2022-08-30
-title: Fink Science Portal v2
+title: Fink Science Portal 2.0
 author: fink
 tags: [Portal]
 ---
 
-Check out the details of the version 2.0 of the Science Portal. No new features, but a shiny interface, and better performance. Do not hesitate to give your feedback, and propose missing features!
+Check out the details of the version 2.0 of the Science Portal. A shiny new interface, better performance, and some new features or bug fixes ([release notes](https://github.com/astrolabsoftware/fink-science-portal/releases/tag/2.0)). Do not hesitate to give your feedback, and propose missing features!
 
 <!--more-->
 

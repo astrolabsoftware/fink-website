@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Tue, 30 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/tags/portal/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Fink Science Portal v2</title>
+      <title>Fink Science Portal 2.0</title>
       <link>https://fink-broker.org/2022-08-30-science-portal-updates/</link>
       <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>https://fink-broker.org/2022-08-30-science-portal-updates/</guid>
-      <description>&lt;p&gt;Check out the details of the version 2.0 of the Science Portal. No new features, but a shiny interface, and better performance. Do not hesitate to give your feedback, and propose missing features!&lt;/p&gt;</description>
+      <description>&lt;p&gt;Check out the details of the version 2.0 of the Science Portal. A shiny new interface, better performance, and some new features or bug fixes (&lt;a href=&#34;https://github.com/astrolabsoftware/fink-science-portal/releases/tag/2.0&#34;&gt;release notes&lt;/a&gt;). Do not hesitate to give your feedback, and propose missing features!&lt;/p&gt;</description>
     </item>
     
     <item>
