@@ -9,6 +9,9 @@ List of publications from the Fink collaboration and the larger astronomy commun
 
 ### 2022
 
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2211.10987) **Finding active galactic nuclei through Fink**,
+_Etienne Russeil, Emille E. O. Ishida, Roman Le Montagner, Julien Peloton, Anais Moller_
+
 [![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2210.17433) **Enabling the discovery of fast transients: A kilonova science module for the Fink broker**,
 _B. Biswas, E. E. O. Ishida, J. Peloton, A. Moller, M. V. Pruzhinskaya, R. S. de Souza, D. Muthukrishna_
 
