@@ -1,0 +1,372 @@
+<!doctype html>
+
+<html lang="en" class="h-100">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="Hugo 0.81.0" />
+  <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
+  
+  
+  <title>Data transfer at scale | Fink broker</title>
+  <style>
+body {
+    background-color:  #f2f3f4; 
+    background-image: url(images/background.png);
+    background-size: contain;
+}
+.container {
+  max-width: 900px;
+}
+#nav a {
+  font-weight: bold;
+  color: inherit;
+}
+#nav a.nav-link-active {
+  background-color: #212529;
+  color: #fff;
+}
+#nav-border {
+  border-bottom: 1px solid #212529;
+}
+#main {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+#home-jumbotron {
+  background-color: inherit;
+}
+#footer .container {
+  padding: 1em 0;
+}
+#footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+.font-125 {
+  font-size: 125%;
+}
+.tag-btn {
+  margin-bottom: 0.3em;
+}
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit; 
+  background-color: transparent;
+  border-radius: 0;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+img,
+iframe,
+embed,
+video,
+audio {
+  max-width: 100%;
+}
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: initial;
+}
+</style>
+
+</head>
+  <body class="d-flex flex-column h-100">
+    <div id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/"><i data-feather="home"></i> Home</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/post/"><i data-feather="edit"></i> News</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="https://fink-portal.org"><i data-feather="share-2"></i> Science Portal</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/papers/"><i data-feather="book"></i> Publications</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/members/"><i data-feather="users"></i> Team</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/joining/"><i data-feather="user-plus"></i> Join us</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/about/"><i data-feather="info"></i> About</a>
+  
+  </nav>
+</div>
+
+    <div class="container">
+      <main id="main">
+        
+
+<h1>Data transfer at scale</h1>
+
+
+<i data-feather="calendar"></i> <time datetime="2023-01-17">Jan 17, 2023</time>
+
+  <br>
+  <i data-feather="tag"></i>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://fink-broker.org/tags/mining">mining</a>
+  
+
+<br><br>
+<p>We are pleased to announce a new service in Fink to explore and transfer historical data at scale: <a href="https://fink-portal.org/download">https://fink-portal.org/download</a>. This service lets users to select any observing nights between 2019 and now, apply filters, define the content of the output, and stream data directly to anywhere!</p>
+<h3 id="why-such-a-service">Why such a service?</h3>
+<p>In Fink we had so far two main services to interact with the alert data:</p>
+<ol>
+<li>Fink livestream: based on Apache Kafka, to receive alert in real-time based on user-defined filters.</li>
+<li>Fink Science Portal: web application (and REST API) to access and display historical data.</li>
+</ol>
+<p>The first service   enable data transfer at scale, but you cannot request alerts from the past. The second service lets you query data from the beginning of the project (2019!), but the volume of data to transfer for each query is limited. <strong>Hence, we were missing a service that would enable massive data transfer for historical data.</strong></p>
+<p>This service is mainly made for users who want to access a lot of alerts for:</p>
+<ol>
+<li>building data sets,</li>
+<li>training machine/deep learning models,</li>
+<li>performing different analyses on processed alert data provided by Fink,</li>
+</ol>
+<h3 id="defining-your-query">Defining your query</h3>
+<p>To start the service, connect to <a href="https://fink-portal.org/download">https://fink-portal.org/download</a>. The construction of the query is a guided process. First choose the data source (only ZTF is available at the time of the first release). Then choose the dates for which you would like to get alert data using the calendar. You can choose multiple consecutive dates.</p>
+<p>You can further filter the data in two ways:</p>
+<ol>
+<li>You can choose the class(es) of interest. By default, you will receive all alerts between the chosen dates, regardless of their classification in Fink. By using the dropdown button, you can also select one or more classes to be streamed.</li>
+<li>Optionally, you can also impose extra conditions on the alerts you want to retrieve based on their content. You will simply specify the name of the parameter with the condition (SQL syntax). If you have several conditions, put one condition per line, ending with semi-colon. Example of valid conditions:</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#75715e">-- Example 1
+</span><span style="color:#75715e">-- Alerts with magnitude above 19.5 and
+</span><span style="color:#75715e">-- at least 2&#39;&#39; distance away to nearest
+</span><span style="color:#75715e">-- source in ZTF reference images:
+</span><span style="color:#75715e"></span>candidate.magpsf <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">19</span>.<span style="color:#ae81ff">5</span>;
+candidate.distnr <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>;
+
+<span style="color:#75715e">-- Example 2: Using a combination of fields
+</span><span style="color:#75715e"></span>(candidate.magnr <span style="color:#f92672">-</span> candidate.magpsf) <span style="color:#f92672">&lt;</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">4</span> <span style="color:#f92672">*</span> (LOG10(candidate.distnr) <span style="color:#f92672">+</span> <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">2</span>);
+
+<span style="color:#75715e">-- Example 3: Filtering on ML scores
+</span><span style="color:#75715e"></span>rf_snia_vs_nonia <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">5</span>;
+snn_snia_vs_nonia <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">5</span>;
+</code></pre></div><p>See <a href="https://zwickytransientfacility.github.io/ztf-avro-alert/">here</a> for the available ZTF fields. Note that ZTF fields most users want will typically start with <code>candidate.</code>. Fink added value fields can be found at <a href="https://fink-broker.readthedocs.io/en/latest/science/added_values/">https://fink-broker.readthedocs.io/en/latest/science/added_values/</a>.</p>
+<p>Finally you can choose the content of the alerts to be returned. You have three types of content:</p>
+<ol>
+<li>Lightcurve: lightweight (~1.4 KB/alerts), this option transfers only necessary fields for working with lightcurves plus all Fink added values. Prefer this option to start.</li>
+<li>Cutouts: Only the cutouts (Science, Template, Difference) are transfered.</li>
+<li>Full packet: original ZTF alerts plus all Fink added values.</li>
+</ol>
+<p>Note that you can filter on any alert fields regardless of the final alert content (the filtering is done prior to the output schema). Once you have filled all parameters, you will have a summary of your selection with an estimation of the number of alerts to transfer:</p>
+<p><img src="/images/download_web.png" alt="1"></p>
+<p>This estimation takes into account the number of alerts per night and the number of alerts per classes, but it does not account for the extra conditions (that could further reduce the number of alerts). You will also have an estimation of the size of the data to be transfered. You can update your parameters if need be, the estimations will be updated in real-time. If you just want to test your selection, hit the button <code>Test job</code>, otherwise hit <code>Submit job</code>. In either cases, your job will be triggered on the Fink Apache Spark cluster, and a topic name will be generated. Keep this topic name with you, you will need it to get the data. You can then monitor the progress of your job by opening the accordion <code>Monitor your job</code>, and hit <code>Upload log</code>:</p>
+<p><img src="/images/monitor_datatransfer.png" alt="1"></p>
+<h3 id="consuming-the-alert-data">Consuming the alert data</h3>
+<p>A few minutes after hitting the submit button, your data will start to flow. We decided to <em>stream</em> the output of each job. In practice, this means that the output alerts will be send to the Fink Apache Kafka cluster, and a stream containing the alerts will be produced. You will then act as a consumer of this stream, and you will be able to poll alerts knowing the topic name. This has many advantages compared to traditional techniques:</p>
+<ol>
+<li>Data is available as soon as there is one alert pushed in the topic.</li>
+<li>The user can start and stop polling whenever, resuming the poll later (alerts are in a queue).</li>
+<li>The user can poll the stream many times, hence easily saving data in multiple machines.</li>
+<li>The user can share the topic name with anyone, hence easily sharing data.</li>
+<li>The user can decide to not poll all alerts.</li>
+</ol>
+<p>To ease the consuming step, the users are recommended to use the <a href="https://github.com/astrolabsoftware/fink-client">fink-client</a>. You would simply install the latest version using pip:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># need at least fink-client&gt;=3.0</span>
+pip install fink-client --upgrade
+</code></pre></div><p>You will then invoke for example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fink_datatransfer <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -topic &lt;topic name&gt; <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -outdir &lt;output directory&gt; <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -partitionby time <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --verbose
+</code></pre></div><p>Alert data will be consumed on stored on disk. In this example data will be partitioned by time, this means the alerts will be stored by their date (<code>YYYY/MM/DD</code>). This is useful if you transfered several nights. Alternatively, you can also choose to partition by alert classification (Fink or TNS classification), and you will have e.g.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tree -d outdir/
+outdir/
+├── **
+│   ├── part-0-13000.parquet
+│   ├── part-0-16000.parquet
+│   ├── part-0-18000.parquet
+│   ├── part-0-3000.parquet
+│   ├── part-0-4000.parquet
+│   ├── part-0-6000.parquet
+│   └── part-0-8000.parquet
+├── Ae*
+├── AGB*
+├── AGB*_Candidate
+├── AGN
+├── AGN_Candidate
+├── Ambiguous
+├── BClG
+├── Be*
+├── Blazar
+├── Blazar_Candidate
+├── BLLac
+├── Blue
+├── BlueSG*
+├── BlueStraggler
+├── BYDra
+├── C*
+├── CataclyV*
+...
+</code></pre></div><p>You can then easily read the alert data in a Pandas DataFrame for example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+
+pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_parquet(<span style="color:#e6db74">&#39;outdir&#39;</span>)
+
+pdf<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">2</span>)
+       objectId               candid     magpsf  sigmapsf  fid  <span style="color:#f92672">...</span>
+<span style="color:#ae81ff">0</span>  ZTF18abyjrnl  <span style="color:#ae81ff">2182290200315010047</span>  <span style="color:#ae81ff">18.590357</span>  <span style="color:#ae81ff">0.073010</span>    <span style="color:#ae81ff">2</span>  <span style="color:#f92672">...</span>
+<span style="color:#ae81ff">1</span>  ZTF18acpdmhl  <span style="color:#ae81ff">2182336375415015008</span>  <span style="color:#ae81ff">19.446053</span>  <span style="color:#ae81ff">0.166661</span>    <span style="color:#ae81ff">1</span>  <span style="color:#f92672">...</span>
+</code></pre></div><h3 id="how-is-this-done-in-practice">How is this done in practice?</h3>
+<p><img src="/images/datatransfer_archi.png" alt="1"></p>
+<p>(1) the user connects to the service and request a transfer by filling fields and hitting the submit button. (2) Dash callbacks build and upload the execution script to HDFS, and submit a job in the Fink <a href="https://spark.apache.org/">Apache Spark</a> cluster using the <a href="https://livy.apache.org/">Livy</a> service. (3) Necessary data is loaded from the distributed storage system containing Fink data and processed by the Spark cluster. (4) The resulting alerts are published to the Fink <a href="https://kafka.apache.org/">Apache Kafka</a> cluster, and they are available up to 4 days by the user. (5) The user can retrieve the data using e.g. the Fink client, or any Kafka-based tool.</p>
+<h3 id="benchmarks">Benchmarks</h3>
+<h4 id="publishing-data">Publishing data</h4>
+<p>The first experiment was to select a night of data (about 250,000 alerts), apply some filters on it based on the magnitude, select lightweight alert content (~1.4 KB/alert on disk), and submit the job. The first alert was available in less than a minute, and the entire data was pushed in the topic in about 90 seconds using 1 core for the job.</p>
+<p>The second experiment was to select several nights of data (about 1.5 million alerts, or 60GB on disk), select only <code>Supernova candidates</code>, apply some filters on it based on the magnitude, select full alert content (~55 KB/alert on disk), and submit the job. The first alert was available in less than a minute, and the entire data was pushed in the topic in about 25 minutes using 1 core for the job.</p>
+<p><img src="/images/exp2_rate.png" alt="1">
+<em>Data is pushed at a rate of about 20 alert/minute in the topic. Note that even if we started with 1.5 million alerts, the filters reduced a lot the number of alerts to transfer.</em></p>
+<p><img src="/images/exp2_spark.png" alt="1">
+<em>CPU load from the Spark cluster (in %). We asked for 1 core, and the job run on 1 machine of the cluster containing 18 cores. The load of the machine is almost constant and small (~5% &ndash; which means 1/18 core used), except a 10 minutes rise due to another job submitted at the same time.</em></p>
+<p>The third experiment was to select several weeks of data (about 4.6 million alerts, or about 180GB on disk), apply no filters, select lightweight alert content (~1.4 KB/alert on disk), and submit the job. The first alert was available in less than a minute, and the entire data was pushed in the topic in about 10 minutes using 8 cores for the job:</p>
+<p><img src="/images/exp3_rate.png" alt="1">
+<em>Data is pushed at a rate of about 500k alert/minute in the topic, or about 8k alert/second using 8 cores.</em></p>
+<p><img src="/images/exp3_alert_rate.png" alt="1">
+<em>Data is pushed at a rate of 2 MB/s in the topic.</em></p>
+<p><img src="/images/exp3_spark.png" alt="1">
+<em>CPU load from the Spark cluster (in %). We asked for 8 cores split in 4 executors (2 cores/executor). The job was divided in 4 machines, with one having the experiment 2 running as well (purple).</em></p>
+<h4 id="consuming-data">Consuming data</h4>
+<p>Using the Fink client, we polled alerts from the third experiment (about 4.6 million alerts). It took about 10 minutes to get all the alerts polled and written on disk (this would depend on your network &ndash; but this the order of magnitudes):</p>
+<p><img src="/images/exp3_consuming.png" alt="1"></p>
+
+
+      </main>
+    </div>
+    
+    <script src="https://fink-broker.org/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+
+
+<script src="https://fink-broker.org/js/jquery-3.3.1.slim.min.js"></script>
+<script src="https://fink-broker.org/js/bootstrap.bundle.min.js"></script>
+
+    
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+  crossorigin="anonymous"
+/>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+  crossorigin="anonymous"
+></script>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+  crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"
+></script>
+
+
+    
+  
+
+  </body>
+</html>
