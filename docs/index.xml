@@ -6,7 +6,16 @@
     <description>Recent content on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data transfer at scale</title>
+      <link>https://fink-broker.org/2023-01-17-data-transfer/</link>
+      <pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2023-01-17-data-transfer/</guid>
+      <description>&lt;p&gt;We are pleased to announce a new service in Fink to explore and transfer historical data at scale: &lt;a href=&#34;https://fink-portal.org/download&#34;&gt;https://fink-portal.org/download&lt;/a&gt;. This service lets users to select any observing nights between 2019 and now, apply filters, define the content of the output, and stream data directly to anywhere!&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Fink Science Portal 2.0</title>
       <link>https://fink-broker.org/2022-08-30-science-portal-updates/</link>
