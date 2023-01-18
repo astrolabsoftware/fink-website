@@ -323,6 +323,9 @@ pdf<span style="color:#f92672">.</span>head(<span style="color:#ae81ff">2</span>
 <h4 id="consuming-data">Consuming data</h4>
 <p>Using the Fink client, we polled alerts from the third experiment (about 4.6 million alerts). It took about 10 minutes to get all the alerts polled and written on disk (this would depend on your network &ndash; but this the order of magnitudes):</p>
 <p><img src="/images/exp3_consuming.png" alt="1"></p>
+<h2 id="what-is-next">What is next?</h2>
+<p>As the service just opens, you might experience some service interruptions, or inefficiencies. This service is highly demanding in resources, so in the first weeks of deployment we will monitor the load of the clusters and optimize the current design.</p>
+<p>We are also thinking to expand the service, to include for example classification or cross-match on-demand while transfering the data (hence old alerts would contain information from newer science module or additional catalogs). Let us know what you would like to have!</p>
 
 
       </main>
