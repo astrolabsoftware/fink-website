@@ -17,7 +17,7 @@ Each alert packet includes now the closest match to the [4LAC DR3](https://fermi
 
 ### Gravitational waves
 
-Each alert packet includes now the closes match to the [Mangrove](https://mangrove.lal.in2p3.fr) catalog of galaxies, if it exists within 1 arcmin. Mangrove has been designed for the follow up of gravitational waves event, and it contains curated and augmented information of both GLADE and AllWISE catalogs.
+Each alert packet includes now the closest match to the [Mangrove](https://mangrove.lal.in2p3.fr) catalog of galaxies, if it exists within 1 arcmin. Mangrove has been designed for the follow up of gravitational waves events, and it contains curated and augmented information of both GLADE and AllWISE catalogs.
 
 ## Anomaly detection
 
@@ -46,8 +46,8 @@ pip install fink-client --upgrade
 
 ## Thanks
 
-Fink is a community-driven broker, and this work would not be possible without all the science team behind the design and implementation of all these science modules. Particular thanks to
+Fink is a community-driven broker, and this work would not be possible without all the science teams behind the design and implementation of all these science modules. Particular thanks to
 - Anomaly detection: Igor, Maria
 - 4LAC, 3HSP: Jonathan, Jean-Philippe
 - T2: Tarek
-- Mangrove: the GRANDMA team: Sarah, Theophile, Michael, and all the observers!
+- Mangrove: the GRANDMA team, Sarah, Theophile, Michael, and all the observers!
