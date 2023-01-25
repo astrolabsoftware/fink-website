@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2023-01-25
-title: Fink is expanding!
+title: Fink is expanding! Release 2.9
 author: fink
 tags: [release]
 ---
