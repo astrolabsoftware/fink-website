@@ -3,18 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://fink-broker.org/</loc>
-    <lastmod>2023-01-17T00:00:00+00:00</lastmod>
+    <lastmod>2023-01-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fink-broker.org/2023-01-25-fink-update/</loc>
+    <lastmod>2023-01-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fink-broker.org/post/</loc>
+    <lastmod>2023-01-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fink-broker.org/tags/release/</loc>
+    <lastmod>2023-01-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://fink-broker.org/tags/</loc>
+    <lastmod>2023-01-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fink-broker.org/2023-01-17-data-transfer/</loc>
     <lastmod>2023-01-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fink-broker.org/tags/mining/</loc>
-    <lastmod>2023-01-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fink-broker.org/post/</loc>
-    <lastmod>2023-01-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://fink-broker.org/tags/</loc>
     <lastmod>2023-01-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://fink-broker.org/2022-08-30-science-portal-updates/</loc>

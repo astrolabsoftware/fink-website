@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>release</title>
+      <link>https://fink-broker.org/tags/release/</link>
+      <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/tags/release/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>mining</title>
       <link>https://fink-broker.org/tags/mining/</link>

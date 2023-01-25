@@ -1,0 +1,276 @@
+<!doctype html>
+
+<html lang="en" class="h-100">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="Hugo 0.81.0" />
+  <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
+  
+  
+  <title>Fink is expanding! | Fink broker</title>
+  <style>
+body {
+    background-color:  #f2f3f4; 
+    background-image: url(images/background.png);
+    background-size: contain;
+}
+.container {
+  max-width: 900px;
+}
+#nav a {
+  font-weight: bold;
+  color: inherit;
+}
+#nav a.nav-link-active {
+  background-color: #212529;
+  color: #fff;
+}
+#nav-border {
+  border-bottom: 1px solid #212529;
+}
+#main {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+#home-jumbotron {
+  background-color: inherit;
+}
+#footer .container {
+  padding: 1em 0;
+}
+#footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+.font-125 {
+  font-size: 125%;
+}
+.tag-btn {
+  margin-bottom: 0.3em;
+}
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit; 
+  background-color: transparent;
+  border-radius: 0;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+img,
+iframe,
+embed,
+video,
+audio {
+  max-width: 100%;
+}
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: initial;
+}
+</style>
+
+</head>
+  <body class="d-flex flex-column h-100">
+    <div id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/"><i data-feather="home"></i> Home</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/post/"><i data-feather="edit"></i> News</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="https://fink-portal.org"><i data-feather="share-2"></i> Science Portal</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/papers/"><i data-feather="book"></i> Publications</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/members/"><i data-feather="users"></i> Team</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/joining/"><i data-feather="user-plus"></i> Join us</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/about/"><i data-feather="info"></i> About</a>
+  
+  </nav>
+</div>
+
+    <div class="container">
+      <main id="main">
+        
+
+<h1>Fink is expanding!</h1>
+
+
+<i data-feather="calendar"></i> <time datetime="2023-01-25">Jan 25, 2023</time>
+
+  <br>
+  <i data-feather="tag"></i>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://fink-broker.org/tags/release">release</a>
+  
+
+<br><br>
+<p>The Fink release 2.9 includes new science modules exploring anomaly detection, time-series transformer for transient classification, and additional associations to various catalogs of astronomical objects.</p>
+<h2 id="crossmatch-with-catalogs">Crossmatch with catalogs</h2>
+<h3 id="agn">AGN</h3>
+<p>Each alert packet includes now the closest match to the <a href="https://fermi.gsfc.nasa.gov/ssc/data/access/lat/4LACDR3/">4LAC DR3</a> and <a href="https://www.ssdc.asi.it/3hsp/">3HSP</a> catalogs, if it exists within 1 arcminute. These catalogs contain Active Galactic Nuclei detected by the LAT (4LAC) based on 8 years of data, and extreme and high-synchrotron peaked blazars and blazar candidates (3HSP).</p>
+<h3 id="gravitational-waves">Gravitational waves</h3>
+<p>Each alert packet includes now the closes match to the <a href="https://mangrove.lal.in2p3.fr">Mangrove</a> catalog of galaxies, if it exists within 1 arcmin. Mangrove has been designed for the follow up of gravitational waves event, and it contains curated and augmented information of both GLADE and AllWISE catalogs.</p>
+<h2 id="anomaly-detection">Anomaly detection</h2>
+<p>Perhaps one of the most anticipated outcomes of the Rubin era is the identification of unknown astrophysical sources. As an example, potentially cataclysmic events leading to new mechanisms of particle acceleration or electromagnetic counterparts of GW can provide important insights into their progenitor systems. However, given the volume and complexity of the data which will accompany them, it is unlikely that such sources will be serendipitously identified.</p>
+<p>The use of automated anomaly detection algorithms help to mitigate some of these issues. However, traditional techniques are known to deliver a high incidence of false positives (e.g <a href="https://arxiv.org/abs/1905.11516">Pruzhinskaya et al 2019</a>). Taking into account that, in astronomy, further scrutiny of an anomaly candidate is only possible through expensive spectroscopic follow-up, this translates into a significant fraction of resources spent in non-interesting targets. This caveat can be overcome by carefully designing a recommendation system able to identify and flag candidates following a custom anomaly definition. This is the goal of active anomaly detection techniques (<a href="https://arxiv.org/abs/1708.09441">Das et al 2017</a>).</p>
+<p>In order to fully exploit the potential of ZTF and Rubin for new discoveries, we just deployed an new anomaly detection module, based on state-of-the-art adaptive machine learning techniques which is tailored to optimise the use of domain knowledge (<a href="https://arxiv.org/abs/1909.13260">Ishida et al 2019</a>). This will allow the broker to deliver increasingly more accurate anomaly scores throughout the first years of the survey.</p>
+<h2 id="transformers">Transformers</h2>
+<p>Following the work of <a href="https://arxiv.org/abs/2105.06178">Allam et al 2021</a>, we deployed an optimised version of the original time-series transformer, <code>t2</code>. This classifier has been trained to target a large variety of transients, from galactic to extra-galactic.</p>
+<h2 id="how-to-use-the-output-of-these-modules">How to use the output of these modules?</h2>
+<p>As all the other modules, the output of these are publicly available (see <a href="https://fink-broker.readthedocs.io/en/latest/science/added_values/">here</a> their description). You can access it via all Fink services: Livestream, Data Transfer, and Science Portal. Note that previous alerts are not reprocessed, and these new science modules start acting from 2023/01/25.</p>
+<h2 id="what-is-changing-for-users-in-fink-29">What is changing for users in Fink 2.9?</h2>
+<p>While most changes are transparent to the users, we changed the way we handle alert schema in the Livestream service, and users need to upgrade their client to keep polling alerts:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 4.0+ required</span>
+pip install fink<span style="color:#f92672">-</span>client <span style="color:#f92672">--</span>upgrade
+</code></pre></div><h2 id="thanks">Thanks</h2>
+<p>Fink is a community-driven broker, and this work would not be possible without all the science team behind the design and implementation of all these science modules. Particular thanks to</p>
+<ul>
+<li>Anomaly detection: Igor, Maria</li>
+<li>4LAC, 3HSP: Jonathan, Jean-Philippe</li>
+<li>T2: Tarek</li>
+<li>Mangrove: the GRANDMA team: Sarah, Theophile, Michael, and all the observers!</li>
+</ul>
+
+
+      </main>
+    </div>
+    
+    <script src="https://fink-broker.org/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+
+
+<script src="https://fink-broker.org/js/jquery-3.3.1.slim.min.js"></script>
+<script src="https://fink-broker.org/js/bootstrap.bundle.min.js"></script>
+
+    
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+  crossorigin="anonymous"
+/>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+  crossorigin="anonymous"
+></script>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+  crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"
+></script>
+
+
+    
+  
+
+  </body>
+</html>
