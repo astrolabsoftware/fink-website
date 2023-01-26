@@ -6,7 +6,7 @@ author: fink
 tags: [release]
 ---
 
-The Fink broker release 2.9 includes new science modules exploring anomaly detection, time-series transformer for transient classification, and additional associations to various catalogs of astronomical objects. Additionally, the Fink Science Portal release 2.1 adds a lot of new features!
+The Fink broker release 2.9 includes new science modules exploring anomaly detection, time-series transformer for transient classification, and additional associations to various catalogs of astronomical objects. Additionally, the Fink Science Portal 2.1 release adds a lot of new features!
 <!--more-->
 
 ## Crossmatch with catalogs
