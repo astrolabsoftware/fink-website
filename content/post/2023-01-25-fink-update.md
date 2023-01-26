@@ -23,7 +23,7 @@ Each alert packet includes now the closest match to the [Mangrove](https://mangr
 
 Perhaps one of the most anticipated outcomes of the Rubin era is the identification of unknown astrophysical sources. As an example, potentially cataclysmic events leading to new mechanisms of particle acceleration or electromagnetic counterparts of GW can provide important insights into their progenitor systems. However, given the volume and complexity of the data which will accompany them, it is unlikely that such sources will be serendipitously identified. We need to develop tailored machine learning algorithms to detect such interesting candidates and direct them to the experts who can give meaning to a new discovery!
 
-We are happy to announce that Fink now also provides results from an anomaly detection module. It was constructed aiming to identify statistically anomalous alerts without a cataloged cross-match. This is the first milestone for Fink in the realm of anomaly detection. However, we do not expect that this module will grow and evolve with time, in terms of the machine learning methods it uses, but also in incorporating feedback from the community. Thus, do not hesitate to give us your feedback on it.
+We are happy to announce that Fink now also provides results from an anomaly detection module. It was constructed aiming to identify statistically anomalous alerts without a cataloged cross-match. This is the first milestone for Fink in the realm of anomaly detection. However, we expect that this module will grow and evolve with time, in terms of the machine learning methods it uses, but also in incorporating feedback from the community. Thus, do not hesitate to tell us about your experience with it.
 
 ## Transformers
 
