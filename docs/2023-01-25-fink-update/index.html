@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
   
   
-  <title>Fink is expanding! Release 2.9 | Fink broker</title>
+  <title>Fink is expanding! | Fink broker</title>
   <style>
 body {
     background-color:  #f2f3f4; 
@@ -188,7 +188,7 @@ audio {
       <main id="main">
         
 
-<h1>Fink is expanding! Release 2.9</h1>
+<h1>Fink is expanding!</h1>
 
 
 <i data-feather="calendar"></i> <time datetime="2023-01-25">Jan 25, 2023</time>
@@ -201,7 +201,7 @@ audio {
   
 
 <br><br>
-<p>The Fink release 2.9 includes new science modules exploring anomaly detection, time-series transformer for transient classification, and additional associations to various catalogs of astronomical objects.</p>
+<p>The Fink broker release 2.9 includes new science modules exploring anomaly detection, time-series transformer for transient classification, and additional associations to various catalogs of astronomical objects. Additionally, the Fink Science Portal release 2.1 adds a lot of new features!</p>
 <h2 id="crossmatch-with-catalogs">Crossmatch with catalogs</h2>
 <h3 id="agn">AGN</h3>
 <p>Each alert packet includes now the closest match to the <a href="https://fermi.gsfc.nasa.gov/ssc/data/access/lat/4LACDR3/">4LAC DR3</a> and <a href="https://www.ssdc.asi.it/3hsp/">3HSP</a> catalogs, if it exists within 1 arcminute. These catalogs contain Active Galactic Nuclei detected by the LAT (4LAC) based on 8 years of data, and extreme and high-synchrotron peaked blazars and blazar candidates (3HSP).</p>
@@ -218,13 +218,16 @@ audio {
 <p>While most changes are transparent to the users, we changed the way we handle alert schema in the Livestream service, and users need to upgrade their client to keep polling alerts:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># 4.0+ required</span>
 pip install fink<span style="color:#f92672">-</span>client <span style="color:#f92672">--</span>upgrade
-</code></pre></div><h2 id="thanks">Thanks</h2>
+</code></pre></div><h2 id="fink-science-portal-21">Fink Science Portal 2.1</h2>
+<p>In this new release (<a href="https://github.com/astrolabsoftware/fink-science-portal/releases/tag/2.1">release notes</a>), not only bugs have been fixed and layout improved, but new features have been added. Among several, a new lightcurve model for Solar System objects based on their spin has been added. This work is supported by the MITI grant (CNRS), and a paper summarising the findings is ongoing. Stay tuned!</p>
+<h2 id="thanks">Thanks</h2>
 <p>Fink is a community-driven broker, and this work would not be possible without all the science teams behind the design and implementation of all these science modules. Particular thanks to</p>
 <ul>
 <li>Anomaly detection: Igor, Maria</li>
 <li>4LAC, 3HSP: Jonathan, Jean-Philippe</li>
 <li>T2: Tarek</li>
 <li>Mangrove: the GRANDMA team, Sarah, Theophile, Michael, and all the observers!</li>
+<li>Fink Science Portal: Sergey, Quentin, Max, Benoit, Jerome</li>
 </ul>
 
 

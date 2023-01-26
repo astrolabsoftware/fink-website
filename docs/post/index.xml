@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 25 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Fink is expanding! Release 2.9</title>
+      <title>Fink is expanding!</title>
       <link>https://fink-broker.org/2023-01-25-fink-update/</link>
       <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://fink-broker.org/2023-01-25-fink-update/</guid>
-      <description>&lt;p&gt;The Fink release 2.9 includes new science modules exploring anomaly detection, time-series transformer for transient classification, and additional associations to various catalogs of astronomical objects.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The Fink broker release 2.9 includes new science modules exploring anomaly detection, time-series transformer for transient classification, and additional associations to various catalogs of astronomical objects. Additionally, the Fink Science Portal release 2.1 adds a lot of new features!&lt;/p&gt;</description>
     </item>
     
     <item>

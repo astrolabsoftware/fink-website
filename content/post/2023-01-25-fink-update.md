@@ -1,12 +1,12 @@
 ---
 layout: post
 date: 2023-01-25
-title: Fink is expanding! Release 2.9
+title: Fink is expanding!
 author: fink
 tags: [release]
 ---
 
-The Fink release 2.9 includes new science modules exploring anomaly detection, time-series transformer for transient classification, and additional associations to various catalogs of astronomical objects.
+The Fink broker release 2.9 includes new science modules exploring anomaly detection, time-series transformer for transient classification, and additional associations to various catalogs of astronomical objects. Additionally, the Fink Science Portal release 2.1 adds a lot of new features!
 <!--more-->
 
 ## Crossmatch with catalogs
@@ -42,6 +42,10 @@ While most changes are transparent to the users, we changed the way we handle al
 pip install fink-client --upgrade
 ```
 
+## Fink Science Portal 2.1
+
+In this new release ([release notes](https://github.com/astrolabsoftware/fink-science-portal/releases/tag/2.1)), not only bugs have been fixed and layout improved, but new features have been added. Among several, a new lightcurve model for Solar System objects based on their spin has been added. This work is supported by the MITI grant (CNRS), and a paper summarising the findings is ongoing. Stay tuned!
+
 ## Thanks
 
 Fink is a community-driven broker, and this work would not be possible without all the science teams behind the design and implementation of all these science modules. Particular thanks to
@@ -49,3 +53,4 @@ Fink is a community-driven broker, and this work would not be possible without a
 - 4LAC, 3HSP: Jonathan, Jean-Philippe
 - T2: Tarek
 - Mangrove: the GRANDMA team, Sarah, Theophile, Michael, and all the observers!
+- Fink Science Portal: Sergey, Quentin, Max, Benoit, Jerome
