@@ -11,11 +11,11 @@ The Fink broker release 2.9 includes new science modules exploring anomaly detec
 
 ## Crossmatch with catalogs
 
-### AGN
+#### AGN
 
 Each alert packet includes now the closest match to the [4LAC DR3](https://fermi.gsfc.nasa.gov/ssc/data/access/lat/4LACDR3/) and [3HSP](https://www.ssdc.asi.it/3hsp/) catalogs, if it exists within 1 arcminute. These catalogs contain Active Galactic Nuclei detected by the LAT (4LAC) based on 8 years of data, and extreme and high-synchrotron peaked blazars and blazar candidates (3HSP).
 
-### Gravitational waves
+#### Gravitational waves
 
 Each alert packet includes now the closest match to the [Mangrove](https://mangrove.lal.in2p3.fr) catalog of galaxies, if it exists within 1 arcmin. Mangrove has been designed for the follow up of gravitational waves events, and it contains curated and augmented information of both GLADE and AllWISE catalogs.
 
@@ -27,7 +27,7 @@ We are happy to announce that Fink now also provides results from an anomaly det
 
 ## Transformers
 
-Following the work of [Allam et al 2021](https://arxiv.org/abs/2105.06178), we deployed an optimised version of the original time-series transformer, `t2`. This classifier has been trained to target a large variety of transients, from galactic to extra-galactic.
+Following the work of [Allam et al 2021](https://arxiv.org/abs/2105.06178), we deployed an optimised version of the original time-series transformer, `t2`. This classifier has been trained to target a large variety of transients, from galactic to extra-galactic. More to come soon in a dedicated research paper!
 
 ## How to use the output of these modules?
 
