@@ -4,7 +4,7 @@ permalink: /joining.html
 tags: [Fink, Members]
 ---
 
-If you want to know more about Fink and our recent releases and science results, you can follow us on twitter [@FinkBroker](https://twitter.com/finkbroker) and check our [news](https://fink-broker.org/post/).
+If you want to know more about Fink and our recent releases and science results, you can follow us on twitter [@FinkBroker](https://twitter.com/finkbroker) and check our [news](https://fink-broker.org/post/). Documentation is at [https://fink-broker.readthedocs.io](https://fink-broker.readthedocs.io).
 
 You can join the Fink collaboration by filling this [form](https://forms.gle/CmvH8vsyyv4AUTpy8). You will be then subscribed to our mailing list and receive relevant news and information about our general meetings.
 

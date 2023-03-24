@@ -30,15 +30,5 @@ We want Fink to be able to _filter, aggregate, enrich, consume_ incoming data st
 
 ## Getting started
 
-If you want to join Fink please check our [Joining page](https://fink-broker.org/joining/)
+If you want to join Fink please check our [Joining page](https://fink-broker.org/joining/), and you will find the documentation website at [https://fink-broker.readthedocs.io](https://fink-broker.readthedocs.io).
 
-Learning Fink infrastructure is easy whether you are a developer or a scientist:
-
-* Learn about the [broker technology](https://fink-broker.readthedocs.io/en/latest/broker/introduction/), the [science](https://fink-broker.readthedocs.io/en/latest/science/introduction/) we do, and how to [receive](https://fink-broker.readthedocs.io/en/latest/fink-client/) alerts.
-* Learn how to use the broker or how to contribute following the different [tutorials](https://fink-broker.readthedocs.io/en/latest/tutorials/introduction/).
-* Explore the different components:
-    * [fink-alert-simulator](https://github.com/astrolabsoftware/fink-alert-simulator): Simulate alert streams for the Fink broker.
-    * [fink-broker](https://github.com/astrolabsoftware/fink-broker): Astronomy Broker based on Apache Spark.
-    * [fink-science](https://github.com/astrolabsoftware/fink-science): Define your science modules to add values to Fink alerts.
-    * [fink-filters](https://github.com/astrolabsoftware/fink-filters): Define your filters to create your alert stream in Fink.
-    * [fink-client](https://github.com/astrolabsoftware/fink-client):  Light-weight client to manipulate alerts from Fink.
