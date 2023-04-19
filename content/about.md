@@ -6,8 +6,9 @@ tags: [About, Archive]
 
 Fink is a community driven project, open to anyone, that processes time-domains alert streams and connects them with follow-up facilities and science teams. Fink broker has been selected as a community broker to process the full stream of transient alerts from the [Vera C. Rubin Observatory](https://lsst.org/). Since 2020, we are processing the alert stream from the [Zwicky Transient Facility](https://www.ztf.caltech.edu/) (ZTF).
 
-Fink's processed data stream from ZTF can be accessed through our [science portal](https://fink-portal.org) and our [API](https://fink-portal.org/api) (with [tutorials](https://github.com/astrolabsoftware/fink-notebook-template)). This data is aggregated at the end of every observing night by ZTF. For automatic filtered data streams within minutes of observations, please contact us at contact@fink-broker.org An overview of Fink broker architecture and first science results can be found in our white paper published in [MNRAS](https://academic.oup.com/mnras/article/501/3/3272/5992334) [arxiv](https://arxiv.org/abs/2009.10185).
+Fink's processed data stream from ZTF can be accessed through our [science portal](https://fink-portal.org) and our [API](https://fink-portal.org/api) (with [tutorials](https://github.com/astrolabsoftware/fink-notebook-template)). This data is aggregated at the end of every observing night by ZTF. For automatic filtered data streams within minutes of observations, please contact us at contact@fink-broker.org An overview of Fink broker architecture and first science results can be found in our white paper published in [MNRAS](https://academic.oup.com/mnras/article/501/3/3272/5992334) and [arxiv](https://arxiv.org/abs/2009.10185).
 
+Fink is currently deployed in Université Paris Saclay thanks to the contribution of IJCLab. For Rubin LSST Fink will be deployed at CC-IN2P3 scientific data centre. 
 
 ## About Fink's infrastructure
 
@@ -27,6 +28,9 @@ We want Fink to be able to _filter, aggregate, enrich, consume_ incoming data st
 * for users with appropriate data rights, facilitating followup queries and/or user-generated processing within the corresponding Data Access Center
 * managing annotation & citation as followup observations are made
 * collecting classification and other information gathered by the scientific community
+
+## About Fink's collaboration
+We are eager to have a vibrant collaboration with members from both engineering and research backgrounds around the world. We are commiteed to have an inclusive and respectful collaboration. Our Code of Conduct is available [here](https://drive.google.com/file/d/1U3nhLDYkAbaxD3dszvQPflkDlM2s1X6-/view?usp=share_link).
 
 ## Getting started
 

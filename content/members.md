@@ -26,6 +26,10 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 * **International Center for Advanced Studies, Physical Sciences Institute, San Martin University**: M. Makler
 
+#### Australia
+* **Swinburne University fo Technology**: A. Möller, D. Dobie
+* **Australian National University**: J. Soon
+
 #### Brazil
 
 * **Centro Brasileiro de Pesquisas Físicas**: C.R. De Bom
@@ -80,6 +84,11 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 ## Collaborators
 
+#### Facilities and collaborations
+- SVOM
+- AstroColibri
+- GRANDMA
+#### Brokers
 - ALeRCE Team - http://alerce.science/
 - AMPEL Team - https://ampelproject.github.io/
 - ANTARES Team - https://antares.noirlab.edu/
