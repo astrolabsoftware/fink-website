@@ -27,16 +27,20 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **International Center for Advanced Studies, Physical Sciences Institute, San Martin University**: M. Makler
 
 #### Australia
-* **Swinburne University fo Technology**: A. Möller, D. Dobie
+* **Swinburne University fo Technology**: A. Möller, D. Dobie, C. Gately
 * **Australian National University**: J. Soon
 
 #### Brazil
 
-* **Centro Brasileiro de Pesquisas Físicas**: C.R. De Bom
+* **Centro Brasileiro de Pesquisas Físicas**: C.R. De Bom, B. Fraga, A. Santos
 
 #### Czech Republic
 
 * **CEICO, Institute of Physics, Czech Academy of Sciences**: S. Karpov
+
+#### Denmark
+
+* **Dark Cosmology Centre (DARK), Niels Bohr Institute - University of Copenhagen**: C. Gall
 
 #### Italy
 
@@ -55,14 +59,18 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **CNRS/IRAP, Université Paul Sabatier**: O. Godet, E. Quintin, M.L. Lanza, N. Webb, M. Yassine
 * **CNRS/LAM, Aix Marseille Université**: S. Blondin
 * **CNRS/LAPP, Université Grenoble-Alpes, Université Savoie Mont Blanc**: D. Boutigny, D. Verkindt
-* **CNRS/LPC, Université Clermont Auvergne**: E. Gangler, P. Gris, E. Russeil
+* **CNRS/LPC, Université Clermont Auvergne**: E. Gangler, P. Gris, M. V.  Pruzhinskaya, E. Russeil
 * **CNRS/LPSC, Université Grenoble-Alpes**: J. Bregeon, M. Masson
 * **CNRS/LUPM, Université de Montpellier**: J. Cohen-Tanugi
 * **CNRS/OCA, Lagrange, Université Côte d'Azur**: B. Carry
 
+#### Portugal
+
+* **Instituto Superior Tecnico, Universidade de Lisboa**: S. Gonzalez-Gaitan
+
 #### Russian Federation
 
-* **Lomonosov Moscow State University, Sternberg Astronomical Institute**: I. Beschastnov, M. V. Kornilov, M. V.  Pruzhinskaya
+* **Lomonosov Moscow State University, Sternberg Astronomical Institute**: I. Beschastnov, M. V. Kornilov
 
 #### South Korea
 
@@ -85,10 +93,14 @@ You can contact us at contact(at)fink-broker.org for more information.
 ## Collaborators
 
 #### Facilities and collaborations
+
 - SVOM
 - AstroColibri
 - GRANDMA
+- [COIN](https://cosmostatistics-initiative.org/)
+
 #### Brokers
+
 - ALeRCE Team - http://alerce.science/
 - AMPEL Team - https://ampelproject.github.io/
 - ANTARES Team - https://antares.noirlab.edu/
