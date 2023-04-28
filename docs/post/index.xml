@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fink is going to Australia!</title>
+      <link>https://fink-broker.org/2023-04-28_ozfink/</link>
+      <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2023-04-28_ozfink/</guid>
+      <description>Fink next workshop will be held on May 3 to 5 at Swinburne University of Technology, Melbourne, Australia. This workshop will develop collaboration across Australian research groups, observing facilities and the Fink collaboration. This meeting will be in hybrid format with participants both in person and on zoom. More information at https://www.ozgrav.org/ozfink-workshop-2023.html.</description>
+    </item>
+    
     <item>
       <title>Fink is expanding!</title>
       <link>https://fink-broker.org/2023-01-25-fink-update/</link>
