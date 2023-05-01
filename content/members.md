@@ -27,8 +27,9 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **International Center for Advanced Studies, Physical Sciences Institute, San Martin University**: M. Makler
 
 #### Australia
-* **Swinburne University fo Technology**: A. Möller, D. Dobie, C. Gately
+* **Swinburne University fo Technology**: A. Möller, D. Dobie, C. Gately, G. Poole, S. Saleheen
 * **Australian National University**: J. Soon
+* **Astronomy Data And Computing Services**: J. Hu
 
 #### Brazil
 
