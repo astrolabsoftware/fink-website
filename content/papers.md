@@ -21,7 +21,7 @@ _Etienne Russeil, Emille E. O. Ishida, Roman Le Montagner, Julien Peloton, Anais
 _B. Biswas, E. E. O. Ishida, J. Peloton, A. Moller, M. V. Pruzhinskaya, R. S. de Souza, D. Muthukrishna_
 
 [![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2202.09766) [![button2](https://img.shields.io/static/v1?label=&message=mnras&color=blue&style=plastic&logo=&logoColor=white)](https://doi.org/10.1093/mnras/stac2054) [![button3](https://img.shields.io/static/v1?label=&message=data&color=orange&style=plastic&logo=&logoColor=white)](https://github.com/astrolabsoftware/fink_grandma_kn) **GRANDMA Observations of ZTF/Fink Transients during Summer 2021**,
-_V. Aivazyan, M. Almualla, S. Antier, A. Baransky, K. Barynova, S. Basa, F. Bayard, S. Beradze, D. Berezin, M. Blazek, D. Boutigny, D. Boust, E. Broens, O. Burkhonov, A. Cailleau, N. Christensen, D. Cejudo, A. Coleiro, M. W. Coughlin, D. Datashvili, T. Dietrich, F. Dolon, J.-G. Ducoin, P.-A. Duverne, G. Marchal-Duval, C. Galdies, L. Granier, V. Godunova, P. Gokuldass, H. B. Eggenstein, M. Freeberg, P. Hello, R. Inasaridze, E. O. Ishida, P. Jaquiery, D. A. Kann, G. Kapanadze, S. Karpov, R. W. Kiendrebeogo, A. Klotz, R. Kneip, N. Kochiashvili, W. Kou, F. Kugel, C. Lachaud, S. Leonini, A. Leroy, N. Leroy, A. Le Van Su, D. Marchais, M. Masek, T. Midavaine, A. Moller, D. Morris, R. Natsvlishvili, F. Navarete, K. Noysena, S. Nissanke, K. Noonan, N. B. Orange, J. Peloton, A. Popowicz, T. Pradier, M. Prouza, G. Raaijmakers, Y. Rajabov, M. Richmond, Ya. Romanyuk, L. Rousselot, T. Sadibekova, M. Serrau, O. Sokoliuk, X. Song, A. Simon, C. Stachie, A. Taylor, Y. Tillayev, D. Turpin, M. Vardosanidze, J. Vlieghe, I. Tosta e Melo, X. F. Wang, J. Zhu_
+_V. Aivazyan, et al._
 
 [![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2202.05719) **Impact of satellite glints on the transient science on ZTF scale**,
 _Sergey Karpov, Julien Peloton_
@@ -35,5 +35,5 @@ _Marco Leoni, Emille E. O. Ishida, Julien Peloton, Anais Möller_
 
 Papers featuring Fink
 
-[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2303.09409) ** Repeating Outbursts from the Young Stellar Object Gaia23bab (= SPICY 97589)**, _Michael A. Kuhn et al._
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2303.09409) **Repeating Outbursts from the Young Stellar Object Gaia23bab (= SPICY 97589)**, _Michael A. Kuhn et al._
 [![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2305.00108) **A data science platform to enable time-domain astronomy**, _Michael W. Coughlin et al._
