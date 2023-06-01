@@ -6,9 +6,19 @@
     <description>Recent content in workshop on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 28 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/tags/workshop/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/tags/workshop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ozFink</title>
+      <link>https://fink-broker.org/2023-05-05_ozfink/</link>
+      <pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2023-05-05_ozfink/</guid>
+      <description>Our first Australian workshop was held in Melbourne between the 3 and 5th of May 2023. We had over 50 simultaneous participants both in person and online. It was a great moment to share current facilities, research and start setting the bases for Rubin LSST first light!
+We had a very dynamic schedule with talks about Rubin, Australia LSST involvement, facilities at all wavelengths both in Australia and New Zealand, high-energy, radio, optical, gravitational wave transients, variables, potential theoretical observations, services in Australia, discussion sessions, and much more!</description>
+    </item>
+    
+    <item>
+      <title>ozFink - Save the date!</title>
       <link>https://fink-broker.org/2023-04-28_ozfink/</link>
       <pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate>
       
