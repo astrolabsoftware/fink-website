@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>service on Fink broker</title>
+    <link>https://fink-broker.org/tags/service/</link>
+    <description>Recent content in service on Fink broker</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 11 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/tags/service/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gravitational Waves optical counterpart (Part 1)</title>
+      <link>https://fink-broker.org/2023-07-12_gw/</link>
+      <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2023-07-12_gw/</guid>
+      <description>-- Portal search The fourth observing run of the gravitational wave detectors have already begun, and you might wonder if there are optical counterparts from Fink/ZTF to their detection? We are happy to introduce a new service to quickly explore potential matches: https://fink-portal.org/gw.
+The idea is simple: you enter a superevent name on the left as well as a credible level, and hit the button. The alerts falling into the sky map will be shown in the table, and displayed on the skymap.</description>
+    </item>
+    
+  </channel>
+</rss>

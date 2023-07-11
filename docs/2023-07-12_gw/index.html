@@ -1,0 +1,318 @@
+<!doctype html>
+
+<html lang="en" class="h-100">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="Hugo 0.81.0" />
+  <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
+  
+  
+  <title>Gravitational Waves optical counterpart (Part 1) | Fink broker</title>
+  <style>
+body {
+    background-color:  #f2f3f4; 
+    background-image: url(images/background.png);
+    background-size: contain;
+}
+.container {
+  max-width: 900px;
+}
+#nav a {
+  font-weight: bold;
+  color: inherit;
+}
+#nav a.nav-link-active {
+  background-color: #212529;
+  color: #fff;
+}
+#nav-border {
+  border-bottom: 1px solid #212529;
+}
+#main {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+#home-jumbotron {
+  background-color: inherit;
+}
+#footer .container {
+  padding: 1em 0;
+}
+#footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+.font-125 {
+  font-size: 125%;
+}
+.tag-btn {
+  margin-bottom: 0.3em;
+}
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit; 
+  background-color: transparent;
+  border-radius: 0;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+img,
+iframe,
+embed,
+video,
+audio {
+  max-width: 100%;
+}
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: initial;
+}
+</style>
+
+</head>
+  <body class="d-flex flex-column h-100">
+    <div id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/"><i data-feather="home"></i> Home</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/post/"><i data-feather="edit"></i> News</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="https://fink-portal.org"><i data-feather="share-2"></i> Science Portal</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/papers/"><i data-feather="book"></i> Publications</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/members/"><i data-feather="users"></i> Team</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/joining/"><i data-feather="user-plus"></i> Join us</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/about/"><i data-feather="info"></i> About</a>
+  
+  </nav>
+</div>
+
+    <div class="container">
+      <main id="main">
+        
+
+<h1>Gravitational Waves optical counterpart (Part 1)</h1>
+
+
+<i data-feather="calendar"></i> <time datetime="2023-07-11">Jul 11, 2023</time>
+
+  <br>
+  <i data-feather="tag"></i>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://fink-broker.org/tags/service">service</a>
+  
+
+<br><br>
+<!-- <img src="/images/gw_portal_fink_mobile.png" width="30%" height="100%" style="margin: 0px 5px 5px 0px; float: left; border:0"> -->
+<h3 id="portal-search">Portal search</h3>
+<p>The fourth observing run of the gravitational wave detectors have already begun, and you might wonder if there are optical counterparts from Fink/ZTF to their detection? We are happy to introduce a new service to quickly explore potential matches: <a href="https://fink-portal.org/gw">https://fink-portal.org/gw</a>.</p>
+<p>The idea is simple: you enter a superevent name on the left as well as a credible level, and hit the button. The alerts falling into the sky map will be shown in the table, and displayed on the skymap. Note that we consider only alerts that started varying within a time window of -1 to +6 days after the gravitational wave detectors trigger.</p>
+<p>The table contains a few columns to guide the search, but you can easily access individual objects by clicking on their name if you need further inspection. Regarding the skymap, you can open the top left menu, and (de)select classes of your choice. The classes are provided by Fink, using all the added values from our classifiers and catalog crossmatches.</p>
+<p><img src="/images/gw_portal_fink.png" alt="gw"></p>
+<h3 id="gravitational-wave-api">Gravitational wave API</h3>
+<p>The API will let you do the same, but you have more freedom in the input skymap. You can send any skymap from the Gravitational-Wave Candidate Event Database (GraceDB), but also any custom skymap that will use the same format. Here is an example for a O4 candidate:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> io
+<span style="color:#f92672">import</span> requests
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+
+<span style="color:#75715e"># LIGO/Virgo probability sky maps, as gzipped FITS (bayestar.fits.gz)</span>
+<span style="color:#75715e"># wget https://gracedb.ligo.org/api/superevents/S230709bi/files/bayestar.fits.gz</span>
+fn <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;bayestar.fits.gz&#39;</span>
+
+<span style="color:#75715e"># GW credible region threshold to look for. Note that the values in the resulting</span>
+<span style="color:#75715e"># credible level map vary inversely with probability density: the most probable pixel is</span>
+<span style="color:#75715e"># assigned to the credible level 0.0, and the least likely pixel is assigned the credible level 1.0.</span>
+<span style="color:#75715e"># Area of the 20% Credible Region:</span>
+credible_level <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.2</span>
+
+<span style="color:#75715e"># Query Fink</span>
+data <span style="color:#f92672">=</span> open(fn, <span style="color:#e6db74">&#39;rb&#39;</span>)<span style="color:#f92672">.</span>read()
+r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(
+    <span style="color:#e6db74">&#39;https://fink-portal.org/api/v1/bayestar&#39;</span>,
+    json<span style="color:#f92672">=</span>{
+        <span style="color:#e6db74">&#39;bayestar&#39;</span>: str(data),
+        <span style="color:#e6db74">&#39;credible_level&#39;</span>: credible_level,
+        <span style="color:#e6db74">&#39;output-format&#39;</span>: <span style="color:#e6db74">&#39;json&#39;</span>
+    }
+)
+
+pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(io<span style="color:#f92672">.</span>BytesIO(r<span style="color:#f92672">.</span>content))
+</code></pre></div><p>You can then quickly inspect what kind of match is available:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pdf<span style="color:#f92672">.</span>groupby(<span style="color:#e6db74">&#39;d:classification&#39;</span>)<span style="color:#f92672">.</span>size()
+d:classification
+SN candidate               <span style="color:#ae81ff">2</span>
+Solar System MPC           <span style="color:#ae81ff">2</span>
+Solar System candidate    <span style="color:#ae81ff">42</span>
+Unknown                   <span style="color:#ae81ff">35</span>
+</code></pre></div><p>More information at <a href="https://fink-portal.org/api">https://fink-portal.org/api</a>.</p>
+<h3 id="schema-change">Schema change</h3>
+<p>Note that the schema of the data returned by the <code>api/v1/bayestar</code> endpoint changed. It is lightweight, and more focused on the GW search. The type and description of columns can be found at <a href="https://fink-portal.org/api/v1/columns,">https://fink-portal.org/api/v1/columns,</a> plus two additional columns:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&rsquo;d:classification'</td>
+<td>str</td>
+<td>classification infered from Fink</td>
+</tr>
+<tr>
+<td>&lsquo;v:jdstartgw&rsquo;</td>
+<td>double</td>
+<td>Trigger time (Julian Date) for the gravitational wave detectors</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-is-next">What is next?</h3>
+<p>This service relies on the alert data stored in the Fink database, that is updated once a day. Hence it is not designed for real-time analysis. But&hellip; wait for the Part 2 of this post ;-)</p>
+
+
+
+      </main>
+    </div>
+    
+    <script src="https://fink-broker.org/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+
+
+<script src="https://fink-broker.org/js/jquery-3.3.1.slim.min.js"></script>
+<script src="https://fink-broker.org/js/bootstrap.bundle.min.js"></script>
+
+    
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+  crossorigin="anonymous"
+/>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+  crossorigin="anonymous"
+></script>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+  crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"
+></script>
+
+
+    
+  
+
+  </body>
+</html>
