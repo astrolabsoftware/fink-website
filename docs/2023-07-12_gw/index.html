@@ -213,10 +213,6 @@ audio {
 <span style="color:#f92672">import</span> requests
 <span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
 
-<span style="color:#75715e"># LIGO/Virgo probability sky maps, as gzipped FITS (bayestar.fits.gz)</span>
-<span style="color:#75715e"># wget https://gracedb.ligo.org/api/superevents/S230709bi/files/bayestar.fits.gz</span>
-fn <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;bayestar.fits.gz&#39;</span>
-
 <span style="color:#75715e"># GW credible region threshold to look for. Note that the values in the resulting</span>
 <span style="color:#75715e"># credible level map vary inversely with probability density: the most probable pixel is</span>
 <span style="color:#75715e"># assigned to the credible level 0.0, and the least likely pixel is assigned the credible level 1.0.</span>
@@ -224,12 +220,32 @@ fn <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;bayesta
 credible_level <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.2</span>
 
 <span style="color:#75715e"># Query Fink</span>
-data <span style="color:#f92672">=</span> open(fn, <span style="color:#e6db74">&#39;rb&#39;</span>)<span style="color:#f92672">.</span>read()
 r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(
     <span style="color:#e6db74">&#39;https://fink-portal.org/api/v1/bayestar&#39;</span>,
     json<span style="color:#f92672">=</span>{
-        <span style="color:#e6db74">&#39;bayestar&#39;</span>: str(data),
+        <span style="color:#e6db74">&#39;event_name&#39;</span>: <span style="color:#e6db74">&#39;S230709bi&#39;</span>,
         <span style="color:#e6db74">&#39;credible_level&#39;</span>: credible_level,
+        <span style="color:#e6db74">&#39;output-format&#39;</span>: <span style="color:#e6db74">&#39;json&#39;</span>
+    }
+)
+
+pdf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_json(io<span style="color:#f92672">.</span>BytesIO(r<span style="color:#f92672">.</span>content))
+</code></pre></div><p>Fink returns all alerts emitted within <code>[-1 day, +6 day]</code> from the GW event inside the chosen credible region.
+Alternatively, you can input a sky map retrieved from the GraceDB event page, or distributed via GCN.
+Concretely on <a href="https://gracedb.ligo.org/superevents/S230709bi/view/">S230709bi</a>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> io
+<span style="color:#f92672">import</span> requests
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+
+<span style="color:#75715e"># LIGO/Virgo probability sky maps, as gzipped FITS (bayestar.fits.gz)</span>
+data <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;https://gracedb.ligo.org/api/superevents/S230709bi/files/bayestar.fits.gz&#39;</span>)
+
+<span style="color:#75715e"># Query Fink</span>
+r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(
+    <span style="color:#e6db74">&#39;https://fink-portal.org/api/v1/bayestar&#39;</span>,
+    json<span style="color:#f92672">=</span>{
+        <span style="color:#e6db74">&#39;bayestar&#39;</span>: str(data<span style="color:#f92672">.</span>content),
+        <span style="color:#e6db74">&#39;credible_level&#39;</span>: <span style="color:#ae81ff">0.2</span>,
         <span style="color:#e6db74">&#39;output-format&#39;</span>: <span style="color:#e6db74">&#39;json&#39;</span>
     }
 )
