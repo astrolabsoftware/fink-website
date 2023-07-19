@@ -1,0 +1,496 @@
+<!doctype html>
+
+<html lang="en" class="h-100">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="Hugo 0.81.0" />
+  <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
+  
+  
+  <title>Gravitational Waves optical counterpart (Part 2) | Fink broker</title>
+  <style>
+body {
+    background-color:  #f2f3f4; 
+    background-image: url(images/background.png);
+    background-size: contain;
+}
+.container {
+  max-width: 900px;
+}
+#nav a {
+  font-weight: bold;
+  color: inherit;
+}
+#nav a.nav-link-active {
+  background-color: #212529;
+  color: #fff;
+}
+#nav-border {
+  border-bottom: 1px solid #212529;
+}
+#main {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+#home-jumbotron {
+  background-color: inherit;
+}
+#footer .container {
+  padding: 1em 0;
+}
+#footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+.font-125 {
+  font-size: 125%;
+}
+.tag-btn {
+  margin-bottom: 0.3em;
+}
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit; 
+  background-color: transparent;
+  border-radius: 0;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+img,
+iframe,
+embed,
+video,
+audio {
+  max-width: 100%;
+}
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: initial;
+}
+</style>
+
+</head>
+  <body class="d-flex flex-column h-100">
+    <div id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/"><i data-feather="home"></i> Home</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/post/"><i data-feather="edit"></i> News</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="https://fink-portal.org"><i data-feather="share-2"></i> Science Portal</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/papers/"><i data-feather="book"></i> Publications</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/members/"><i data-feather="users"></i> Team</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/joining/"><i data-feather="user-plus"></i> Join us</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/about/"><i data-feather="info"></i> About</a>
+  
+  </nav>
+</div>
+
+    <div class="container">
+      <main id="main">
+        
+
+<h1>Gravitational Waves optical counterpart (Part 2)</h1>
+
+
+<i data-feather="calendar"></i> <time datetime="2023-07-11">Jul 11, 2023</time>
+
+  <br>
+  <i data-feather="tag"></i>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://fink-broker.org/tags/service">service</a>
+  
+
+<br><br>
+<p>In the <a href="https://fink-broker.org/2023-07-12_gw">previous post</a>, we described a new service in Fink to inspect optical counterparts to gravitational wave events. This service is highly flexible as you can input any sky maps previously emitted by gravitational wave interferometers, but to find counterparts it relies on the alert data stored in the Fink database, that is updated once a day. Hence it is not designed for real-time analysis.</p>
+<p>We are now pleased to introduce the second part of this service, which enables real-time analysis of any events sent by the General Coordinates Network (GCN).</p>
+<h2 id="pipeline-overview">Pipeline Overview</h2>
+<p>Since now a year, a new service has been developed inside the fink-broker to create a real-time multi-messenger analysis pipeline.</p>
+<p><img src="/images/Fink_MM_pipeline.png" alt="Fink_MM">
+<a href="https://github.com/FusRoman/Fink_MM">Fink-MM</a> extends the existing Fink pipeline and it performs a cross-match between the ZTF alerts processed by Fink and the General Coordinates Network (GCN) circulars. The purpose is to find the optical counterparts of astronomical events detected by the observatories sending circulars in the GCN as soon as possible. A daemon is always listening to the GCN circulars and storing them in a database. These circulars are then cross-matched with the ZTF alerts, and the results are stored in the Fink database. Simultaneously, the output is filtered and sent to the Fink community.</p>
+<h3 id="current-listening-observatories">Current listening observatories</h3>
+<p>Here is the list of observatories that we actively listen:</p>
+<ul>
+<li>Gamma-Ray: <a href="https://fermi.gsfc.nasa.gov/">Fermi</a>, <a href="https://swift.gsfc.nasa.gov/about_swift/">Swift</a>, <a href="https://www.cosmos.esa.int/web/integral/home">Integral</a></li>
+<li>X-Ray: Swift</li>
+<li>Optical: Swift</li>
+<li>Neutrino: <a href="https://icecube.wisc.edu/">IceCube</a></li>
+<li>Gravitational Waves: <a href="https://www.ligo.caltech.edu/">LIGO</a>, <a href="https://www.virgo-gw.eu/">VIRGO</a>, <a href="https://gwcenter.icrr.u-tokyo.ac.jp/en/">KAGRA</a></li>
+</ul>
+<h3 id="two-workflows-online-and-offline">Two workflows: online and offline</h3>
+<p>Fink-MM triggers two tasks each day if ZTF alerts are available. The first one is the online mode. It is a streaming job connected to the GCN daemon and the Fink pipeline and it joins both streams. The join condition looks at all the ZTF alerts emitted after the circulars trigger time and located inside the error region. The online mode also looks for the circulars emitted the day before. The typical latency for the online is:</p>
+<ul>
+<li>ZTF alerts latency: 15 minutes</li>
+<li>GCN circulars latency: few seconds, up to 1 hour</li>
+<li>Fink computation pipeline: 1 minute</li>
+</ul>
+<p>On the other hand, the offline mode runs once at the end of a ZTF night and looks for all the circulars and ZTF alerts within a given time window (typically ten days) in case we missed events outside the observing period of ZTF.</p>
+<h2 id="fink-mm-output">Fink-MM output</h2>
+<p>The current output schema for Fink-MM is the following:</p>
+<div class='table'>
+	<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>objectId</code></td>
+<td>string</td>
+<td>Unique ZTF identifier of the object</td>
+</tr>
+<tr>
+<td><code>candid</code></td>
+<td>int</td>
+<td>Unique ZTF identifier of the alert</td>
+</tr>
+<tr>
+<td><code>ztf_ra</code></td>
+<td>float</td>
+<td>ZTF right ascension, in degree</td>
+</tr>
+<tr>
+<td><code>ztf_dec</code></td>
+<td>float</td>
+<td>ZTF declination, in degree</td>
+</tr>
+<tr>
+<td><code>fid</code></td>
+<td>int</td>
+<td>filter id (ZTF, g=1, r=2)</td>
+</tr>
+<tr>
+<td><code>jdstarthist</code></td>
+<td>float</td>
+<td>first variation time at three sigma of the object, in JD</td>
+</tr>
+<tr>
+<td><code>rb</code></td>
+<td>float</td>
+<td>real bogus score</td>
+</tr>
+<tr>
+<td><code>jd</code></td>
+<td>float</td>
+<td>alert emission time</td>
+</tr>
+<tr>
+<td><code>instrument</code></td>
+<td>String</td>
+<td>Triggering instruments (GBM, XRT, &hellip;)</td>
+</tr>
+<tr>
+<td><code>observatory</code></td>
+<td>string</td>
+<td>Triggering observatory (Fermi, Swift, IceCube, &hellip;)</td>
+</tr>
+<tr>
+<td><code>triggerId</code></td>
+<td>string</td>
+<td>Unique GCN identifier (<a href="https://heasarc.gsfc.nasa.gov/wsgi-scripts/tach/gcn_v2/tach.wsgi/">GCN viewer</a> to retrieve quickly the notice)</td>
+</tr>
+<tr>
+<td><code>gcn_ra</code></td>
+<td>float</td>
+<td>GCN Event right ascension, in degree</td>
+</tr>
+<tr>
+<td><code>gcn_dec</code></td>
+<td>float</td>
+<td>GCN Event declination, in degree</td>
+</tr>
+<tr>
+<td><code>gcn_loc_error</code></td>
+<td>float</td>
+<td>GCN error location, in arcminute</td>
+</tr>
+<tr>
+<td><code>triggerTimeUTC</code></td>
+<td>string</td>
+<td>GCN TriggerTime in UTC</td>
+</tr>
+<tr>
+<td><code>p_assoc</code></td>
+<td>float</td>
+<td>Serendipitous probability of associating the alerts with the GCN event</td>
+</tr>
+<tr>
+<td><code>fink_class</code></td>
+<td>string</td>
+<td><a href="https://fink-broker.readthedocs.io/en/latest/science/classification/">Fink Classification</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>In addition, there is also all the added value by Fink and the <a href="https://fink-broker.readthedocs.io/en/latest/science/added_values/">science module</a>, and for the online mode, we added some extra fields to help taking a decision:</p>
+<div class='table'>
+	<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th style="text-align:right">Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>delta_mag</code></td>
+<td>float</td>
+<td style="text-align:right">Difference of magnitude between the alert and the previous one</td>
+</tr>
+<tr>
+<td><code>rate</code></td>
+<td>float</td>
+<td style="text-align:right">Magnitude rate (magnitude/day)</td>
+</tr>
+<tr>
+<td><code>from_upper</code></td>
+<td>bool</td>
+<td style="text-align:right">If true, the last alert used for the difference magnitude is an upper limit</td>
+</tr>
+<tr>
+<td><code>start_vartime</code></td>
+<td>float</td>
+<td style="text-align:right">first variation time at five sigma of the object (in JD, only valid for 30 days)</td>
+</tr>
+<tr>
+<td><code>diff_vartime</code></td>
+<td>float</td>
+<td style="text-align:right">difference between <code>start_vartime</code> and <code>jd</code> (if above 30, <code>start_vartime</code> is not valid)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="accessing-the-data-in-real-time">Accessing the data in real-time</h2>
+<p>We already deployed several real-time topics focusing on GRB and GW optical counterparts. We list the available topic names below, and they are ready to be used.</p>
+<h3 id="available-grb-topics">Available GRB topics</h3>
+<div class='table'>
+	<table>
+<thead>
+<tr>
+<th>Topic Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fink_grb_bronze</code></td>
+<td>Alerts with a real bogus (rb) above 0.7, classified by Fink as an extragalactic event within the error location of a GRB event.</td>
+</tr>
+<tr>
+<td><code>fink_grb_silver</code></td>
+<td>Alerts satisfying the bronze filter with a <code>grb_proba</code> above 5 sigma.</td>
+</tr>
+<tr>
+<td><code>fink_grb_gold</code></td>
+<td>Alerts satisfying the silver filter with a <code>mag_rate</code> above 0.3 mag/day and a <code>rb</code> above 0.9.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="available-gw-topics">Available GW topics</h3>
+<div class='table'>
+	<table>
+<thead>
+<tr>
+<th>Topic Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>fink_gw_bronze</code></td>
+<td>Alerts with a real bogus (<code>rb</code>) above 0.7, classified by Fink as an extragalactic event within the error location of a GW event.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="how-to-listen-to-the-topics">How to listen to the topics?</h3>
+<p>First, register to get an account on the <a href="https://fink-broker.readthedocs.io/en/latest/services/livestream/">livestream service</a>. Then you can use the <a href="https://github.com/astrolabsoftware/fink-client">fink-client</a> to get matching alerts in real-time:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Get first ten matches for example, and save them on disk</span>
+fink_consumer.py --display -limit <span style="color:#ae81ff">10</span> --save -outdir MMA_DB
++--------------+----------------+----------------+----------------------+-------------+------------+
+|   ObjectId   | Classification |     Topic      |    Rate <span style="color:#f92672">(</span>mag/day<span style="color:#f92672">)</span>    | Observatory | Trigger ID |
++--------------+----------------+----------------+----------------------+-------------+------------+
+| ZTF23aasnpzx |    Unknown     | fink_gw_bronze | -0.09833341715458073 |     LVK     |  S230718h  |
++--------------+----------------+----------------+----------------------+-------------+------------+
++--------------+----------------+----------------+---------------------+-------------+------------+
+|   ObjectId   | Classification |     Topic      |   Rate <span style="color:#f92672">(</span>mag/day<span style="color:#f92672">)</span>    | Observatory | Trigger ID |
++--------------+----------------+----------------+---------------------+-------------+------------+
+| ZTF23aasnirt |    Unknown     | fink_gw_bronze | -0.9822790407862867 |     LVK     |  S230718h  |
++--------------+----------------+----------------+---------------------+-------------+------------+
+...
+</code></pre></div><p>Some information will be displayed on the screen, and alerts will be saved on disk (Apache Avro format). You can easily inspect alerts using Fink-provided tools, e.g. in Python</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> fink_client.avroUtils <span style="color:#f92672">import</span> AlertReader
+
+<span style="color:#75715e"># load all alerts</span>
+r <span style="color:#f92672">=</span> AlertReader(<span style="color:#e6db74">&#39;MMA_DB&#39;</span>)
+
+<span style="color:#75715e"># format into a Pandas DataFrame</span>
+pdf <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span>to_pandas()
+
+<span style="color:#66d9ef">print</span>(pdf[[<span style="color:#e6db74">&#39;objectId&#39;</span>, <span style="color:#e6db74">&#39;fink_class&#39;</span>, <span style="color:#e6db74">&#39;triggerId&#39;</span>]])
+        objectId    fink_class triggerId
+<span style="color:#ae81ff">0</span>   ZTF23aasohuq       Unknown  S230718h
+<span style="color:#ae81ff">1</span>   ZTF23aasnuqf       Unknown  S230718d
+<span style="color:#ae81ff">2</span>   ZTF23aasnvfa       Unknown  S230718d
+<span style="color:#ae81ff">3</span>   ZTF23aasogwq       Unknown  S230718q
+<span style="color:#ae81ff">4</span>   ZTF23aasohuv       Unknown  S230718q
+<span style="color:#ae81ff">5</span>   ZTF23aasogwq       Unknown  S230718h
+<span style="color:#ae81ff">6</span>   ZTF23aasogwz       Unknown  S230718h
+<span style="color:#ae81ff">7</span>   ZTF23aasoski       Unknown  S230718q
+<span style="color:#ae81ff">8</span>   ZTF23aasnvze       Unknown  S230718d
+<span style="color:#ae81ff">9</span>   ZTF23aasnoek  SN candidate  S230718d
+<span style="color:#ae81ff">10</span>  ZTF23aasnvey       Unknown  S230718d
+</code></pre></div><h2 id="what-is-next">What is next?</h2>
+<p>This is the first building block for real-time multi-messenger analysis in Fink. As time goes, we will deploy more filters, and associated topics. If you are using this service, your feedback is welcome! Do not hesitate to reach us to build your own filter based on Fink-MM output, or suggest us other incoming streams to correlate with the ZTF alert stream.</p>
+
+
+
+      </main>
+    </div>
+    
+    <script src="https://fink-broker.org/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+
+
+<script src="https://fink-broker.org/js/jquery-3.3.1.slim.min.js"></script>
+<script src="https://fink-broker.org/js/bootstrap.bundle.min.js"></script>
+
+    
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+  crossorigin="anonymous"
+/>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+  crossorigin="anonymous"
+></script>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+  crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"
+></script>
+
+
+    
+  
+
+  </body>
+</html>

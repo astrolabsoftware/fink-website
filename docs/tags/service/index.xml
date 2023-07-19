@@ -17,5 +17,15 @@
 The idea is simple: you enter a superevent name on the left as well as a credible level, and hit the button. The alerts falling into the sky map will be shown in the table, and displayed on the skymap.</description>
     </item>
     
+    <item>
+      <title>Gravitational Waves optical counterpart (Part 2)</title>
+      <link>https://fink-broker.org/2023-07-19_gw/</link>
+      <pubDate>Tue, 11 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2023-07-19_gw/</guid>
+      <description>In the previous post, we described a new service in Fink to inspect optical counterparts to gravitational wave events. This service is highly flexible as you can input any sky maps previously emitted by gravitational wave interferometers, but to find counterparts it relies on the alert data stored in the Fink database, that is updated once a day. Hence it is not designed for real-time analysis.
+We are now pleased to introduce the second part of this service, which enables real-time analysis of any events sent by the General Coordinates Network (GCN).</description>
+    </item>
+    
   </channel>
 </rss>
