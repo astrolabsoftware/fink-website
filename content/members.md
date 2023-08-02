@@ -27,9 +27,11 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **International Center for Advanced Studies, Physical Sciences Institute, San Martin University**: M. Makler
 
 #### Australia
-* **Swinburne University fo Technology**: A. Möller, D. Dobie, C. Gately, G. Poole, S. Saleheen
-* **Australian National University**: J. Soon
+* **Swinburne University fo Technology**: A. Möller, D. Dobie, C. Gately, G. Poole, S. Saleheen, Ray Seikel
+* **Australian National University**: C. Lidman, J. Soon
 * **Astronomy Data And Computing Services**: J. Hu
+* **ICRAR-Curtin University**: A. Goodwin
+* **The University of Adelaide**: S. Einecke
 
 #### Brazil
 
@@ -54,7 +56,7 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **CNRS/CC-IN2P3**: F. Hernandez
 * **CNRS/CDS, Observatoire Astronomique de Strasbourg, Université de Strasbourg**: A. Nebot Gomez-Moran
 * **CNRS/CPPM, Aix Marseille Université**: D. Dornic, D. Fouchez, G. Vannoye
-* **CNRS/IAP, Sorbonne Université**: E. Bachelet, F. Daigne, J.G. Ducoin
+* **CNRS/IAP, Sorbonne Université**: F. Daigne, J.G. Ducoin
 * **CNRS/IJCLab, Université Paris-Saclay**: R. Ansari, J.-E. Campagne, R. Le Montagner, N. Leroy, M. Moniez, J. Neveu
 * **CNRS/IP2I, Université Claude Bernard Lyon 1**: M. Smith
 * **CNRS/IRAP, Université Paul Sabatier**: O. Godet, E. Quintin, M.L. Lanza, N. Webb, M. Yassine
@@ -89,6 +91,11 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 * **Centre for Data Intensive Science/MSSL, University College London**: T. Allam Jr.
 * **University of Sheffield**: U. Burhanudin, J. Maund
+* **University of Southampton**: C. Frohmaier
+
+#### USA
+
+* **IPAC**: E. Bachelet
 
 
 ## Collaborators
