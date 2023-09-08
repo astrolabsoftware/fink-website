@@ -27,7 +27,7 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **International Center for Advanced Studies, Physical Sciences Institute, San Martin University**: M. Makler
 
 #### Australia
-* **Swinburne University fo Technology**: A. Möller, D. Dobie, C. Gately, G. Poole, S. Saleheen, Ray Seikel
+* **Swinburne University fo Technology**: A. Möller, D. Dobie, C. Gately, G. Poole, S. Saleheen, R. Seikel
 * **Australian National University**: C. Lidman, J. Soon
 * **Astronomy Data And Computing Services**: J. Hu
 * **ICRAR-Curtin University**: A. Goodwin
@@ -58,7 +58,7 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **CNRS/CPPM, Aix Marseille Université**: D. Dornic, D. Fouchez, G. Vannoye
 * **CNRS/IAP, Sorbonne Université**: F. Daigne, J.G. Ducoin
 * **CNRS/IJCLab, Université Paris-Saclay**: R. Ansari, J.-E. Campagne, R. Le Montagner, N. Leroy, M. Moniez, J. Neveu
-* **CNRS/IP2I, Université Claude Bernard Lyon 1**: M. Smith
+* **CNRS/IP2I, Université Claude Bernard Lyon 1**: M. Rigault, M. Smith
 * **CNRS/IRAP, Université Paul Sabatier**: O. Godet, E. Quintin, M.L. Lanza, N. Webb, M. Yassine
 * **CNRS/LAM, Aix Marseille Université**: S. Blondin
 * **CNRS/LAPP, Université Grenoble-Alpes, Université Savoie Mont Blanc**: D. Boutigny, D. Verkindt
