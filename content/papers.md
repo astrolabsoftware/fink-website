@@ -38,6 +38,6 @@ _Marco Leoni, Emille E. O. Ishida, Julien Peloton, Anais Möller_
 
 ### Papers featuring Fink
 
-[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2305.00108) **A data science platform to enable time-domain astronomy**, _Michael W. Coughlin et al._
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2305.00108) ![button2](https://img.shields.io/static/v1?label=&message=ApJS&color=blue&style=plastic&logo=&logoColor=white)](https://ui.adsabs.harvard.edu/link_gateway/2023ApJS..267...31C/doi:10.3847/1538-4365/acdee1) **A data science platform to enable time-domain astronomy**, _Michael W. Coughlin et al._
 
-[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2303.09409) **Repeating Outbursts from the Young Stellar Object Gaia23bab (= SPICY 97589)**, _Michael A. Kuhn et al._
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2303.09409) ![button2](https://img.shields.io/static/v1?label=&message=RNAAS&color=blue&style=plastic&logo=&logoColor=white)](https://doi.org/10.3847/2515-5172/acc4c9) **Repeating Outbursts from the Young Stellar Object Gaia23bab (= SPICY 97589)**, _Michael A. Kuhn et al._
