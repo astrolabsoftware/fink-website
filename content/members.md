@@ -73,7 +73,7 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 #### Russian Federation
 
-* **Lomonosov Moscow State University, Sternberg Astronomical Institute**: I. Beschastnov, M. V. Kornilov
+* **Lomonosov Moscow State University**: A. Baluta, I. Beschastnov, M. V. Kornilov, T. Pshenichniy 
 
 #### South Korea
 
