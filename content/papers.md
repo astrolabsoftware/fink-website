@@ -20,7 +20,7 @@ _Tarek Allam Jr., Julien Peloton, Jason D. McEwen_
 [![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2211.10987) [![button2](https://img.shields.io/static/v1?label=&message=neurips&color=blue&style=plastic&logo=&logoColor=white)](https://neurips.cc/virtual/2022/event/57026) **Finding active galactic nuclei through Fink**,
 _Etienne Russeil, Emille E. O. Ishida, Roman Le Montagner, Julien Peloton, Anais Moller_
 
-[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2210.17433) **Enabling the discovery of fast transients: A kilonova science module for the Fink broker**,
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2210.17433) [![button2](https://img.shields.io/static/v1?label=&message=AA&color=blue&style=plastic&logo=&logoColor=white)](https://doi.org/10.1051/0004-6361/202245340) **Enabling the discovery of fast transients: A kilonova science module for the Fink broker**,
 _B. Biswas, E. E. O. Ishida, J. Peloton, A. Moller, M. V. Pruzhinskaya, R. S. de Souza, D. Muthukrishna_
 
 [![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2202.09766) [![button2](https://img.shields.io/static/v1?label=&message=mnras&color=blue&style=plastic&logo=&logoColor=white)](https://doi.org/10.1093/mnras/stac2054) [![button3](https://img.shields.io/static/v1?label=&message=data&color=orange&style=plastic&logo=&logoColor=white)](https://github.com/astrolabsoftware/fink_grandma_kn) **GRANDMA Observations of ZTF/Fink Transients during Summer 2021**,
@@ -38,6 +38,6 @@ _Marco Leoni, Emille E. O. Ishida, Julien Peloton, Anais Möller_
 
 ### Papers featuring Fink
 
-[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2305.00108) **A data science platform to enable time-domain astronomy**, _Michael W. Coughlin et al._
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2305.00108) [![button2](https://img.shields.io/static/v1?label=&message=ApJS&color=blue&style=plastic&logo=&logoColor=white)](https://ui.adsabs.harvard.edu/link_gateway/2023ApJS..267...31C/doi:10.3847/1538-4365/acdee1) **A data science platform to enable time-domain astronomy**, _Michael W. Coughlin et al._
 
-[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2303.09409) **Repeating Outbursts from the Young Stellar Object Gaia23bab (= SPICY 97589)**, _Michael A. Kuhn et al._
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2303.09409) [![button2](https://img.shields.io/static/v1?label=&message=RNAAS&color=blue&style=plastic&logo=&logoColor=white)](https://doi.org/10.3847/2515-5172/acc4c9) **Repeating Outbursts from the Young Stellar Object Gaia23bab (= SPICY 97589)**, _Michael A. Kuhn et al._
