@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2023-08-09
+date: 2023-09-11
 title: Data transfer at scale (Part 2)
 author: fink
 tags: [mining]
