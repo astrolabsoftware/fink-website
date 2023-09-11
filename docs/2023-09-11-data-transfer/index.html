@@ -1,0 +1,303 @@
+<!doctype html>
+
+<html lang="en" class="h-100">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="Hugo 0.81.0" />
+  <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
+  
+  
+  <title>Data transfer at scale (Part 2) | Fink broker</title>
+  <style>
+body {
+    background-color:  #f2f3f4; 
+    background-image: url(images/background.png);
+    background-size: contain;
+}
+.container {
+  max-width: 900px;
+}
+#nav a {
+  font-weight: bold;
+  color: inherit;
+}
+#nav a.nav-link-active {
+  background-color: #212529;
+  color: #fff;
+}
+#nav-border {
+  border-bottom: 1px solid #212529;
+}
+#main {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+#home-jumbotron {
+  background-color: inherit;
+}
+#footer .container {
+  padding: 1em 0;
+}
+#footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+.font-125 {
+  font-size: 125%;
+}
+.tag-btn {
+  margin-bottom: 0.3em;
+}
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit; 
+  background-color: transparent;
+  border-radius: 0;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+img,
+iframe,
+embed,
+video,
+audio {
+  max-width: 100%;
+}
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: initial;
+}
+</style>
+
+</head>
+  <body class="d-flex flex-column h-100">
+    <div id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/"><i data-feather="home"></i> Home</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/post/"><i data-feather="edit"></i> News</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="https://fink-portal.org"><i data-feather="share-2"></i> Science Portal</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/papers/"><i data-feather="book"></i> Publications</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/members/"><i data-feather="users"></i> Team</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/joining/"><i data-feather="user-plus"></i> Join us</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/about/"><i data-feather="info"></i> About</a>
+  
+  </nav>
+</div>
+
+    <div class="container">
+      <main id="main">
+        
+
+<h1>Data transfer at scale (Part 2)</h1>
+
+
+<i data-feather="calendar"></i> <time datetime="2023-09-11">Sep 11, 2023</time>
+
+  <br>
+  <i data-feather="tag"></i>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://fink-broker.org/tags/mining">mining</a>
+  
+
+<br><br>
+<p>In the <a href="https://fink-broker.org/2023-01-17-data-transfer">previous post</a>, we announced a new service of Fink to explore and transfer historical data at scale from the website <a href="https://fink-portal.org/download">https://fink-portal.org/download</a>. And now we are presenting new features to reduce the download time and processing time from the user&rsquo;s machine.</p>
+<!---->
+<h3 id="whats-new">What&rsquo;s new</h3>
+<p>In this version we have introduced the functionality of simultaneous downloading from multiple partitions through the implementation of multi-processing technology, which is an approach that takes advantage of modern hardware resources to run multiple tasks in parallel.
+By using this strategy, the service is able to simultaneously access different partitions of the data stored in the Kafka server, enabling faster and more efficient transfer. The benefits of this approach are numerous, ranging from optimizing transfer times to making more efficient use of available hardware resources.</p>
+<h3 id="how-to-use">How to use</h3>
+<p>The basic command for downloading data from the Fink Apache Kafka cluster includes the following options :</p>
+<ol>
+<li><code>topic</code> : This is the name of the topic where alerts are loaded.</li>
+<li><code>outdir</code> : The directory where the alerts will be stored.</li>
+<li><code>partitionby</code> : Specifies how the alerts will be partitioned.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fink_datatransfer <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>            -topic &lt;topic name&gt; <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>            -outdir &lt;output directory&gt; <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>            -partitionby time <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>            --verbose
+</code></pre></div><p>In this new version, other options will need to be taken into account:</p>
+<ol>
+<li><code>nconsumers</code> : Determine the number of processes (consumers) to use.<br>
+Each process will be assigned a partition in which it will consume all available alerts before being assigned a new, either partially processed or unprocessed partition.
+For example, with 10 partitions in our topic and 4 consumers, the first consumer will be assigned the first partition, the second consumer the second partition, and so on. Partition 5 will be assigned to the first one to finish retrieving all available alerts in its partition.
+In our examples, we used a computer with 8 cores. Using a number of consumers greater than 6, the machine started slowing down significantly, and the program began experience freezes and crashes. It becomes unresponsive and can close unexpectedly. Therefore, it is recommended not to use a number of consumers higher than the available number of cores.</li>
+<li><code>batchsize</code> : This is the number of alerts downloaded at once by a consumer, and it is set by default to 1000.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fink_datatransfer <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>            -topic &lt;topic name&gt; <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>            -outdir &lt;output directory&gt; <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>            -partitionby time <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>            -nconsumers <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>            -batchsize <span style="color:#ae81ff">1000</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>            --verbose
+</code></pre></div><h3 id="recommendations">Recommendations:</h3>
+<p>The results obtained from using multiprocessing also depend on the computer&rsquo;s performance, including the number of CPU and Cores, memory cost, and available bandwidth of the network. Having a large number of consumers or a large batch size is not necessarily the best way to achieve good results.</p>
+<h4 id="nconsumers">Nconsumers:</h4>
+<p>Increasing the number of consumers can reduce the consumption time. However, the greater the number of consumers, the more demanding it is for the computer. Bandwidth should also be taken into account, as it will be shared among all processes, potentially decreasing speed for each additional process.<br>
+Here is an example in which we consume all the alerts from the month of July in Lightcurve (approximately 3.9 million alerts with a size of 5.23 GB). The alerts have been fully loaded into the topic before downloading.</p>
+<p><img src="/images/dt-2nconsumers.png" alt="1"></p>
+<p>However, it is important to remember that the larger the number of consumers, the higher the chances of the program crashing, and the slower the individual consumer.</p>
+<h4 id="batchsize">Batchsize:</h4>
+<p>The batch size significantly influences the program&rsquo;s execution time, especially when the loading of alerts into the topic is complete. In this example with 5 <code>consumers</code>, we observe a significant decrease in execution time as the batch size increases.</p>
+<p><img src="/images/dt-2batchsize.png" alt="1"></p>
+<p>It&rsquo;s worth noting that a larger batch size leads to a higher memory usage. For a batchsize of 10000 alerts :</p>
+<ol>
+<li>Lightcurve option (assuming 1 alert is about 2 KB) : this would correspond to ~20 MB per batch per process</li>
+<li>Cutouts option (about 40 KB/alert) : this would correspond to ~400 MB per batch per process</li>
+<li>Full packet option (about 55 KB/alert) : corresponding to ~550 MB per batch</li>
+</ol>
+<p>Therefore, the batch size should be defined based on the available resources because all programs on the machine can be slowed down, and even unexpectedly closed when there isn&rsquo;t enough available memory.</p>
+<h4 id="real-time-alert-reception">Real-time alert reception:</h4>
+<p>It&rsquo;s also possible to utilize multiprocessing during real-time alert reception. Each consumer is assigned one partition at a time. After retrieving all available alerts in that partition, it will save the offset of the last retrieved alert in that partition before moving on to another partition. This way, the next consumer to retrieve that partition can continue from that offset.<br>
+In general, loading alerts into the Kafka server is slower than receiving them. Therefore, it&rsquo;s recommended to have a smaller number of consumers than the number of partitions (which is set to 10 in the Fink Kafka cluster). By starting the program around the same time as the beginning of the alert loading and having more than 2 consumers, the program typically finishes a few seconds after the alert loading is complete, which means there is no delay in polling and processing the data.</p>
+
+
+
+      </main>
+    </div>
+    
+    <script src="https://fink-broker.org/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+
+
+<script src="https://fink-broker.org/js/jquery-3.3.1.slim.min.js"></script>
+<script src="https://fink-broker.org/js/bootstrap.bundle.min.js"></script>
+
+    
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+  crossorigin="anonymous"
+/>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+  crossorigin="anonymous"
+></script>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+  crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"
+></script>
+
+
+    
+  
+
+  </body>
+</html>

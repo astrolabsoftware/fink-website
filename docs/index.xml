@@ -6,7 +6,17 @@
     <description>Recent content on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 19 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data transfer at scale (Part 2)</title>
+      <link>https://fink-broker.org/2023-09-11-data-transfer/</link>
+      <pubDate>Mon, 11 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2023-09-11-data-transfer/</guid>
+      <description>In the previous post, we announced a new service of Fink to explore and transfer historical data at scale from the website https://fink-portal.org/download. And now we are presenting new features to reduce the download time and processing time from the user&amp;rsquo;s machine.
+ What&amp;rsquo;s new In this version we have introduced the functionality of simultaneous downloading from multiple partitions through the implementation of multi-processing technology, which is an approach that takes advantage of modern hardware resources to run multiple tasks in parallel.</description>
+    </item>
+    
     <item>
       <title>Gravitational Waves optical counterpart (Part 2)</title>
       <link>https://fink-broker.org/2023-07-19_gw/</link>
