@@ -11,7 +11,7 @@ In the [previous post](https://fink-broker.org/2023-01-17-data-transfer), we ann
 
 ### What's new
 
-In this version we have introduced the functionality of simultaneous downloading from multiple partitions through the implementation of multi-processing technology, which is an approach that takes advantage of modern hardware resources to run multiple tasks in parallel. 
+In the recent versions of [fink_client](https://github.com/astrolabsoftware/fink-client) (`fink_client >= 7.0`) we have introduced the functionality of simultaneous downloading from multiple partitions through the implementation of multi-processing technology, which is an approach that takes advantage of modern hardware resources to run multiple tasks in parallel. 
 By using this strategy, the service is able to simultaneously access different partitions of the data stored in the Kafka server, enabling faster and more efficient transfer. The benefits of this approach are numerous, ranging from optimizing transfer times to making more efficient use of available hardware resources.
 
 ### How to use
