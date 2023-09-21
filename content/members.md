@@ -32,6 +32,8 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **Astronomy Data And Computing Services**: J. Hu
 * **ICRAR-Curtin University**: A. Goodwin
 * **The University of Adelaide**: S. Einecke
+* **University of Sydney**: K. Rose
+* **University of Queensland**: N. Khetan
 
 #### Brazil
 
