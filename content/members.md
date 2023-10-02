@@ -27,13 +27,14 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **International Center for Advanced Studies, Physical Sciences Institute, San Martin University**: M. Makler
 
 #### Australia
-* **Swinburne University fo Technology**: A. Möller, D. Dobie, C. Gately, G. Poole, S. Saleheen, R. Seikel
-* **Australian National University**: C. Lidman, J. Soon
 * **Astronomy Data And Computing Services**: J. Hu
+* **Australian National University**: C. Lidman, J. Soon
 * **ICRAR-Curtin University**: A. Goodwin
+* **Swinburne University fo Technology**: A. Möller, D. Dobie, C. Gately, G. Poole, S. Saleheen, R. Seikel, S. Webb
 * **The University of Adelaide**: S. Einecke
-* **University of Sydney**: K. Rose
-* **University of Queensland**: N. Khetan
+* **The University of Melbourne**: K. Auchettl
+* **The University of Queensland**: N. Khetan
+* **The University of Sydney**: K. Rose
 
 #### Brazil
 
@@ -92,6 +93,7 @@ You can contact us at contact(at)fink-broker.org for more information.
 #### United Kingdom
 
 * **Centre for Data Intensive Science/MSSL, University College London**: T. Allam Jr.
+* **Queens University Belfast**: C. Angus
 * **University of Sheffield**: U. Burhanudin, J. Maund
 * **University of Southampton**: C. Frohmaier
 
