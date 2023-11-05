@@ -9,7 +9,10 @@ List of publications from the Fink collaboration and the larger astronomy commun
 
 ### 2023
 
-[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2305.01123) **Enabling discovery of solar system objects in large alert data streams**,
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2310.17322) **The rate of satellite glints in ZTF and LSST sky surveys**,
+_S. Karpov, J. Peloton_
+
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2305.01123)[![button2](https://img.shields.io/static/v1?label=&message=AA&color=blue&style=plastic&logo=&logoColor=white)](https://doi.org/10.1051/0004-6361/202346905) **Enabling discovery of Solar System objects in large alert data streams **,
 _R. Le Montagner, J. Peloton, B. Carry, J. Desmars, D. Hestroffer, R. A. Mendez, A. C. Perlbarg, W. Thuillot_
 
 [![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2303.08951) **The Tiny Time-series Transformer: Low-latency High-throughput Classification of Astronomical Transients using Deep Model Compression**,
