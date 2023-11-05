@@ -25,7 +25,7 @@ If you have already a science project in mind (not necessary to join Fink), you 
       <guid>https://fink-broker.org/papers/</guid>
       <description>List of publications from the Fink collaboration and the larger astronomy community that uses Fink public data.
 2023  The rate of satellite glints in ZTF and LSST sky surveys, S. Karpov, J. Peloton
- **Enabling discovery of Solar System objects in large alert data streams **, R. Le Montagner, J. Peloton, B. Carry, J. Desmars, D. Hestroffer, R. A. Mendez, A. C. Perlbarg, W. Thuillot
+  **Enabling discovery of Solar System objects in large alert data streams **, R. Le Montagner, J. Peloton, B. Carry, J. Desmars, D. Hestroffer, R. A. Mendez, A. C. Perlbarg, W. Thuillot
  The Tiny Time-series Transformer: Low-latency High-throughput Classification of Astronomical Transients using Deep Model Compression, Tarek Allam Jr.</description>
     </item>
     
