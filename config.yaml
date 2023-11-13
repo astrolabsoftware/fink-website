@@ -27,27 +27,31 @@ menu:
     pre: share-2
     url: https://fink-portal.org
     weight: 3
+  - name: Documentation
+    pre: help-circle
+    url: https://fink-broker.readthedocs.io
+    weight: 4
   - name: Publications
     pre: book 
     url: /papers/
-    weight: 4
+    weight: 5
   - name: Team
     pre: users
     url: /members/
-    weight: 5
+    weight: 6
   - name: Join us
     pre: user-plus
     url: /joining/
-    weight: 6
+    weight: 7
   - name: About
     pre: info
     url: /about/
-    weight: 7
+    weight: 8
 
 params:
   includeBootstrapJs: true
   showActiveNav: true
-  containerMaxWidth: 900px
+  containerMaxWidth: 1200px
   dateFormat: Jan 2, 2006
   homeText: 
   footerText:
