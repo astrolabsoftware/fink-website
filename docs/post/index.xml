@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Open science prize for Free Software in research 2023</title>
+      <link>https://fink-broker.org/2023-11-29-open-science-award/</link>
+      <pubDate>Wed, 29 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2023-11-29-open-science-award/</guid>
+      <description>We are proud to announce that the Fink team has been awarded the open science prize for Free Software in research 2023 by the French Ministry of Research!
+The award recognizes projects and research teams working to develop and disseminate free software, contributing to the construction of a crucial common good. These awards recognize the production of free software as a contribution and a result of research. They highlight exceptional or highly promising achievements, which can inspire both the scientific community and society as a whole.</description>
+    </item>
+    
     <item>
       <title>Data transfer at scale (Part 2)</title>
       <link>https://fink-broker.org/2023-09-11-data-transfer/</link>
