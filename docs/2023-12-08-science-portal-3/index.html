@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
   
   
-  <title>award | Fink broker</title>
+  <title>Science Portal 3.0 | Fink broker</title>
   <style>
 body {
     background-color:  #f2f3f4; 
@@ -201,13 +201,8 @@ audio {
       <main id="main">
         
 
-<h1>award</h1>
+<h1>Science Portal 3.0</h1>
 
-
-<p>
-  <a class="font-125" href="https://fink-broker.org/2023-12-08-science-portal-3/">Science Portal 3.0</a>
-  <br>
-  
 
 <i data-feather="calendar"></i> <time datetime="2023-12-07">Dec 7, 2023</time>
 
@@ -218,23 +213,31 @@ audio {
   <a class="btn btn-sm btn-outline-dark tag-btn" href="https://fink-broker.org/tags/award">award</a>
   
 
-</p>
-
-<p>
-  <a class="font-125" href="https://fink-broker.org/2023-11-29-open-science-award/">Open science prize for Free Software in research 2023</a>
-  <br>
-  
-
-<i data-feather="calendar"></i> <time datetime="2023-11-29">Nov 29, 2023</time>
-
-  <br>
-  <i data-feather="tag"></i>
-  
-  
-  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://fink-broker.org/tags/award">award</a>
-  
-
-</p>
+<br><br>
+<p><img src="/images/science-portal-3/frontpage.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+<p>The Fink Science Portal 3.0 is out! This new version contains a lot of improvements and new features, with a huge contribution from Sergey Karpov (FZU). The full list of code change can be found in the <a href="https://github.com/astrolabsoftware/fink-science-portal/releases/tag/3.0">release notes</a>, and we detail below the main changes.</p>
+<h3 id="new-features">New features</h3>
+<p>This new release brings a lot of new features. Regarding the general layout, we added a responsive menubar on top to complement the current togglable sidebar. We also implement the auto-close of the sidebar when clicking on a link.</p>
+<p>Then the object page benefited from most of the updates. The lightcurve helper is now moved in a popover below the lightcurve. User can also toggle the visibility of lightcurve upper limits independently of the rest, and we display the information on whether a lightcurve point is negative or low quality in the popup of a measurement.</p>
+<p>On the object side accordion, the content of the <code>Alert content</code> dropdown is updated when clicking on a measurement in the lightcurve (in addition to the change of cutouts) so that user can explore all alerts information more easily.</p>
+<p>Last but no least, the direct download of object data has been enabled with buttons (JSON &amp; VOTable)!</p>
+<h3 id="layout-improvement-or-change">Layout improvement or change</h3>
+<p>The layout of the portal in general has been improved keep the same content on all platforms, including mobile devices. This was done by enforcing better use of CSS.</p>
+<p>In the main page, the result of a query is now presented in a scrollable table, instead of a multi-page table. This will improve the experience on touch screen such as tablets or smartphones.</p>
+<p>Regarding elements of the portal, the main change concerns the display and interaction with the cutouts. Cutouts are bigger, uncropped, and zooming in one will automatically update the zoom in the others. The default color map has been set to <code>Blues</code>. The <code>Alert content</code> accordion contains a scrollable table instead of a multi-page table.</p>
+<p>Note finally that irrelevant tabs in the object page are automatically disabled (e.g. disable Solar System when there is no match with MPC), and the external link URL display has been improved.</p>
+<h3 id="code-improvement-and-bug-fix">Code improvement and bug fix</h3>
+<ul>
+<li>Generate QR code asynchronously to speed-up the page loading</li>
+<li>Remove HBase access outside the API part</li>
+<li>Enable easier Dash callback debugging</li>
+</ul>
+<h3 id="api-change">API change</h3>
+<ul>
+<li><code>lc_features_g</code> and <code>lc_features_r</code> have been casted into string arrays.</li>
+<li>We added a new argument in <code>/api/v1/ssocand</code> to control the maximum number of entries to return (<code>maxnumber</code>, default is 10,000).</li>
+<li>The documentation for resolvers have been added.</li>
+</ul>
 
 
 
