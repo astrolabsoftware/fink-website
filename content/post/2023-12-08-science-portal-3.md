@@ -26,7 +26,7 @@ The layout of the portal in general has been improved keep the same content on a
 
 In the main page, the result of a query is now presented in a scrollable table, instead of a multi-page table. This will improve the experience on touch screen such as tablets or smartphones.
 
-Regarding elements of the portal, the main change concerns the display and interaction with the cutouts. Cutouts are bigger, uncropped, and zooming in one will automatically update the zoom in the others. The default color map has been set to `Blues`. The `Alert content` accordion contains a scrollable table instead of a multi-page table.
+Regarding elements of the portal, the main change concerns the display and interaction with the cutouts. Cutouts are bigger, uncropped, and zooming in one will automatically update the zoom in the others, and the difference cutout for negative measurement is now inverted to better show that it is negative. The default color map has been set to `Blues`. The `Alert content` accordion contains a scrollable table instead of a multi-page table.
 
 Note finally that irrelevant tabs in the object page are automatically disabled (e.g. disable Solar System when there is no match with MPC), and the external link URL display has been improved.
 
