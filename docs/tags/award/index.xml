@@ -6,17 +6,7 @@
     <description>Recent content in award on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 07 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/tags/award/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Science Portal 3.0</title>
-      <link>https://fink-broker.org/2023-12-08-science-portal-3/</link>
-      <pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://fink-broker.org/2023-12-08-science-portal-3/</guid>
-      <description>The Fink Science Portal 3.0 is out! This new version contains a lot of improvements and new features, with a huge contribution from Sergey Karpov (FZU). The full list of code change can be found in the release notes, and we detail below the main changes.
-New features This new release brings a lot of new features. Regarding the general layout, we added a responsive menubar on top to complement the current togglable sidebar.</description>
-    </item>
-    
+    <lastBuildDate>Wed, 29 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/tags/award/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Open science prize for Free Software in research 2023</title>
       <link>https://fink-broker.org/2023-11-29-open-science-award/</link>

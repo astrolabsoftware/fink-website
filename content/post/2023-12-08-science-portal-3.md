@@ -1,9 +1,9 @@
 ---
 layout: post
-date: 2023-12-07
+date: 2023-12-08
 title: Science Portal 3.0
 author: fink
-tags: [award]
+tags: [portal]
 ---
 
 <img src="/images/science-portal-3/frontpage.png" width="100%" height="100%" style="display: block; margin: auto;" />
