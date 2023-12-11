@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2023-11-29
-title: Open science prize for Free Software in research 2023
+title: Open science award for Free Software in research 2023
 author: fink
 tags: [award]
 ---
