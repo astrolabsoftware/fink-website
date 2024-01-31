@@ -24,7 +24,7 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 #### Argentina
 
-* **International Center for Advanced Studies, Physical Sciences Institute, San Martin University**: M. Makler
+* **International Center for Advanced Studies, Physical Sciences Institute, San Martin University**: M. Makler, K. Nowogrodzki
 
 #### Australia
 * **Astronomy Data And Computing Services**: J. Hu
@@ -38,7 +38,7 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 #### Brazil
 
-* **Centro Brasileiro de Pesquisas Físicas**: C.R. De Bom, B. Fraga, A. Santos
+* **Centro Brasileiro de Pesquisas Físicas**: J.P. Correia de França, C.R. De Bom, B. Fraga, A. Santos
 
 #### Czech Republic
 
@@ -54,7 +54,7 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 #### France
 
-* **CEA/AIM, Université Paris-Saclay**: D. Turpin
+* **CEA/AIM, Université Paris-Saclay**: D. Turpin, F. Schüssler
 * **CNRS/APC, Université de Paris**: B. Biswas, A. Boucaud, A. Coleiro
 * **CNRS/CC-IN2P3**: F. Hernandez
 * **CNRS/CDS, Observatoire Astronomique de Strasbourg, Université de Strasbourg**: A. Nebot Gomez-Moran
