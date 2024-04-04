@@ -7,6 +7,11 @@ tags: [Fink, publications]
 
 List of publications from the Fink collaboration and the larger astronomy community that uses Fink public data.
 
+### 2024
+
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2403.20179) **Combined spin orientation and phase function of asteroids**,
+_B. Carry, J. Peloton, R. Le Montagner, M. Mahlke, J. Berthier_
+
 ### 2023
 
 [![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2311.04845) **Bayesian multi-band fitting of alerts for kilonovae detection**,
