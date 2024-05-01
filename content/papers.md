@@ -55,6 +55,8 @@ _Anais Möller and Thibault de Boissiere_
 
 ### Papers featuring Fink
 
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2404.18165) **ELEPHANT: ExtragaLactic alErt Pipeline for Hostless AstroNomical Transients**, _P. J. Pessi et al._
+
 [![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2308.12806) **Redback: A Bayesian inference software package for electromagnetic transients**, _Nikhil Sarin et al._
 
 [![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2305.00108) [![button2](https://img.shields.io/static/v1?label=&message=ApJS&color=blue&style=plastic&logo=&logoColor=white)](https://ui.adsabs.harvard.edu/link_gateway/2023ApJS..267...31C/doi:10.3847/1538-4365/acdee1) **A data science platform to enable time-domain astronomy**, _Michael W. Coughlin et al._
