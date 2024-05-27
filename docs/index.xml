@@ -6,7 +6,17 @@
     <description>Recent content on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 27 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fink Brazil</title>
+      <link>https://fink-broker.org/2024-05-27-fink-brazil/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2024-05-27-fink-brazil/</guid>
+      <description>The Fink Brazil workshop took place at CBPF, Rio de Janeiro, from 6 to 10 June 2024. This event brought together researchers interested in exploring the potential applications of Fink data, both in the context of the Zwicky Transient Facility (ZTF), as well as the upcoming Vera Rubin Observatory Large Survey of Space and Time (LSST).
+The program included keynote speakers and contributed talks, posters and tutorials that will help prepare the local community for the arrival of LSST data, maximizing the scientific output of the alert stream.</description>
+    </item>
+    
     <item>
       <title>Science Portal 3.0</title>
       <link>https://fink-broker.org/2023-12-08-science-portal-3/</link>
