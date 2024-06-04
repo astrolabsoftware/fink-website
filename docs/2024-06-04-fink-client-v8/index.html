@@ -1,0 +1,344 @@
+<!doctype html>
+
+<html lang="en" class="h-100">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="Hugo 0.81.0" />
+  <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
+  
+  
+  <title>Fink client v8 | Fink broker</title>
+  <style>
+body {
+    background-color:  #f2f3f4; 
+    background-image: url(images/background.png);
+    background-size: contain;
+}
+.container {
+  max-width: 1200px;
+}
+#nav a {
+  font-weight: bold;
+  color: inherit;
+}
+#nav a.nav-link-active {
+  background-color: #212529;
+  color: #fff;
+}
+#nav-border {
+  border-bottom: 1px solid #212529;
+}
+#main {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+#home-jumbotron {
+  background-color: inherit;
+}
+#footer .container {
+  padding: 1em 0;
+}
+#footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+.font-125 {
+  font-size: 125%;
+}
+.tag-btn {
+  margin-bottom: 0.3em;
+}
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit; 
+  background-color: transparent;
+  border-radius: 0;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+img,
+iframe,
+embed,
+video,
+audio {
+  max-width: 100%;
+}
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: initial;
+}
+</style>
+
+</head>
+  <body class="d-flex flex-column h-100">
+    <div id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/"><i data-feather="home"></i> Home</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/post/"><i data-feather="edit"></i> News</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="https://fink-portal.org"><i data-feather="share-2"></i> Science Portal</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="https://fink-broker.readthedocs.io"><i data-feather="help-circle"></i> Documentation</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/papers/"><i data-feather="book"></i> Publications</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/members/"><i data-feather="users"></i> Team</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/joining/"><i data-feather="user-plus"></i> Join us</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/about/"><i data-feather="info"></i> About</a>
+  
+  </nav>
+</div>
+
+    <div class="container">
+      <main id="main">
+        
+
+<h1>Fink client v8</h1>
+
+
+<i data-feather="calendar"></i> <time datetime="2024-06-04">Jun 4, 2024</time>
+
+  <br>
+  <i data-feather="tag"></i>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://fink-broker.org/tags/client">client</a>
+  
+
+<br><br>
+<p>Dear users, the Fink client v8 is out. <a href="https://github.com/astrolabsoftware/fink-client">fink-client</a> is a light package to manipulate catalogs and alerts issued from the fink broker programmatically. It is used in the context of 2 major Fink services: Livestream and Data Transfer.</p>
+<p>In this new major version, the installation procedure has been simplified, and new functionalities to the Livestream service have been added. More information in the <a href="https://fink-broker.readthedocs.io/en/latest/services/livestream/">Livestream manual</a>. Below, we give some details.</p>
+<h3 id="simpler-installation-procedure">Simpler installation procedure</h3>
+<p>The previous installation procedure was cumbersome because we had to freeze an old version of <code>fastavro</code>. Thanks to <a href="https://github.com/fastavro/fastavro/pull/738">one our colleague from AMPEL</a> we can move on versions, and the installation of the client simply becomes:</p>
+<pre><code># get or upgrade to the latest version
+pip install -U fink-client
+</code></pre><h3 id="checking-offsets">Checking offsets</h3>
+<p>You might want to check where you are on the different queues, that is retrieving the offsets for each topic that you are polling:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fink_consumer --display_statistics
+
+Topic <span style="color:#f92672">[</span>Partition<span style="color:#f92672">]</span>                                   Committed        Lag
+<span style="color:#f92672">========================================================================</span>
+fink_sso_ztf_candidates_ztf  <span style="color:#f92672">[</span>4<span style="color:#f92672">]</span>                            <span style="color:#ae81ff">1</span>        <span style="color:#ae81ff">972</span>
+------------------------------------------------------------------------
+Total <span style="color:#66d9ef">for</span> fink_sso_ztf_candidates_ztf                       <span style="color:#ae81ff">1</span>        <span style="color:#ae81ff">972</span>
+------------------------------------------------------------------------
+
+Topic <span style="color:#f92672">[</span>Partition<span style="color:#f92672">]</span>                                   Committed        Lag
+<span style="color:#f92672">========================================================================</span>
+------------------------------------------------------------------------
+Total <span style="color:#66d9ef">for</span> fink_sso_fink_candidates_ztf                      <span style="color:#ae81ff">0</span>          <span style="color:#ae81ff">2</span>
+------------------------------------------------------------------------
+</code></pre></div><p>In this example, I have two topic, <code>fink_sso_ztf_candidates_ztf</code> and <code>fink_sso_fink_candidates_ztf</code>.</p>
+<p>For the first topic, there is one active partition on the remote Kafka cluster that served data (number <code>[4]</code>). I polled 1 alert (<code>Committed</code>), and there are <code>972</code> remaining alerts to be polled (<code>Lag</code>). As there is only one active partition on the remote Kafka cluster, the total is the same (there could be up to 10 active partitions). For the second topic, I did not start polling as <code>0</code> alert has been <code>Committed</code>.</p>
+<h3 id="resetting-offsets">Resetting offsets</h3>
+<p>Sometimes you might want to poll again alerts, that is restarting to poll from the beginning of a queue. For this, you can use:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fink_consumer --display -start_at earliest
+Resetting offsets to BEGINNING
+...
+assign TopicPartition<span style="color:#f92672">{</span>topic<span style="color:#f92672">=</span>fink_sso_fink_candidates_ztf,partition<span style="color:#f92672">=</span>0,offset<span style="color:#f92672">=</span>0,leader_epoch<span style="color:#f92672">=</span>None,error<span style="color:#f92672">=</span>None<span style="color:#f92672">}</span>
+...
+assign TopicPartition<span style="color:#f92672">{</span>topic<span style="color:#f92672">=</span>fink_sso_ztf_candidates_ztf,partition<span style="color:#f92672">=</span>0,offset<span style="color:#f92672">=</span>0,leader_epoch<span style="color:#f92672">=</span>None,error<span style="color:#f92672">=</span>None<span style="color:#f92672">}</span>
+...
+<span style="color:#75715e"># poll restarts at the first offset</span>
+</code></pre></div><p>All your topic partitions will be reset to the starting offset (<code>0</code> in this case). Similarly, you can empty all topics, and restarting polling from the last offset:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fink_consumer --display -start_at latest
+...
+assign TopicPartition<span style="color:#f92672">{</span>topic<span style="color:#f92672">=</span>fink_sso_fink_candidates_ztf,partition<span style="color:#f92672">=</span>0,offset<span style="color:#f92672">=</span>0,leader_epoch<span style="color:#f92672">=</span>None,error<span style="color:#f92672">=</span>None<span style="color:#f92672">}</span>
+...
+assign TopicPartition<span style="color:#f92672">{</span>topic<span style="color:#f92672">=</span>fink_sso_fink_candidates_ztf,partition<span style="color:#f92672">=</span>4,offset<span style="color:#f92672">=</span>2,leader_epoch<span style="color:#f92672">=</span>None,error<span style="color:#f92672">=</span>None<span style="color:#f92672">}</span>
+...
+assign TopicPartition<span style="color:#f92672">{</span>topic<span style="color:#f92672">=</span>fink_sso_ztf_candidates_ztf,partition<span style="color:#f92672">=</span>4,offset<span style="color:#f92672">=</span>973,leader_epoch<span style="color:#f92672">=</span>None,error<span style="color:#f92672">=</span>None<span style="color:#f92672">}</span>
+...
+No alerts the last <span style="color:#ae81ff">10</span> seconds
+...
+</code></pre></div><p>Empty partitions will have <code>offset=0</code>, but others will have their offset to the latest one. The client will then wait for new data to come. Note that the reset will be actually triggered on the next poll. Hence the command <code>fink_consumer --display_statistics</code> will not right away display the reset offsets.
+This is particularly useful after a bug in the topic (malformed alerts pushed), and you want a fresh restart.</p>
+<h3 id="troubleshooting-schema-mismatch">Troubleshooting schema mismatch</h3>
+<p>A typical error though would be:</p>
+<pre><code>Traceback (most recent call last):
+  File &quot;/Users/julien/anaconda3/bin/fink_consumer&quot;, line 10, in &lt;module&gt;
+    sys.exit(main())
+  File &quot;/Users/julien/Documents/workspace/myrepos/fink-client/fink_client/scripts/fink_consumer.py&quot;, line 92, in main
+    topic, alert = consumer.poll(timeout=maxtimeout)
+  File &quot;/Users/julien/Documents/workspace/myrepos/fink-client/fink_client/consumer.py&quot;, line 94, in poll
+    alert = _decode_avro_alert(avro_alert, self._parsed_schema)
+  File &quot;/Users/julien/Documents/workspace/myrepos/fink-client/fink_client/avroUtils.py&quot;, line 381, in _decode_avro_alert
+    return fastavro.schemaless_reader(avro_alert, schema)
+  File &quot;fastavro/_read.pyx&quot;, line 835, in fastavro._read.schemaless_reader
+  File &quot;fastavro/_read.pyx&quot;, line 846, in fastavro._read.schemaless_reader
+  File &quot;fastavro/_read.pyx&quot;, line 561, in fastavro._read._read_data
+  File &quot;fastavro/_read.pyx&quot;, line 456, in fastavro._read.read_record
+  File &quot;fastavro/_read.pyx&quot;, line 559, in fastavro._read._read_data
+  File &quot;fastavro/_read.pyx&quot;, line 431, in fastavro._read.read_union
+  File &quot;fastavro/_read.pyx&quot;, line 555, in fastavro._read._read_data
+  File &quot;fastavro/_read.pyx&quot;, line 349, in fastavro._read.read_array
+  File &quot;fastavro/_read.pyx&quot;, line 561, in fastavro._read._read_data
+  File &quot;fastavro/_read.pyx&quot;, line 456, in fastavro._read.read_record
+  File &quot;fastavro/_read.pyx&quot;, line 559, in fastavro._read._read_data
+  File &quot;fastavro/_read.pyx&quot;, line 405, in fastavro._read.read_union
+IndexError: list index out of range
+</code></pre><p>This error happens when the schema to decode the alert is not matching the alert content. Usually this should not happen (schema is included in the alert payload). In case it happens though, you can force a schema:</p>
+<pre><code>fink_consumer [...] -schema [path_to_a_good_schema]
+</code></pre><p>In case you do not have replacement schemas, you can save the current (faulty) schema that is contained within an alert packet:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">fink_consumer -limit <span style="color:#ae81ff">1</span> --dump_schema
+</code></pre></div><p>You will see the traceback above, with the message:</p>
+<pre><code>Schema saved as schema_2024-06-03T11:12:36.855544+00:00.json
+</code></pre><p>Then you can inspect the schema manually, or open an issue on the fink-client repository by attaching this schema to your message.</p>
+<h3 id="what-would-be-next">What would be next?</h3>
+<p>We are preparing for the start of LSST. Many functionalities are being developed (automation of workflows, web client, centralised authentication with other Fink services, &hellip;), but let us know what you would like to have!</p>
+
+
+
+      </main>
+    </div>
+    
+    <script src="https://fink-broker.org/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+
+
+<script src="https://fink-broker.org/js/jquery-3.3.1.slim.min.js"></script>
+<script src="https://fink-broker.org/js/bootstrap.bundle.min.js"></script>
+
+    
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+  crossorigin="anonymous"
+/>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+  crossorigin="anonymous"
+></script>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+  crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"
+></script>
+
+
+    
+  
+
+  </body>
+</html>

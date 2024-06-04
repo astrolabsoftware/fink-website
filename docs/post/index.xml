@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fink client v8</title>
+      <link>https://fink-broker.org/2024-06-04-fink-client-v8/</link>
+      <pubDate>Tue, 04 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2024-06-04-fink-client-v8/</guid>
+      <description>Dear users, the Fink client v8 is out. fink-client is a light package to manipulate catalogs and alerts issued from the fink broker programmatically. It is used in the context of 2 major Fink services: Livestream and Data Transfer.
+In this new major version, the installation procedure has been simplified, and new functionalities to the Livestream service have been added. More information in the Livestream manual. Below, we give some details.</description>
+    </item>
+    
     <item>
       <title>Fink Brazil</title>
       <link>https://fink-broker.org/2024-05-27-fink-brazil/</link>
