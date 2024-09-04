@@ -15,8 +15,9 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 ## Development Team
 
-- [Julien Peloton](https://github.com/JulienPeloton) (Lead) - CNRS/IJCLab, IT department
+- Julien Peloton (lead) - CNRS/IJCLab, IT department
 - Julius Hrivnac (database) - CNRS/IJCLab, IT department
+- Fabrice Jammes (Kubernetes) - CNRS/LPC, IT department
 - Marco Leoni (machine learning) - Université Paris-Saclay, IT department
 - Adrien Ramparison (cloud management, deployment, monitoring) - CNRS/IJCLab, IT department
 
@@ -28,17 +29,21 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 #### Australia
 * **Astronomy Data And Computing Services**: J. Hu
-* **Australian National University**: C. Lidman, J. Soon
+* **Australian National University**: C. Lidman, B. Schmidt, J. Soon
 * **ICRAR-Curtin University**: A. Goodwin
-* **Swinburne University fo Technology**: A. Möller, D. Dobie, C. Gately, G. Poole, S. Saleheen, R. Seikel, S. Webb
+* **Monash University**: R. Hirai (also RIKEN, Japan)
+* **Swinburne University fo Technology**: A. Möller, D. Dobie, C. Gately, G. Poole, H. Roxburgh, S. Saleheen, R. Seikel, S. Webb
 * **The University of Adelaide**: S. Einecke
 * **The University of Melbourne**: K. Auchettl
+* **The University of New South Wales Canberra**: A. Ruiter
 * **The University of Queensland**: N. Khetan
 * **The University of Sydney**: K. Rose
 
 #### Brazil
 
-* **Centro Brasileiro de Pesquisas Físicas**: J.P. Correia de França, C.R. De Bom, B. Fraga, A. Santos
+* **Centro Brasileiro de Pesquisas Físicas**: J.P. Correia de França, C.R. De Bom, B. Fraga, J. C. Rodríguez Ramírez, A. Santos
+* **Instituto de Astronomia, Geofísica e Ciências Atmosféricas - Universidade de São Paulo**: L. Nakazono, R. Ruiz Valença, G. Schwarz
+* **UFRJ - Observatório do Valongo**: M. Grossi, L. Ribeiro
 
 #### Czech Republic
 
@@ -54,7 +59,8 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 #### France
 
-* **CEA/AIM, Université Paris-Saclay**: D. Turpin, F. Schüssler
+* **CEA/AIM, Université Paris-Saclay**: D. Turpin
+* **CEA/Irfu, Université Paris-Saclay**: F. Schüssler
 * **CNRS/APC, Université de Paris**: B. Biswas, A. Boucaud, A. Coleiro
 * **CNRS/CC-IN2P3**: F. Hernandez
 * **CNRS/CDS, Observatoire Astronomique de Strasbourg, Université de Strasbourg**: A. Nebot Gomez-Moran
@@ -65,6 +71,7 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **CNRS/IRAP, Université Paul Sabatier**: O. Godet, E. Quintin, M.L. Lanza, N. Webb, M. Yassine
 * **CNRS/LAM, Aix Marseille Université**: S. Blondin
 * **CNRS/LAPP, Université Grenoble-Alpes, Université Savoie Mont Blanc**: D. Boutigny, D. Verkindt
+* **CNRS/LLR**: H. Ashkar
 * **CNRS/LPC, Université Clermont Auvergne**: E. Gangler, P. Gris, M. V.  Pruzhinskaya, E. Russeil
 * **CNRS/LPSC, Université Grenoble-Alpes**: J. Bregeon, M. Masson
 * **CNRS/LUPM, Université de Montpellier**: J. Cohen-Tanugi
@@ -94,6 +101,7 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 * **Centre for Data Intensive Science/MSSL, University College London**: T. Allam Jr.
 * **Queens University Belfast**: C. Angus
+* **University of Hertfordshire**: R. S. de Souza
 * **University of Sheffield**: U. Burhanudin, J. Maund
 * **University of Southampton**: C. Frohmaier
 
