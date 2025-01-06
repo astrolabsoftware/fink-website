@@ -9,10 +9,13 @@ List of publications from the Fink collaboration and the larger astronomy commun
 
 ### 2024
 
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2412.05061) **Search for Orphan Gamma-Ray Burst Afterglows with the Vera C. Rubin Observatory and the alert broker Fink**,
+_Marina Masson, Johan Bregeon_
+
 [![button1](https://img.shields.io/static/v1?label=&message=CHEP2023&color=blue&style=plastic&logo=fing&logoColor=white)](https://www.epj-conferences.org/articles/epjconf/pdf/2024/05/epjconf_chep2024_01039.pdf) **Multidatabase, the Future of the data storage in Particle Physics and Astronomy**,
 _Julius Hrivnác, Julien Peloton_
 
-[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2404.08798) **Transient Classifiers for Fink: Benchmarks for LSST**,
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2404.08798) [![button2](https://img.shields.io/static/v1?label=&message=AA&color=blue&style=plastic&logo=&logoColor=white)](https://doi.org/10.1051/0004-6361/202450370) **Transient Classifiers for Fink: Benchmarks for LSST**,
 _B.M.O. Fraga, C.R. Bom, A. Santos, E. Russeil, M. Leoni, J. Peloton, E.E.O. Ishida, A. Möller, S. Blondin_
 
 [![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2403.20179) [![button2](https://img.shields.io/static/v1?label=&message=AA&color=blue&style=plastic&logo=&logoColor=white)](https://doi.org/10.1051/0004-6361/202449789) **Combined spin orientation and phase function of asteroids**,
