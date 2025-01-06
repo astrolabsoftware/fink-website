@@ -23,7 +23,7 @@ _B. Carry, J. Peloton, R. Le Montagner, M. Mahlke, J. Berthier_
 
 ### 2023
 
-[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2311.04845) **Bayesian multi-band fitting of alerts for kilonovae detection**,
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2311.04845) [![button2](https://img.shields.io/static/v1?label=&message=neurips&color=blue&style=plastic&logo=&logoColor=white)](https://neurips.cc/virtual/2023/76211) **Bayesian multi-band fitting of alerts for kilonovae detection**,
 _Biswajit Biswas, Junpeng Lao, Eric Aubourg, Alexandre Boucaud, Axel Guinot, Emille E. O. Ishida, Cécile Roucelle_
 
 [![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2310.17322) [![button2](https://img.shields.io/static/v1?label=&message=CAOSP&color=blue&style=plastic&logo=&logoColor=white)](https://doi.org/10.31577/caosp.2023.53.4.69) **The rate of satellite glints in ZTF and LSST sky surveys**,
