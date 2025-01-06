@@ -26,13 +26,14 @@ You can contact us at contact(at)fink-broker.org for more information.
 #### Argentina
 
 * **International Center for Advanced Studies, Physical Sciences Institute, San Martin University**: M. Makler, K. Nowogrodzki
+* **UNAHUR/CONICET**: G. J. M. Luna
 
 #### Australia
 * **Astronomy Data And Computing Services**: J. Hu
 * **Australian National University**: C. Lidman, B. Schmidt, J. Soon
 * **ICRAR-Curtin University**: A. Goodwin
 * **Monash University**: R. Hirai (also RIKEN, Japan)
-* **Swinburne University fo Technology**: A. Möller, D. Dobie, C. Gately, G. Poole, H. Roxburgh, S. Saleheen, R. Seikel, S. Webb
+* **Swinburne University fo Technology**: A. Möller, D. Dobie, C. Gately, G. Poole, H. Roxburgh, S. Saleheen, R. Seikel, N. Van Bemmel, T. Waterson, S. Webb
 * **The University of Adelaide**: S. Einecke
 * **The University of Melbourne**: K. Auchettl
 * **The University of New South Wales Canberra**: A. Ruiter
@@ -75,7 +76,11 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **CNRS/LPC, Université Clermont Auvergne**: E. Gangler, P. Gris, M. V.  Pruzhinskaya, E. Russeil
 * **CNRS/LPSC, Université Grenoble-Alpes**: J. Bregeon, M. Masson
 * **CNRS/LUPM, Université de Montpellier**: J. Cohen-Tanugi
-* **CNRS/OCA, Lagrange, Université Côte d'Azur**: B. Carry
+* **CNRS/OCA, Lagrange, Université Côte d'Azur**: B. Carry, A. Sergeyev
+
+#### Germany
+
+* **COIN**: R. Durgesh
 
 #### Portugal
 
@@ -108,6 +113,7 @@ You can contact us at contact(at)fink-broker.org for more information.
 #### USA
 
 * **IPAC**: E. Bachelet
+* **University of North Carolina at Chapel Hill**: H. Corbett
 
 
 ## Collaborators
