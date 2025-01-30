@@ -18,6 +18,16 @@ The changes in this new version were driven by the forthcoming Rubin alert strea
     </item>
     
     <item>
+      <title>Fink watch</title>
+      <link>https://fink-broker.org/2025-01-15-fink-watch/</link>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/2025-01-15-fink-watch/</guid>
+      <description>You are looking for a nice outreach project using Fink data? Check out the Fink watch! It displays the number of alerts per night processed by the astronomical broker Fink in real-time. The watch uses a Raspberry Pi to control the LCD Display Module, and it polls alert information from the Fink Kafka cluster.
+More information at https://github.com/JulienPeloton/fink-watch.</description>
+    </item>
+    
+    <item>
       <title>Fink client v8</title>
       <link>https://fink-broker.org/2024-06-04-fink-client-v8/</link>
       <pubDate>Tue, 04 Jun 2024 00:00:00 +0000</pubDate>
