@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Fink broker</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Portal</title>
+      <link>https://fink-broker.org/tags/portal/</link>
+      <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://fink-broker.org/tags/portal/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>client</title>
       <link>https://fink-broker.org/tags/client/</link>
@@ -22,15 +31,6 @@
       <pubDate>Mon, 27 May 2024 00:00:00 +0000</pubDate>
       
       <guid>https://fink-broker.org/tags/workshop/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Portal</title>
-      <link>https://fink-broker.org/tags/portal/</link>
-      <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://fink-broker.org/tags/portal/</guid>
       <description></description>
     </item>
     

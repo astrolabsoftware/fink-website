@@ -1,0 +1,293 @@
+<!doctype html>
+
+<html lang="en" class="h-100">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="Hugo 0.81.0" />
+  <link rel="stylesheet" href="https://fink-broker.org/css/bootstrap.min.css">
+  
+  
+  <title>Fink Portal v6 | Fink broker</title>
+  <style>
+body {
+    background-color:  #f2f3f4; 
+    background-image: url(images/background.png);
+    background-size: contain;
+}
+.container {
+  max-width: 1200px;
+}
+#nav a {
+  font-weight: bold;
+  color: inherit;
+}
+#nav a.nav-link-active {
+  background-color: #212529;
+  color: #fff;
+}
+#nav-border {
+  border-bottom: 1px solid #212529;
+}
+#main {
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+#home-jumbotron {
+  background-color: inherit;
+}
+#footer .container {
+  padding: 1em 0;
+}
+#footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+.font-125 {
+  font-size: 125%;
+}
+.tag-btn {
+  margin-bottom: 0.3em;
+}
+pre {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit; 
+  background-color: transparent;
+  border-radius: 0;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+img,
+iframe,
+embed,
+video,
+audio {
+  max-width: 100%;
+}
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: initial;
+}
+</style>
+
+</head>
+  <body class="d-flex flex-column h-100">
+    <div id="nav-border" class="container">
+  <nav id="nav" class="nav justify-content-center">
+  
+  
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/"><i data-feather="home"></i> Home</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/post/"><i data-feather="edit"></i> News</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="https://fink-portal.org"><i data-feather="share-2"></i> Science Portal</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="https://fink-broker.readthedocs.io"><i data-feather="help-circle"></i> Documentation</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/papers/"><i data-feather="book"></i> Publications</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/members/"><i data-feather="users"></i> Team</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/joining/"><i data-feather="user-plus"></i> Join us</a>
+  
+    
+    
+      
+      
+      
+      
+      
+        
+      
+    
+    
+    <a class="nav-link " href="/about/"><i data-feather="info"></i> About</a>
+  
+  </nav>
+</div>
+
+    <div class="container">
+      <main id="main">
+        
+
+<h1>Fink Portal v6</h1>
+
+
+<i data-feather="calendar"></i> <time datetime="2025-01-30">Jan 30, 2025</time>
+
+  <br>
+  <i data-feather="tag"></i>
+  
+  
+  <a class="btn btn-sm btn-outline-dark tag-btn" href="https://fink-broker.org/tags/portal">portal</a>
+  
+
+<br><br>
+<p>We are delighted to announce the release of <a href="https://fink-portal.org">Fink Portal</a> version 6. While there are no new functionalities this time, there is a major change under the hood that should result in improved performance. Release notes can be found at: <a href="https://github.com/astrolabsoftware/fink-science-portal/releases/tag/6.0">https://github.com/astrolabsoftware/fink-science-portal/releases/tag/6.0</a></p>
+<p><img src="/images/API_fink.png" width="70%" height="70%" style="display: block; margin: auto;" /></p>
+<p>The changes in this new version were driven by the forthcoming Rubin alert stream. To facilitate integration with the new data structures and manage the higher volume of data that will be collected, we redesigned the overall structure. The API is now completely isolated from the frontend, enabling local development. Profilers have been systematically introduced for all endpoint operations, and many parts of the code have been improved. Finally, the new cutout API is now the default method for image data retrieval.</p>
+<h2 id="api-change">API change</h2>
+<p>The object API is a Flask application used to access object data stored in tables in Apache HBase. From 2019 to 2024, the development of this API was done in <a href="https://github.com/astrolabsoftware/fink-science-portal">fink-science-portal</a>, and it is now standalone.</p>
+<h4 id="new-api-url">New API URL</h4>
+<p>As part of the transition to a new system for Rubin, the URL to access the API changed from <code>https://fink-portal.org/api/v1/&lt;endpoint&gt;</code> to <code>https://api.fink-portal.org/api/v1/&lt;endpoint&gt;</code>. Both URLs have been valid until January 30, 2025, at which point only <code>https://api.fink-portal.org/api/v1/&lt;endpoint&gt;</code> becomes valid. We encourage all users to update the URL as soon as possible and report any problems. Note that users can access the API documentation at <a href="https://api.fink-portal.org">https://api.fink-portal.org</a> where all endpoints are detailed:</p>
+<p><img src="/images/api_screen.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
+<h4 id="route-changes">Route changes</h4>
+<p>Three endpoints have been deprecated:</p>
+<ul>
+<li><code>/api/v1/xmatch</code></li>
+<li><code>/api/v1/random</code></li>
+<li><code>/api/v1/explorer</code></li>
+</ul>
+<p>The endpoint <code>/api/v1/xmatch</code> was a wrapper around <code>/api/v1/conesearch</code> and did not provide any additional performance benefits. To reduce maintenance costs, it has been deprecated. It may be reintroduced if significant performance improvements are achieved. The endpoint <code>/api/v1/random</code> was never used as far as we know. If you were a user of it, please let us know, and it will be re-introduced. The endpoint <code>/api/v1/explorer</code> has been replaced by <code>/api/v1/conesearch</code>. In addition, the endpoint <code>/api/v1/columns</code> has been renamed <code>/api/v1/schema</code>.</p>
+<p>See the <a href="https://fink-broker.readthedocs.io/en/latest/migration/">migration page</a> for more information.</p>
+<h3 id="cutout-api">Cutout API</h3>
+<p>This API (<a href="https://github.com/astrolabsoftware/fink-cutout-api">https://github.com/astrolabsoftware/fink-cutout-api</a>) is used internally by Fink web components to retrieve cutouts from the data lake on HDFS. We take advantage of the pyarrow connector to read parquet files to efficiently extract required cutouts from an HDFS block.</p>
+<p>Each night, Fink processes alerts and stores them in the datalake as parquet files. Additionally, we transfered data to HBase tables to support various web services. This approach allowed for efficient data exposure once the data is in the tables. However, this has led to numerous issues that outweigh the benefits. One of the most critical tasks during data writing is populating the main table, which includes both lightcurve and cutout data. Frequently, HBase crashes for extended periods—sometimes lasting minutes or even hours—resulting in downtime for all services. Furthermore, cutout data constitutes a significant portion of our storage needs, yet much of it remains rarely accessed.</p>
+<p>Since cutouts are already stored in the datalake, if we can develop a quick access method, we can eliminate the need to transfer them to tables. This change would also lead to substantial savings in storage space and costs. This observation has led to the development of this API.</p>
+<p>The fundamental mechanism is to store cutout metadata in HBase and leverage the capabilities of <code>pyarrow</code> to read parquet files stored in HDFS. This is (only slightly) slower than accessing cutouts from the HBase table, but it lead to hundreds of TB saved (estimation about 30k EUR saved for the duration of the project!).</p>
+<h3 id="the-power-of-the-gateway">The power of the Gateway</h3>
+<p>The application relies internally on two components, the Fink cutout API (see above), and the Java Gateway. The Java Gateway enables the Flask application to communicate with a JVM using <a href="https://www.py4j.org/">py4j</a>, where the Fink HBase client based on <a href="https://github.com/hrivnac/Lomikel">Lomikel</a> is available. This client simplifies the interaction with HBase tables, where Fink aggregated alert data is stored.</p>
+<p>Initially, we loaded the client JAR using jpype at the application&rsquo;s start, sharing the client among all users. This approach caused several issues due to the client&rsquo;s lack of thread safety. To resolve this, we switched to an isolation mode, where a new client is created for each query instead of reusing a global client.</p>
+<p>While this strategy effectively prevents conflicts between sessions, it significantly slows down individual queries. For instance, when using the route <code>api/v1/objects</code>, the overall query time is primarily determined by the time taken to load the client.</p>
+<p>Instead of loading the client from scratch in the Python application for each query, we now spawn a JVM once (from outside the Python application), and access Java objects dynamically from the Python application using py4j. This has led to huge speed-up for most queries without the need for cutouts. Note that this technique is heavily inspired from the work in pyspark.</p>
+<h3 id="native-profiling">Native Profiling</h3>
+<p>Inspecting the performance of a web application can be somewhat challenging. While we already have telemetry for Dash components, we are now carefully profiling each application route.</p>
+
+
+
+      </main>
+    </div>
+    
+    <script src="https://fink-broker.org/js/feather.min.js"></script>
+<script>
+  feather.replace()
+</script>
+
+
+<script src="https://fink-broker.org/js/jquery-3.3.1.slim.min.js"></script>
+<script src="https://fink-broker.org/js/bootstrap.bundle.min.js"></script>
+
+    
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+  integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq"
+  crossorigin="anonymous"
+/>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+  integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+  crossorigin="anonymous"
+></script>
+
+
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"
+  integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI"
+  crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"
+></script>
+
+
+    
+  
+
+  </body>
+</html>
