@@ -1,12 +1,12 @@
 ---
 layout: post
 date: "2025-01-30"
-title: Fink Portal v6
+title: Science Portal v6
 author: fink
 tags: [portal]
 ---
 
-We are delighted to announce the release of [Fink Portal](https://fink-portal.org) version 6. While there are no new functionalities this time, there is a major change under the hood that should result in improved performance. Release notes can be found at: https://github.com/astrolabsoftware/fink-science-portal/releases/tag/6.0
+We are delighted to announce the release of [Fink Science Portal](https://fink-portal.org) version 6. While there are no new functionalities this time, there is a major change under the hood that should result in improved performance. Release notes can be found at: https://github.com/astrolabsoftware/fink-science-portal/releases/tag/6.0
 
 <img src="/images/frontend.png" width="100%" height="100%" style="display: block; margin: auto;" />
 

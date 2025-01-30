@@ -8,12 +8,12 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 30 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://fink-broker.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Fink Portal v6</title>
+      <title>Science Portal v6</title>
       <link>https://fink-broker.org/2025-01-30-fink-portal-v6/</link>
       <pubDate>Thu, 30 Jan 2025 00:00:00 +0000</pubDate>
       
       <guid>https://fink-broker.org/2025-01-30-fink-portal-v6/</guid>
-      <description>We are delighted to announce the release of Fink Portal version 6. While there are no new functionalities this time, there is a major change under the hood that should result in improved performance. Release notes can be found at: https://github.com/astrolabsoftware/fink-science-portal/releases/tag/6.0
+      <description>We are delighted to announce the release of Fink Science Portal version 6. While there are no new functionalities this time, there is a major change under the hood that should result in improved performance. Release notes can be found at: https://github.com/astrolabsoftware/fink-science-portal/releases/tag/6.0
 The changes in this new version were driven by the forthcoming Rubin alert stream. To facilitate integration with the new data structures and manage the higher volume of data that will be collected, we redesigned the overall structure.</description>
     </item>
     
