@@ -215,10 +215,11 @@ audio {
 
 <br><br>
 <p>We are delighted to announce the release of <a href="https://fink-portal.org">Fink Portal</a> version 6. While there are no new functionalities this time, there is a major change under the hood that should result in improved performance. Release notes can be found at: <a href="https://github.com/astrolabsoftware/fink-science-portal/releases/tag/6.0">https://github.com/astrolabsoftware/fink-science-portal/releases/tag/6.0</a></p>
-<p><img src="/images/API_fink.png" width="70%" height="70%" style="display: block; margin: auto;" /></p>
+<p><img src="/images/frontend.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>
 <p>The changes in this new version were driven by the forthcoming Rubin alert stream. To facilitate integration with the new data structures and manage the higher volume of data that will be collected, we redesigned the overall structure. The API is now completely isolated from the frontend, enabling local development. Profilers have been systematically introduced for all endpoint operations, and many parts of the code have been improved. Finally, the new cutout API is now the default method for image data retrieval.</p>
 <h2 id="api-change">API change</h2>
 <p>The object API is a Flask application used to access object data stored in tables in Apache HBase. From 2019 to 2024, the development of this API was done in <a href="https://github.com/astrolabsoftware/fink-science-portal">fink-science-portal</a>, and it is now standalone.</p>
+<p><img src="/images/API_fink.png" width="70%" height="70%" style="display: block; margin: auto;" /></p>
 <h4 id="new-api-url">New API URL</h4>
 <p>As part of the transition to a new system for Rubin, the URL to access the API changed from <code>https://fink-portal.org/api/v1/&lt;endpoint&gt;</code> to <code>https://api.fink-portal.org/api/v1/&lt;endpoint&gt;</code>. Both URLs have been valid until January 30, 2025, at which point only <code>https://api.fink-portal.org/api/v1/&lt;endpoint&gt;</code> becomes valid. We encourage all users to update the URL as soon as possible and report any problems. Note that users can access the API documentation at <a href="https://api.fink-portal.org">https://api.fink-portal.org</a> where all endpoints are detailed:</p>
 <p><img src="/images/api_screen.png" width="100%" height="100%" style="display: block; margin: auto;" /></p>

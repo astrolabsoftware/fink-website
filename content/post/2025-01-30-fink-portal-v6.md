@@ -8,13 +8,16 @@ tags: [portal]
 
 We are delighted to announce the release of [Fink Portal](https://fink-portal.org) version 6. While there are no new functionalities this time, there is a major change under the hood that should result in improved performance. Release notes can be found at: https://github.com/astrolabsoftware/fink-science-portal/releases/tag/6.0
 
-<img src="/images/API_fink.png" width="70%" height="70%" style="display: block; margin: auto;" />
+<img src="/images/frontend.png" width="100%" height="100%" style="display: block; margin: auto;" />
 
 The changes in this new version were driven by the forthcoming Rubin alert stream. To facilitate integration with the new data structures and manage the higher volume of data that will be collected, we redesigned the overall structure. The API is now completely isolated from the frontend, enabling local development. Profilers have been systematically introduced for all endpoint operations, and many parts of the code have been improved. Finally, the new cutout API is now the default method for image data retrieval.
 
 ## API change
 
 The object API is a Flask application used to access object data stored in tables in Apache HBase. From 2019 to 2024, the development of this API was done in [fink-science-portal](https://github.com/astrolabsoftware/fink-science-portal), and it is now standalone.
+
+<img src="/images/API_fink.png" width="70%" height="70%" style="display: block; margin: auto;" />
+
 
 #### New API URL
 
