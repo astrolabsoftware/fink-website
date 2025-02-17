@@ -136,10 +136,11 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 #### Facilities and collaborations
 
-- SVOM
-- AstroColibri
-- GRANDMA
+- [AstroColibri](https://astro-colibri.science/)
 - [COIN](https://cosmostatistics-initiative.org/)
+- [GRANDMA](https://grandma.ijclab.in2p3.fr/)
+- [SVOM](https://www.svom.eu/en/home/)
+- [SNAD](https://snad.space/)
 
 #### Brokers
 
