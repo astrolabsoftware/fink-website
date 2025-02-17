@@ -33,7 +33,7 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **Australian National University**: C. Lidman, B. Schmidt, J. Soon
 * **ICRAR-Curtin University**: A. Goodwin
 * **Monash University**: R. Hirai (also RIKEN, Japan)
-* **Swinburne University fo Technology**: A. Möller, D. Dobie, C. Gately, G. Poole, H. Roxburgh, S. Saleheen, R. Seikel, N. Van Bemmel, T. Waterson, S. Webb
+* **Swinburne University fo Technology**: A. Möller, D. Dobie, C. Gately, G. Poole, H. Roxburgh, S. Saleheen, R. Seikel, L. Steinwender, N. Van Bemmel, T. Waterson, S. Webb
 * **The University of Adelaide**: S. Einecke
 * **The University of Melbourne**: K. Auchettl
 * **The University of New South Wales Canberra**: A. Ruiter
@@ -43,8 +43,14 @@ You can contact us at contact(at)fink-broker.org for more information.
 #### Brazil
 
 * **Centro Brasileiro de Pesquisas Físicas**: J.P. Correia de França, C.R. De Bom, B. Fraga, J. C. Rodríguez Ramírez, A. Santos
+* **Laboratório Nacional de Astrofísica**: I. Jesus Lima
 * **Instituto de Astronomia, Geofísica e Ciências Atmosféricas - Universidade de São Paulo**: L. Nakazono, R. Ruiz Valença, G. Schwarz
+* **Instituto Nacional de Pesquisas Espaciais**: C. V. Rodrigues
 * **UFRJ - Observatório do Valongo**: M. Grossi, L. Ribeiro
+
+#### China
+
+* **Yunnan University**: K. Chatterjee
 
 #### Czech Republic
 
@@ -69,11 +75,11 @@ You can contact us at contact(at)fink-broker.org for more information.
 * **CNRS/IAP, Sorbonne Université**: F. Daigne, J.G. Ducoin
 * **CNRS/IJCLab, Université Paris-Saclay**: R. Ansari, J.-E. Campagne, R. Le Montagner, N. Leroy, M. Moniez, J. Neveu
 * **CNRS/IP2I, Université Claude Bernard Lyon 1**: M. Rigault, M. Smith
-* **CNRS/IRAP, Université Paul Sabatier**: O. Godet, E. Quintin, M.L. Lanza, N. Webb, M. Yassine
+* **CNRS/IRAP, Université Paul Sabatier**: O. Godet, M.L. Lanza, N. Webb, M. Yassine, H. Yang
 * **CNRS/LAM, Aix Marseille Université**: S. Blondin
 * **CNRS/LAPP, Université Grenoble-Alpes, Université Savoie Mont Blanc**: D. Boutigny, D. Verkindt
 * **CNRS/LLR**: H. Ashkar
-* **CNRS/LPC, Université Clermont Auvergne**: E. Gangler, P. Gris, M. V.  Pruzhinskaya, E. Russeil
+* **CNRS/LPCA, Université Clermont Auvergne**: E. Gangler, C. Mur, P. Gris
 * **CNRS/LPSC, Université Grenoble-Alpes**: J. Bregeon, M. Masson
 * **CNRS/LUPM, Université de Montpellier**: J. Cohen-Tanugi
 * **CNRS/OCA, Lagrange, Université Côte d'Azur**: B. Carry, A. Sergeyev
@@ -88,11 +94,20 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 #### Russian Federation
 
-* **Lomonosov Moscow State University**: A. Baluta, I. Beschastnov, M. V. Kornilov, T. Pshenichniy 
+* **Lomonosov Moscow State University**: A. Baluta, I. Beschastnov, M. V. Kornilov, T. Pshenichniy, M. Pruzhinskaya
+* **Industry**: I. Ippolitov
+
+#### Spain
+
+* **European Space Astronomy Centre**: E. Quintin
 
 #### South Korea
 
 * **Seoul National University**: S.W. Chang
+
+#### Sweden
+
+* **Stockholm University**: E. Russeil
 
 #### Switzerland
 
@@ -106,6 +121,7 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 * **Centre for Data Intensive Science/MSSL, University College London**: T. Allam Jr.
 * **Queens University Belfast**: C. Angus
+* **University of Edinburgh**: R. Williams
 * **University of Hertfordshire**: R. S. de Souza
 * **University of Sheffield**: U. Burhanudin, J. Maund
 * **University of Southampton**: C. Frohmaier
@@ -120,10 +136,11 @@ You can contact us at contact(at)fink-broker.org for more information.
 
 #### Facilities and collaborations
 
-- SVOM
-- AstroColibri
-- GRANDMA
+- [AstroColibri](https://astro-colibri.science/)
 - [COIN](https://cosmostatistics-initiative.org/)
+- [GRANDMA](https://grandma.ijclab.in2p3.fr/)
+- [SVOM](https://www.svom.eu/en/home/)
+- [SNAD](https://snad.space/)
 
 #### Brokers
 
