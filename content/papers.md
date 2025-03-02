@@ -7,6 +7,11 @@ tags: [Fink, publications]
 
 List of publications from the Fink collaboration and the larger astronomy community that uses Fink public data.
 
+### 2025
+
+[![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2502.19555) **Real-Time Active Learning for optimised spectroscopic follow-up: Enhancing early SN Ia classification with the Fink broker**,
+_Möller, A., Ishida, E. E. O., Peloton, J., Vidal Velázquez, O., Soon, J., Martin, B., Cluver, M., Leoni, M., Taylor, E._
+
 ### 2024
 
 [![button1](https://img.shields.io/static/v1?label=&message=arxiv&color=critical&style=plastic&logo=fing&logoColor=white)](https://arxiv.org/abs/2412.05061) **Search for Orphan Gamma-Ray Burst Afterglows with the Vera C. Rubin Observatory and the alert broker Fink**,
