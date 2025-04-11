@@ -1,5 +1,11 @@
 # Fink website
 
+## New repository for Rubin
+
+This repository is unactive. Please use https://github.com/astrolabsoftware/fink-website-rubin instead.
+
+## Deployment
+
 To deploy locally
 
 ```
